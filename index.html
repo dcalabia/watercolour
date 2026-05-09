@@ -1116,6 +1116,53 @@ buildCats('cocktailq');
 srUpdateProgress('menu'); srUpdateProgress('wine');
 srUpdateProgress('foodq'); srUpdateProgress('wineq');
 srUpdateProgress('cocktail'); srUpdateProgress('cocktailq');
+
+
+
+
+
+  // Keyboard shortcuts: Space = flip, A = wrong, S = unsure, D = right
+  document.addEventListener('keydown', function(e) {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+    const deckMap = {
+      'menu-screen':     'menu',
+      'wine-screen':     'wine',
+      'foodq-screen':    'foodq',
+      'wineq-screen':    'wineq',
+      'cocktail-screen': 'cocktail',
+      'cocktailq-screen':'cocktailq'
+    };
+
+    let activeDeck = null;
+    for (const [screenId, deckId] of Object.entries(deckMap)) {
+      const el = document.getElementById(screenId);
+      if (el && el.style.display === 'block') { activeDeck = deckId; break; }
+    }
+    if (!activeDeck) return;
+
+    if (e.code === 'Space') {
+      e.preventDefault();
+      const flipBtn = document.getElementById(activeDeck + '-flip');
+      if (flipBtn) flipBtn.click();
+      return;
+    }
+
+    // SR buttons are shown individually via display:'block' after card is flipped
+    const wrongBtn = document.getElementById(activeDeck + '-sr-wrong');
+    const srVisible = wrongBtn && wrongBtn.style.display === 'block';
+
+    if (srVisible) {
+      if (e.key === 'a' || e.key === 'A') {
+        document.getElementById(activeDeck + '-sr-wrong').click();
+      } else if (e.key === 's' || e.key === 'S') {
+        document.getElementById(activeDeck + '-sr-unsure').click();
+      } else if (e.key === 'd' || e.key === 'D') {
+        document.getElementById(activeDeck + '-sr-right').click();
+      }
+    }
+  });
+
 </script>
 </body>
 </html>
