@@ -2033,8 +2033,1079 @@ const WINES = [
   }
 ];
 const FOOD_CARDS = [{"section": "Price", "q": "How much is the Grilled Seafood Platter?", "a": "$90", "context": "Signature — octopus, calamari, prawns, scallops"}, {"section": "Price", "q": "How much is the Lobster Tagliatelle?", "a": "$75", "context": "Signature — most expensive pasta on the menu"}, {"section": "Price", "q": "How much is the Prime Striploin?", "a": "$78", "context": "12oz dry-aged — same price as Lamb Chops"}, {"section": "Price", "q": "How much are the Lamb Chops?", "a": "$78", "context": "Signature — same price as Prime Striploin"}, {"section": "Price", "q": "How much is the Seafood Risotto?", "a": "$68", "context": "Signature — calamari, shrimp, scallops"}, {"section": "Price", "q": "How much is the Whole Grilled Branzino?", "a": "$58", "context": "Signature — served whole"}, {"section": "Price", "q": "How much is the Organic King Salmon?", "a": "$48", "context": "Signature — from Ireland, medium only"}, {"section": "Price", "q": "How much is the Lemon Roasted Chicken?", "a": "$47", "context": "Signature — smashed potatoes, swiss chard"}, {"section": "Price", "q": "How much is the Spaghetti?", "a": "$39", "context": "Signature — most affordable pasta"}, {"section": "Price", "q": "How much is the Octopus a la Plancha?", "a": "$34", "context": "Hot Plate — most expensive hot plate"}, {"section": "Price", "q": "How much is the Calamari Fritti?", "a": "$32", "context": "Hot Plate"}, {"section": "Price", "q": "How much is the Baked Feta?", "a": "$28", "context": "Hot Plate"}, {"section": "Price", "q": "How much are the Zucchini Chips?", "a": "$27", "context": "Hot Plate"}, {"section": "Price", "q": "How much is the Beets & Goat Cheese?", "a": "$29", "context": "Raw & Salad"}, {"section": "Price", "q": "How much is the Spring Salad?", "a": "$28", "context": "Raw & Salad"}, {"section": "Price", "q": "How much is the Fennel & Arugula?", "a": "$27", "context": "Raw & Salad"}, {"section": "Price", "q": "How much is the Carpaccio?", "a": "$32", "context": "Raw & Salad"}, {"section": "Price", "q": "How much is the Tuna Tartare?", "a": "$34", "context": "Raw & Salad — most expensive starter"}, {"section": "Price", "q": "How much is the Greek Village Salad?", "a": "$26", "context": "Raw & Salad — most affordable salad"}, {"section": "Price", "q": "How much is the Baguette?", "a": "$8", "context": "Hot Plate — good upsell at table arrival"}, {"section": "Mise", "q": "What cutlery for Whole Grilled Branzino?", "a": "Fork + Steak Knife + 3rd plate", "context": "3rd plate is for the bones"}, {"section": "Mise", "q": "What cutlery for Baked Feta?", "a": "Butter Knife + Fork", "context": "Only hot plate that uses a butter knife"}, {"section": "Mise", "q": "What cutlery for Lamb Chops?", "a": "Fork + Steak Knife", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Prime Striploin?", "a": "Fork + Steak Knife", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Lemon Roasted Chicken?", "a": "Steak Knife + Fork", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Organic King Salmon?", "a": "Fork + Butter Knife", "context": "Medium only — note on the mise"}, {"section": "Mise", "q": "What cutlery for Grilled Seafood Platter?", "a": "Butter Knife + Fork", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Lobster Tagliatelle?", "a": "Fork + Spoon", "context": "Signature pasta"}, {"section": "Mise", "q": "What cutlery for Spaghetti?", "a": "Fork + Spoon", "context": "Signature pasta"}, {"section": "Mise", "q": "What cutlery for Seafood Risotto?", "a": "Fork + Spoon", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Baguette?", "a": "Butter Knife only", "context": "Hot Plate"}, {"section": "Mise", "q": "What cutlery for all Raw & Salad dishes?", "a": "Fork + Spoon", "context": "All 6 salads — same setting"}, {"section": "Mise", "q": "What cutlery for Zucchini Chips?", "a": "Fork + Spoon", "context": "Hot Plate"}, {"section": "Mise", "q": "What cutlery for Octopus a la Plancha?", "a": "Fork + Spoon", "context": "Hot Plate"}, {"section": "Mise", "q": "What cutlery for Calamari Fritti?", "a": "Fork + Spoon", "context": "Hot Plate"}, {"section": "Mise", "q": "Which dish needs a 3rd plate?", "a": "Whole Grilled Branzino", "context": "For the bones — always set it"}, {"section": "Mise", "q": "Which dishes use a Steak Knife?", "a": "Lamb Chops, Prime Striploin, Lemon Roasted Chicken, Branzino", "context": "Any dish you need to cut through"}, {"section": "Mise", "q": "Which dishes use a Butter Knife?", "a": "Baked Feta, Salmon, Seafood Platter, Baguette", "context": "Softer proteins and spreads"}, {"section": "Ingredients", "q": "What cheese is in the Carpaccio?", "a": "Manchego", "context": "Spanish sheep's milk cheese — nutty, like a milder parmesan"}, {"section": "Ingredients", "q": "What herbs are in the Beets & Goat Cheese?", "a": "Dill and mint", "context": "Not just 'herbs' — be specific if asked"}, {"section": "Ingredients", "q": "What is the dressing on Beets & Goat Cheese?", "a": "Champagne vinaigrette", "context": "Raw & Salad"}, {"section": "Ingredients", "q": "What is the dressing on Spring Salad?", "a": "Burnt honey vinaigrette", "context": "Endives, hazelnuts, pear, comté"}, {"section": "Ingredients", "q": "What type of pasta is in Lobster Tagliatelle?", "a": "Hand cut pasta", "context": "Not dry pasta — made in-house"}, {"section": "Ingredients", "q": "What sauce is in Lobster Tagliatelle?", "a": "Bisque, cream, chives — and chilli", "context": "Chilli is easy to forget — it's in there"}, {"section": "Ingredients", "q": "What potatoes come with Lemon Roasted Chicken?", "a": "Smashed potatoes", "context": "Not roasted, not herb — smashed"}, {"section": "Ingredients", "q": "What greens are in Lemon Roasted Chicken?", "a": "Swiss chard", "context": "Also has olives, sumac, preserved lemon"}, {"section": "Ingredients", "q": "What seafood is in the Seafood Risotto?", "a": "Calamari, shrimp, scallops", "context": "Menu says 'market seafood' — kitchen confirmed these three"}, {"section": "Ingredients", "q": "What is the broth in Seafood Risotto?", "a": "Light seafood and tomato broth", "context": "Arborio rice absorbs it to make it creamy"}, {"section": "Ingredients", "q": "What comes on the Whole Grilled Branzino?", "a": "Vine tomatoes, olives, capers, white wine, herb roasted potatoes", "context": "Served whole on an oval plate"}, {"section": "Ingredients", "q": "What type of potatoes come with Branzino?", "a": "Herb roasted potatoes", "context": "Not smashed, not plain — herb roasted"}, {"section": "Ingredients", "q": "What sauce comes with Octopus a la Plancha?", "a": "Salsa verde and hummus", "context": "New menu — no longer capers/red onion"}, {"section": "Ingredients", "q": "What comes with Calamari Fritti?", "a": "Shishito peppers, aioli, lemon", "context": "Fritti = Italian for fried"}, {"section": "Ingredients", "q": "What nut is in the Spring Salad?", "a": "Hazelnuts", "context": "With pear, comté, burnt honey vinaigrette"}, {"section": "Ingredients", "q": "What nut is in the Fennel & Arugula?", "a": "Toasted pine nuts", "context": "With blood orange, aged parmesan, sumac"}, {"section": "Ingredients", "q": "What spice finishes the Fennel & Arugula?", "a": "Sumac", "context": "Tangy, lemony Middle Eastern spice"}, {"section": "Ingredients", "q": "What spice is in Lemon Roasted Chicken?", "a": "Sumac", "context": "Also in Fennel & Arugula — two dishes share it"}, {"section": "Ingredients", "q": "What sauce is on the Prime Striploin?", "a": "Peppercorn sauce", "context": "12oz dry-aged with grilled Mediterranean veg"}, {"section": "Ingredients", "q": "What is specifically listed in the Seafood Platter?", "a": "Grilled Spanish octopus, calamari, prawns, scallops, beans, lemon", "context": "Grilled Spanish octopus — be specific"}, {"section": "Ingredients", "q": "What is the vinaigrette on Greek Village Salad?", "a": "No vinaigrette — just olive oil and herbs", "context": "Heirloom tomatoes, cucumber, peppers, olives, feta, mint, oregano"}, {"section": "Details", "q": "Where is the King Salmon from?", "a": "Ireland", "context": "Organic — cooked medium only"}, {"section": "Details", "q": "What temperature is Salmon cooked?", "a": "Medium only", "context": "Don't take temp requests — it's set"}, {"section": "Details", "q": "How many ounces is the Prime Striploin?", "a": "12oz", "context": "Dry-aged — mention this when describing"}, {"section": "Details", "q": "What does 'a la Plancha' mean?", "a": "Grilled on a scorching flat griddle", "context": "Spanish term — char on outside, tender inside"}, {"section": "Details", "q": "What does 'Fritti' mean?", "a": "Italian for fried", "context": "Calamari Fritti"}, {"section": "Details", "q": "What does 'confit' mean?", "a": "Slow-cooked in oil at low heat", "context": "Confit tomato = jammy, concentrated flavor"}, {"section": "Details", "q": "What is burrata?", "a": "Mozzarella with a creamy center that oozes", "context": "In the Spaghetti — delicate, serve immediately"}, {"section": "Details", "q": "What are 'Mediterranean vegetables'?", "a": "Peppers, onions, zucchini", "context": "Come with Prime Striploin"}, {"section": "Details", "q": "What does preserved lemon taste like?", "a": "Deeply savory, intensely salty — not sour", "context": "Salt-cured for weeks. In Lemon Roasted Chicken"}, {"section": "Details", "q": "What is bisque?", "a": "Rich creamy sauce made from the lobster shells", "context": "In Lobster Tagliatelle — concentrated shellfish flavor"}, {"section": "Details", "q": "What is beurre blanc?", "a": "French butter-wine sauce — silky and slightly tangy", "context": "Lemongrass beurre blanc on the Salmon"}, {"section": "Details", "q": "What is salsa verde (on the menu)?", "a": "Italian style — parsley, capers, anchovy, olive oil", "context": "Not Mexican salsa verde. On Lamb Chops and Octopus"}, {"section": "Details", "q": "Which dish is served whole?", "a": "Whole Grilled Branzino", "context": "Needs 3rd plate for bones — you may carve tableside"}, {"section": "Details", "q": "What are shishito peppers?", "a": "Mild Japanese peppers — but 1 in 10 is spicy", "context": "In Octopus a la Plancha and Calamari Fritti"}, {"section": "Details", "q": "What is phyllo?", "a": "Paper-thin Greek pastry that crisps like baklava", "context": "In Baked Feta — wraps the cheese"}, {"section": "Details", "q": "What does the Baguette come with?", "a": "Warmed, sea salt, rosemary, olive oil", "context": "Good upsell at the start of the meal — $8"}, {"section": "Details", "q": "Which dish has chilli in it?", "a": "Lobster Tagliatelle", "context": "Easy to forget — bisque, chilli, cream, chives"}, {"section": "Details", "q": "What rice is used in Seafood Risotto?", "a": "Arborio rice", "context": "Short-grain Italian rice — releases starch to make it creamy"}, {"section": "Pitch", "q": "3 ingredients to pitch for Tuna Tartare", "a": "tuna · avocado · citrus", "context": "$34 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Carpaccio", "a": "beef tenderloin · arugula · manchego", "context": "$32 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Greek Village Salad", "a": "heirloom tomato · feta · olives", "context": "$26 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Spring Salad", "a": "endives · pear · comté", "context": "$28 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Fennel & Arugula", "a": "fennel · blood orange · aged parmesan", "context": "$27 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Beets & Goat Cheese", "a": "beets · goat cheese · sicilian pistachio", "context": "$29 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Zucchini Chips", "a": "fried zucchini · tzatziki · lemon", "context": "$27 — Hot Plate"}, {"section": "Pitch", "q": "3 ingredients to pitch for Baked Feta", "a": "feta · phyllo · truffle honey", "context": "$28 — Hot Plate"}, {"section": "Pitch", "q": "3 ingredients to pitch for Octopus a la Plancha", "a": "octopus · hummus · salsa verde", "context": "$34 — Hot Plate"}, {"section": "Pitch", "q": "3 ingredients to pitch for Calamari Fritti", "a": "calamari · shishito peppers · aioli", "context": "$32 — Hot Plate"}, {"section": "Pitch", "q": "3 ingredients to pitch for Lobster Tagliatelle", "a": "lobster · hand cut pasta · bisque", "context": "$75 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Spaghetti", "a": "confit tomato · Italian burrata · pistachio", "context": "$39 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Whole Grilled Branzino", "a": "branzino · vine tomatoes · herb roasted potatoes", "context": "$58 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Lamb Chops", "a": "lamb · salsa verde · tzatziki", "context": "$78 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Lemon Roasted Chicken", "a": "chicken · preserved lemon · smashed potatoes", "context": "$47 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Prime Striploin", "a": "12oz dry-aged striploin · peppercorn sauce · grilled vegetables", "context": "$78 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Organic King Salmon", "a": "salmon · spinach · lemongrass beurre blanc", "context": "$48 — Signature, from Ireland"}, {"section": "Pitch", "q": "3 ingredients to pitch for Seafood Risotto", "a": "market seafood · arborio rice · seafood broth", "context": "$68 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Grilled Seafood Platter", "a": "grilled Spanish octopus · prawns · scallops", "context": "$90 — Signature"}, {"section": "Cocktails", "q": "How many signature cocktails do we have?", "a": "3", "context": "Otto's Negroni, Athenian Spritz, Pomegranate Margarita"}, {"section": "Cocktails", "q": "What's in the Otto's Negroni?", "a": "Otto's vermouth, campari, gin", "context": "3oz — $18"}, {"section": "Cocktails", "q": "What's in the Athenian Spritz?", "a": "Otto's vermouth, prosecco, tonic", "context": "3oz — $19"}, {"section": "Cocktails", "q": "What's in the Pomegranate Margarita?", "a": "Tequila, cointreau, pomegranate", "context": "3oz — $21 — most expensive cocktail"}, {"section": "Cocktails", "q": "How much is the Otto's Negroni?", "a": "$18", "context": "Otto's vermouth, campari, gin"}, {"section": "Cocktails", "q": "How much is the Athenian Spritz?", "a": "$19", "context": "Otto's vermouth, prosecco, tonic"}, {"section": "Cocktails", "q": "How much is the Pomegranate Margarita?", "a": "$21", "context": "Most expensive cocktail on the menu"}, {"section": "Cocktails", "q": "Can we make cocktails beyond the 3 signature ones?", "a": "Yes — traditional cocktails too", "context": "Margarita, spicy margarita etc — ask the bar"}, {"section": "Cocktails", "q": "What is cointreau?", "a": "Orange-flavoured liqueur", "context": "In the Pomegranate Margarita"}, {"section": "Cocktails", "q": "What is campari?", "a": "Bitter Italian aperitif — deep red colour", "context": "In the Otto's Negroni"}, {"section": "Beverages", "q": "What is the only non-alcoholic beer?", "a": "Heineken 0.0", "context": "355ml — $9"}, {"section": "Beverages", "q": "How much is Heineken 0.0?", "a": "$9", "context": "Only non-alcoholic beer on the menu — 355ml $9"}, {"section": "Beverages", "q": "What beers do we have?", "a": "Peroni Lager and Hoegaarden Wheat Beer", "context": "Both 330ml, both $12"}, {"section": "Beverages", "q": "Where is Peroni from?", "a": "Italy", "context": "Lager — 330ml — $12"}, {"section": "Beverages", "q": "Where is Hoegaarden from?", "a": "Belgium", "context": "Wheat Beer — 330ml — $12"}, {"section": "Beverages", "q": "What style is Hoegaarden?", "a": "Wheat Beer", "context": "Belgian — $12"}, {"section": "Beverages", "q": "How much are both beers?", "a": "$12 each", "context": "Peroni Lager and Hoegaarden Wheat Beer — 330ml"}, {"section": "Beverages", "q": "How is the Coke served?", "a": "Classic glass bottle, imported", "context": "355ml — $7.50"}, {"section": "Beverages", "q": "How much is the Coke?", "a": "$7.50", "context": "Classic glass bottle, imported"}, {"section": "Beverages", "q": "What is the cheapest non-alcoholic option?", "a": "Diet Coke or Gingerale — $6", "context": "355ml"}, {"section": "Beverages", "q": "What non-alcoholic options do we offer?", "a": "Peach Iced Tea, Raspberry Lemonade, Coke, Diet Coke/Gingerale, Heineken 0.0", "context": "$6–$10 range"}, {"section": "Beverages", "q": "How much is Peach Iced Tea?", "a": "$10", "context": "355ml non-alcoholic"}, {"section": "Beverages", "q": "How much is Raspberry Lemonade?", "a": "$10", "context": "355ml non-alcoholic"}, {"section": "Beverages", "q": "What sparkling water do we serve?", "a": "Pellegrino", "context": "Sparkling — offer with lime"}, {"section": "Beverages", "q": "What wine options are available by the glass?", "a": "Muscadet, Chardonnay, Nero d'Avola, Syrah, Rosé, Cava", "context": "5oz pours — $17 to $19"}, {"section": "Beverages", "q": "How much is wine by the glass?", "a": "$17–$19", "context": "Rosé $17 · Muscadet/Nero d'Avola $18 · Chardonnay/Syrah/Cava $19"}, {"section": "Service", "q": "What garnish for flat water?", "a": "Lemon", "context": "Never offer tap unprompted — upsell still or sparkling"}, {"section": "Service", "q": "What garnish for sparkling water?", "a": "Lime", "context": "Pellegrino is the sparkling water"}, {"section": "Service", "q": "Do we offer tap water?", "a": "Only if guest requests it", "context": "Always offer flat or sparkling first — for upsell"}, {"section": "Service", "q": "How many wine glass types are there?", "a": "4", "context": "Champagne, White, Burgundy, Syrah/Reds"}, {"section": "Service", "q": "What are the 4 wine glasses?", "a": "Champagne · White · Burgundy · Syrah/Other Reds", "context": "Each grape family gets its own glass"}, {"section": "Service", "q": "What glass for Chardonnay?", "a": "Burgundy glass", "context": "Not the standard white wine glass"}, {"section": "Service", "q": "What glass for Pinot Noir?", "a": "Burgundy glass", "context": "Same glass as Chardonnay"}, {"section": "Service", "q": "What glass for all whites except Chardonnay?", "a": "White wine glass", "context": "Muscadet, Ribolla, Greco di Tufo, Etna Bianco etc."}, {"section": "Service", "q": "What glass for Syrah, Nero d'Avola, Montepulciano etc.?", "a": "Syrah / Other Reds glass", "context": "All reds except Pinot Noir and Chardonnay"}, {"section": "Service", "q": "What glass for Champagne and Prosecco?", "a": "Champagne / Prosecco glass", "context": "All sparkling wines"}, {"section": "Service", "q": "Where is Seat 1 at a table?", "a": "First banquette seat to the left", "context": "Consistent across all tables"}, {"section": "Service", "q": "What is the 86 list?", "a": "Items currently sold out or unavailable", "context": "Review it at the start of every shift — food, wine, cocktails"}, {"section": "Service", "q": "How many water jugs to fill at opening?", "a": "8 water jugs", "context": "Fill with water and ice — opening checklist"}, {"section": "Service", "q": "How far from the table edge should plates be?", "a": "Half an inch", "context": "Opening checklist — uniform settings"}, {"section": "Service", "q": "How full should candles be before service?", "a": "At least 30% filled", "context": "Opening checklist"}, {"section": "Service", "q": "How many cleaning triangles to prepare?", "a": "6 to 8", "context": "Table wipes — opening checklist"}, {"section": "Service", "q": "What are the 3 types of plates?", "a": "Crown/spiky (balcony 211–215) + 2 similar plates (thin vs thick outer layer)", "context": "Don't mix them — you'll get called out"}, {"section": "Service", "q": "Which plates go on the balcony?", "a": "Crown / spiky plates", "context": "Seats 211–215 only"}, {"section": "Service", "q": "What goes in the copper dishes during opening?", "a": "Mussel shells", "context": "Opening checklist — fill before service"}, {"section": "Service", "q": "Where are decanters kept?", "a": "In the wine cabinets", "context": "Don't leave them out"}, {"section": "Details", "q": "What is manchego?", "a": "Spanish sheep's milk cheese — nutty, like a milder parmesan", "context": "In the Carpaccio"}, {"section": "Details", "q": "What is tzatziki?", "a": "Greek yogurt, cucumber, garlic, dill sauce", "context": "In Octopus a la Plancha, Lamb Chops, Zucchini Chips"}, {"section": "Details", "q": "What is aioli?", "a": "Garlic mayonnaise", "context": "In Carpaccio and Calamari Fritti"}, {"section": "Details", "q": "What is comté?", "a": "French aged cow's milk cheese — nutty with caramel notes", "context": "In Spring Salad"}, {"section": "Details", "q": "What is sumac?", "a": "Tangy, lemony Middle Eastern spice — dark red powder", "context": "In Fennel & Arugula and Lemon Roasted Chicken"}, {"section": "Details", "q": "What are endives?", "a": "Pale, crunchy, slightly bitter leaf — elongated like a small torpedo", "context": "In Spring Salad — not a Brussels sprout"}, {"section": "Details", "q": "What is swiss chard?", "a": "Leafy green related to beets — slightly earthy, mellow when cooked", "context": "In Lemon Roasted Chicken"}, {"section": "Details", "q": "What is truffle honey?", "a": "Honey infused with black truffle — earthy, aromatic sweetness", "context": "In Baked Feta — makes it indulgent"}, {"section": "Details", "q": "What is sicilian pistachio?", "a": "Richer and more intensely flavored than standard pistachios", "context": "In Beets & Goat Cheese and Spaghetti"}, {"section": "Details", "q": "What is a champagne vinaigrette?", "a": "Light dressing made with champagne vinegar — delicate and slightly sweet", "context": "In Beets & Goat Cheese"}, {"section": "Details", "q": "What is dry-aged beef?", "a": "Beef aged in a controlled environment — concentrates flavor, more tender", "context": "Prime Striploin is 12oz dry-aged"}, {"section": "Beverages", "q": "How many wines do we sell by the half bottle?", "a": "3", "context": "Chablis, Brunello, Brut Champagne"}, {"section": "Beverages", "q": "Which Chablis do we sell by the half bottle?", "a": "Dom. Hamelin Premier Cru 'Beauroy'", "context": "France · $75"}, {"section": "Beverages", "q": "How much is the Chablis half bottle?", "a": "$75", "context": "Dom. Hamelin Premier Cru 'Beauroy' — France"}, {"section": "Beverages", "q": "Which Brunello do we sell by the half bottle?", "a": "Altesino 2020", "context": "Montalcino, Tuscany · $100"}, {"section": "Beverages", "q": "How much is the Brunello half bottle?", "a": "$100", "context": "Altesino 2020 — Montalcino, Tuscany"}, {"section": "Beverages", "q": "Which Champagne do we sell by the half bottle?", "a": "Veuve Clicquot Brut NV", "context": "Champagne, France · $100"}, {"section": "Beverages", "q": "How much is the Champagne half bottle?", "a": "$100", "context": "Veuve Clicquot Brut NV — Champagne, France"}, {"section": "Beverages", "q": "Name all three half bottle wines with prices", "a": "Chablis Dom. Hamelin $75 · Brunello Altesino $100 · Veuve Clicquot $100", "context": "All 375ml — white, red, sparkling"}, {"section": "Beverages", "q": "What size are the half bottles?", "a": "375ml", "context": "vs standard 750ml full bottles"}, {"section": "Beverages", "q": "What are the two red wines by the glass?", "a": "Nero d'Avola (Italy) · Syrah (France)", "context": "Both $18–$19 · 5oz pours"}, {"section": "Beverages", "q": "How much is Nero d'Avola by the glass?", "a": "$18", "context": "Sicily, Italy · 5oz"}, {"section": "Beverages", "q": "How much is Syrah by the glass?", "a": "$19", "context": "France · 5oz"}, {"section": "Beverages", "q": "What are the two white wines by the glass?", "a": "Muscadet (France) · Chardonnay (Italy)", "context": "$18 and $19 · 5oz pours"}, {"section": "Beverages", "q": "How much is Muscadet by the glass?", "a": "$18", "context": "Loire Valley, France · 5oz"}, {"section": "Beverages", "q": "How much is Chardonnay by the glass?", "a": "$19", "context": "Italy · 5oz"}, {"section": "Beverages", "q": "What is the rosé by the glass?", "a": "French Rosé 2023", "context": "$17 · 5oz — cheapest wine by the glass"}, {"section": "Beverages", "q": "What is the sparkling wine by the glass?", "a": "Cava (Spain)", "context": "$19 · 5oz"}, {"section": "Beverages", "q": "How many wines do we offer by the glass?", "a": "6", "context": "Muscadet $18 · Chardonnay $19 · Nero d'Avola $18 · Syrah $19 · Rosé $17 · Cava $19"}, {"section": "Beverages", "q": "What is the cheapest wine by the glass?", "a": "Rosé — $17", "context": "French Rosé 2023 · 5oz"}, {"section": "Beverages", "q": "What is the most expensive wine by the glass?", "a": "$19 — Chardonnay, Syrah, or Cava", "context": "Three options tied at $19"}, {"section": "Beverages", "q": "What are the two beers we sell?", "a": "Peroni Lager (Italy) · Leffe Brune (Belgium)", "context": "Both 330ml · Both $12"}, {"section": "Beverages", "q": "What style is Leffe Brune?", "a": "Dark Abbey Ale", "context": "Belgium · 330ml · $12"}, {"section": "Beverages", "q": "Where is Peroni from?", "a": "Italy", "context": "Lager · 330ml · $12"}, {"section": "Beverages", "q": "How much are both beers?", "a": "$12 each", "context": "Peroni Lager and Leffe Brune · 330ml"}, {"section": "Beverages", "q": "Do we have a non-alcoholic beer?", "a": "Yes — Heineken 0.0", "context": "$9 · 355ml · only non-alcoholic beer"}, {"section": "Beverages", "q": "How many non-alcoholic beverages do we offer?", "a": "5", "context": "Peach Iced Tea, Raspberry Lemonade, Coke, Diet Coke/Gingerale, Heineken 0.0"}, {"section": "Beverages", "q": "What non-alcoholic options do we have?", "a": "Peach Iced Tea · Raspberry Lemonade · Coke · Diet Coke/Gingerale · Heineken 0.0", "context": "$6–$10 range · 355ml"}, {"section": "Beverages", "q": "What is the most expensive non-alcoholic drink?", "a": "Peach Iced Tea or Raspberry Lemonade — $10", "context": "Both 355ml"}, {"section": "Beverages", "q": "What is the cheapest non-alcoholic drink?", "a": "Diet Coke or Gingerale — $6", "context": "355ml"}, {"section": "Beverages", "q": "How is the Coke served?", "a": "Classic glass bottle, imported", "context": "$7.50 · 355ml"}, {"section": "Beverages", "q": "What is the price of Heineken 0.0?", "a": "$9", "context": "355ml · only non-alcoholic beer on the menu"}, {"section": "Cocktails", "q": "How many cocktails do we have?", "a": "3 signature cocktails", "context": "Plus traditional cocktails available on request"}, {"section": "Cocktails", "q": "What is the most expensive cocktail?", "a": "Pomegranate Margarita — $21", "context": "Tequila, Cointreau, pomegranate · 3oz"}, {"section": "Cocktails", "q": "What is the cheapest cocktail?", "a": "Otto's Negroni — $18", "context": "Otto's vermouth, Campari, gin · 3oz"}, {"section": "Cocktails", "q": "Which cocktail uses prosecco?", "a": "Athenian Spritz", "context": "Otto's vermouth, prosecco, tonic · $19"}, {"section": "Cocktails", "q": "Which cocktail uses Cointreau?", "a": "Pomegranate Margarita", "context": "Tequila, Cointreau, pomegranate · $21"}, {"section": "Cocktails", "q": "What is Cointreau?", "a": "Orange-flavoured liqueur", "context": "In the Pomegranate Margarita"}, {"section": "Cocktails", "q": "Can guests order cocktails not on the menu?", "a": "Yes — traditional cocktails available", "context": "Margarita, Espresso Martini etc — check with bar"}, {"section": "Cocktails", "q": "What size are the cocktails?", "a": "3oz", "context": "All three signature cocktails"}, {"section": "Beverages", "q": "What is the most expensive bottle on the wine list?", "a": "Dom Pérignon 2015 — $645", "context": "Brut Vintage Champagne · France"}, {"section": "Beverages", "q": "What is the most expensive red on the wine list?", "a": "Super Tuscan — Antinori 'Tignanello' 2022 · $410", "context": "Chianti Classico, Tuscany"}, {"section": "Beverages", "q": "What is the most affordable bottle of red?", "a": "Rioja Reserva — Palacios de Camino Real · $80", "context": "Spain · 2019"}, {"section": "Beverages", "q": "What is the most affordable bottle of white?", "a": "Malvazija — Coronica · $78", "context": "Croatia · 2023"}, {"section": "Beverages", "q": "What sparkling wines do we offer by the bottle?", "a": "Prosecco, Rosé, Brut Champagne, Rosé Champagne, Blanc de Noirs, Brut Vintage", "context": "6 options — $85 to $645"}, {"section": "Beverages", "q": "What is the entry-level Champagne?", "a": "Veuve Clicquot Brut NV — $195", "context": "Most recognizable Champagne on the list"}, {"section": "Beverages", "q": "Which wine region has the most bottles on our list?", "a": "Tuscany, Italy", "context": "Chianti, Brunello x3, Bolgheri, Super Tuscans — 7 bottles"}, {"section": "Beverages", "q": "Do we have any Croatian wine?", "a": "Yes — Malvazija, Coronica 2023", "context": "From Istria · $78 · white wine"}, {"section": "Beverages", "q": "What is the only Californian wine on the list?", "a": "Pinot Noir — Kosta Browne, Santa Rita Hills 2021", "context": "$375 · only New World red"}];
-const COCKTAILS = [{"name": "Negroni", "category": "Stirred", "spirit": "Gin", "glass": "Rocks glass", "garnish": "Orange peel", "ingredients": ["30ml gin", "30ml Campari", "30ml sweet vermouth"], "method": "Stir with ice 30 seconds. Strain over large ice cube.", "ratios": "1:1:1", "guest_line": "Bitter, complex and perfectly balanced — the ultimate aperitivo.", "note": "Created in Florence 1919. Campari gives the red colour and bitter backbone."}, {"name": "Espresso Martini", "category": "Shaken", "spirit": "Vodka", "glass": "Martini glass", "garnish": "3 coffee beans", "ingredients": ["50ml vodka", "30ml fresh espresso", "20ml coffee liqueur (Kahlúa)", "5ml sugar syrup"], "method": "Shake hard with ice. Double strain into chilled glass.", "ratios": "5:3:2", "guest_line": "The ultimate pick-me-up — bold coffee with a silky, frothy finish.", "note": "Shake very hard for the foam. Use fresh hot espresso for best crema."}, {"name": "Aperol Spritz", "category": "Sparkling", "spirit": "Aperol", "glass": "Large wine glass", "garnish": "Orange slice", "ingredients": ["90ml Prosecco", "60ml Aperol", "splash of soda water"], "method": "Build over ice. Add Prosecco first, then Aperol, then soda.", "ratios": "3:2:1", "guest_line": "Light, bittersweet and refreshing — Italy's favourite afternoon drink.", "note": "Always build in the glass — never shake or stir vigorously."}, {"name": "Gin & Tonic", "category": "Highball", "spirit": "Gin", "glass": "Highball or copa glass", "garnish": "Lime wedge or cucumber", "ingredients": ["50ml gin", "150ml tonic water"], "method": "Build over ice. Add gin, then tonic slowly. Gentle stir.", "ratios": "1:3", "guest_line": "Crisp, botanical and endlessly refreshing — the gin showcases best over lots of ice.", "note": "Copa (balloon) glass keeps botanicals fragrant. Premium tonic makes a big difference."}, {"name": "Old Fashioned", "category": "Stirred", "spirit": "Whiskey", "glass": "Rocks glass", "garnish": "Orange peel + cherry", "ingredients": ["60ml bourbon or rye", "1 sugar cube (or 5ml sugar syrup)", "2–3 dashes Angostura bitters", "dash of water"], "method": "Muddle sugar and bitters. Add whiskey and ice. Stir 30 seconds.", "ratios": "Spirit forward", "guest_line": "The original cocktail — whiskey-forward, slightly sweet with aromatic bitters.", "note": "One of the oldest cocktails on record. Never add soda — that's a Wisconsin Old Fashioned."}, {"name": "Margarita", "category": "Shaken", "spirit": "Tequila", "glass": "Coupe or rocks glass", "garnish": "Salt rim, lime wedge", "ingredients": ["50ml tequila blanco", "25ml Cointreau", "25ml fresh lime juice"], "method": "Shake hard with ice. Strain into salted glass.", "ratios": "2:1:1", "guest_line": "Tangy, citrusy and crisp — the perfect balance of sweet, sour and salt.", "note": "Always use fresh lime. Blanco tequila is classic; reposado adds richness."}, {"name": "Mojito", "category": "Built", "spirit": "Rum", "glass": "Highball glass", "garnish": "Mint sprig, lime wheel", "ingredients": ["50ml white rum", "25ml fresh lime juice", "15ml sugar syrup", "6–8 fresh mint leaves", "soda water"], "method": "Muddle mint gently with lime and sugar. Add rum and ice. Top with soda.", "ratios": "2:1:0.5", "guest_line": "Fresh, minty and lively — Cuba's most famous cocktail.", "note": "Don't over-muddle the mint — bruise gently to release oils without bitterness."}, {"name": "Daiquiri", "category": "Shaken", "spirit": "Rum", "glass": "Coupe glass", "garnish": "Lime wheel", "ingredients": ["60ml white rum", "25ml fresh lime juice", "15ml sugar syrup"], "method": "Shake hard with ice. Double strain into chilled coupe.", "ratios": "4:2:1", "guest_line": "Simple, elegant and perfectly sour — one of the great classic cocktails.", "note": "The best test of a bartender's technique. Balance is everything — too sweet or too sour ruins it."}, {"name": "Cosmopolitan", "category": "Shaken", "spirit": "Vodka", "glass": "Martini glass", "garnish": "Flamed orange peel", "ingredients": ["40ml citrus vodka", "15ml Cointreau", "30ml cranberry juice", "15ml fresh lime juice"], "method": "Shake with ice. Double strain into chilled glass.", "ratios": "4:1.5:3:1.5", "guest_line": "Elegant and slightly tart — fruity without being sweet, with a beautiful pink hue.", "note": "Popularised by Sex and the City. The cranberry is for colour and tartness, not sweetness."}, {"name": "Manhattan", "category": "Stirred", "spirit": "Whiskey", "glass": "Coupe or martini glass", "garnish": "Maraschino cherry", "ingredients": ["60ml rye or bourbon", "30ml sweet vermouth", "2 dashes Angostura bitters"], "method": "Stir with ice 30 seconds. Strain into chilled glass.", "ratios": "2:1", "guest_line": "Rich, smooth and sophisticated — the ultimate whiskey cocktail for vermouth lovers.", "note": "Rye gives spice; bourbon gives sweetness. Always stir — never shake."}, {"name": "Whiskey Sour", "category": "Shaken", "spirit": "Whiskey", "glass": "Rocks or coupe glass", "garnish": "Orange slice, cherry", "ingredients": ["50ml bourbon", "25ml fresh lemon juice", "15ml sugar syrup", "1 egg white (optional)"], "method": "Dry shake first (no ice) if using egg white. Add ice and shake again. Strain.", "ratios": "2:1:0.5", "guest_line": "Smooth, tangy and slightly creamy — the egg white adds a silky texture without flavour.", "note": "The dry shake emulsifies the egg white for a perfect foam. Can omit egg white for a sharper sour."}, {"name": "Dry Martini", "category": "Stirred", "spirit": "Gin", "glass": "Martini glass", "garnish": "Lemon twist or olive", "ingredients": ["75ml gin", "15ml dry vermouth"], "method": "Stir with ice 30–40 seconds. Strain into chilled glass.", "ratios": "5:1", "guest_line": "The most iconic cocktail ever made — cold, crisp and completely uncompromising.", "note": "The drier the Martini, the less vermouth. 'Dirty' = olive brine added. 'Gibson' = cocktail onion garnish."}, {"name": "French 75", "category": "Shaken", "spirit": "Gin", "glass": "Champagne flute", "garnish": "Lemon twist", "ingredients": ["30ml gin", "15ml fresh lemon juice", "10ml sugar syrup", "60ml Champagne"], "method": "Shake gin, lemon and sugar with ice. Strain into flute. Top with Champagne.", "ratios": "2:1:0.5 + Champagne", "guest_line": "Celebratory and elegant — gin sour lifted with Champagne bubbles.", "note": "Named after a French 75mm artillery gun for its kick. Can use Cognac instead of gin for the French version."}, {"name": "Dark & Stormy", "category": "Highball", "spirit": "Rum", "glass": "Highball glass", "garnish": "Lime wedge, candied ginger", "ingredients": ["60ml dark rum (Gosling's Black Seal)", "120ml ginger beer", "15ml fresh lime juice"], "method": "Build over ice. Add lime, then rum, then ginger beer.", "ratios": "1:2", "guest_line": "Bold, spicy and warming — dark rum and ginger beer is one of the great combinations.", "note": "Technically a trademark of Gosling's — only their rum makes it a 'Dark & Stormy'. Moscow Mule is the vodka equivalent."}, {"name": "Penicillin", "category": "Shaken", "spirit": "Whisky", "glass": "Rocks glass", "garnish": "Candied ginger", "ingredients": ["50ml blended Scotch", "10ml Islay Scotch (float)", "25ml fresh lemon juice", "20ml honey-ginger syrup"], "method": "Shake blended Scotch, lemon and syrup with ice. Strain over ice. Float Islay Scotch.", "ratios": "2:1:0.75", "guest_line": "Smoky, sweet and medicinal — a modern classic invented in New York in 2005.", "note": "The Islay float (Laphroaig or Ardbeg) gives the smoke on the nose. Don't stir — let it float."}, {"name": "Paloma", "category": "Highball", "spirit": "Tequila", "glass": "Highball glass", "garnish": "Salt rim, grapefruit wedge", "ingredients": ["50ml tequila blanco", "100ml grapefruit soda (Jarritos or Fever-Tree)", "15ml fresh lime juice", "pinch of salt"], "method": "Build over ice. Salt rim optional. Add lime and salt, then tequila, then soda.", "ratios": "1:2", "guest_line": "Mexico's most popular cocktail — more popular than the Margarita locally. Tart, bitter and refreshing.", "note": "Paloma means 'dove' in Spanish. Grapefruit soda is key — fresh grapefruit juice works but changes the character."}, {"name": "Sidecar", "category": "Shaken", "spirit": "Cognac", "glass": "Coupe glass", "garnish": "Sugar rim, orange peel", "ingredients": ["50ml Cognac", "25ml Cointreau", "25ml fresh lemon juice"], "method": "Shake with ice. Strain into sugar-rimmed coupe.", "ratios": "2:1:1", "guest_line": "Elegant, citrusy and complex — Cognac brings warmth and depth to a classic sour template.", "note": "A 1920s Parisian classic. The sugar rim balances the sour. Similar structure to the Margarita but with Cognac."}, {"name": "Bramble", "category": "Built", "spirit": "Gin", "glass": "Rocks glass", "garnish": "Blackberries, lemon slice", "ingredients": ["50ml gin", "25ml fresh lemon juice", "15ml sugar syrup", "15ml crème de mûre (blackberry liqueur)"], "method": "Shake gin, lemon and sugar. Pour over crushed ice. Drizzle crème de mûre over top.", "ratios": "2:1:0.5", "guest_line": "A modern British classic — fruity, tangy and visually stunning with the purple drizzle.", "note": "Invented by Dick Bradsell in London 1984. The crème de mûre is drizzled on top, not mixed in."}, {"name": "Tom Collins", "category": "Built", "spirit": "Gin", "glass": "Collins glass", "garnish": "Lemon slice, cherry", "ingredients": ["50ml gin", "25ml fresh lemon juice", "15ml sugar syrup", "soda water"], "method": "Shake gin, lemon and sugar. Strain over ice. Top with soda.", "ratios": "2:1:0.5 + soda", "guest_line": "Light, refreshing and easy-drinking — a long gin sour topped with bubbles.", "note": "The original 'Collins' dates to 1876. John Collins uses genever; Tom Collins uses London Dry gin."}, {"name": "Clover Club", "category": "Shaken", "spirit": "Gin", "glass": "Coupe glass", "garnish": "Fresh raspberries", "ingredients": ["50ml gin", "20ml fresh lemon juice", "15ml sugar syrup", "6 fresh raspberries", "1 egg white"], "method": "Dry shake first. Add ice and shake again. Double strain.", "ratios": "2:0.75:0.5", "guest_line": "Fruity, silky and beautifully pink — a pre-Prohibition classic that's back in fashion.", "note": "One of the oldest cocktails in the book — dates to 1880s Philadelphia. The egg white gives a luscious texture."}, {"name": "Porn Star Martini", "category": "Shaken", "spirit": "Vodka", "glass": "Martini glass + shot glass", "garnish": "Passion fruit half, vanilla pod", "ingredients": ["50ml vanilla vodka", "25ml Passoa", "25ml fresh passion fruit", "15ml vanilla syrup", "side shot of Prosecco"], "method": "Shake all with ice. Double strain. Serve with Prosecco shot on the side.", "ratios": "2:1:1", "guest_line": "Fun, fruity and indulgent — one of the UK's best-selling cocktails. The Prosecco chaser is part of the experience.", "note": "Invented by Douglas Ankrah in London 2002. Not a real Martini — it's a vodka sour with passion fruit."}, {"name": "Kir Royale", "category": "Sparkling", "spirit": "Champagne", "glass": "Champagne flute", "garnish": "Blackcurrant or raspberry", "ingredients": ["120ml Champagne or Crémant", "15ml crème de cassis (blackcurrant liqueur)"], "method": "Add crème de cassis to flute first. Top slowly with Champagne.", "ratios": "8:1", "guest_line": "Elegant and celebratory — a French aperitif with a gorgeous deep red colour.", "note": "Kir uses still white wine; Kir Royale uses sparkling. Named after Mayor Félix Kir of Dijon."}, {"name": "Bellini", "category": "Sparkling", "spirit": "Prosecco", "glass": "Champagne flute", "garnish": "None", "ingredients": ["100ml Prosecco", "50ml white peach purée"], "method": "Add peach purée first. Top slowly with Prosecco. Gentle stir.", "ratios": "2:1", "guest_line": "Delicate, peachy and luxurious — invented at Harry's Bar Venice in 1948.", "note": "Only white peaches are authentic. Yellow peach or mango is a variation. Never shake — just layer."}];
-const COCKTAIL_QUIZ = [{"section": "Stirred", "q": "What are the ingredients in a Negroni?", "a": "30ml gin / 30ml Campari / 30ml sweet vermouth", "context": "Gin · Stirred"}, {"section": "Stirred", "q": "What glass is a Negroni served in?", "a": "Rocks glass", "context": "Gin"}, {"section": "Stirred", "q": "What is the garnish for a Negroni?", "a": "Orange peel", "context": "Gin · Stirred"}, {"section": "Stirred", "q": "What method is used for a Negroni?", "a": "Stir with ice 30 seconds", "context": "Gin"}, {"section": "Stirred", "q": "What is the ratio for a Negroni?", "a": "1:1:1", "context": "Gin · Stirred"}, {"section": "Shaken", "q": "What are the ingredients in a Espresso Martini?", "a": "50ml vodka / 30ml fresh espresso / 20ml coffee liqueur (Kahlúa) / 5ml sugar syrup", "context": "Vodka · Shaken"}, {"section": "Shaken", "q": "What glass is a Espresso Martini served in?", "a": "Martini glass", "context": "Vodka"}, {"section": "Shaken", "q": "What is the garnish for a Espresso Martini?", "a": "3 coffee beans", "context": "Vodka · Shaken"}, {"section": "Shaken", "q": "What method is used for a Espresso Martini?", "a": "Shake hard with ice", "context": "Vodka"}, {"section": "Shaken", "q": "What is the ratio for a Espresso Martini?", "a": "5:3:2", "context": "Vodka · Shaken"}, {"section": "Sparkling", "q": "What are the ingredients in a Aperol Spritz?", "a": "90ml Prosecco / 60ml Aperol / splash of soda water", "context": "Aperol · Sparkling"}, {"section": "Sparkling", "q": "What glass is a Aperol Spritz served in?", "a": "Large wine glass", "context": "Aperol"}, {"section": "Sparkling", "q": "What is the garnish for a Aperol Spritz?", "a": "Orange slice", "context": "Aperol · Sparkling"}, {"section": "Sparkling", "q": "What method is used for a Aperol Spritz?", "a": "Build over ice", "context": "Aperol"}, {"section": "Sparkling", "q": "What is the ratio for a Aperol Spritz?", "a": "3:2:1", "context": "Aperol · Sparkling"}, {"section": "Highball", "q": "What are the ingredients in a Gin & Tonic?", "a": "50ml gin / 150ml tonic water", "context": "Gin · Highball"}, {"section": "Highball", "q": "What glass is a Gin & Tonic served in?", "a": "Highball or copa glass", "context": "Gin"}, {"section": "Highball", "q": "What is the garnish for a Gin & Tonic?", "a": "Lime wedge or cucumber", "context": "Gin · Highball"}, {"section": "Highball", "q": "What method is used for a Gin & Tonic?", "a": "Build over ice", "context": "Gin"}, {"section": "Highball", "q": "What is the ratio for a Gin & Tonic?", "a": "1:3", "context": "Gin · Highball"}, {"section": "Stirred", "q": "What are the ingredients in a Old Fashioned?", "a": "60ml bourbon or rye / 1 sugar cube (or 5ml sugar syrup) / 2–3 dashes Angostura bitters / dash of water", "context": "Whiskey · Stirred"}, {"section": "Stirred", "q": "What glass is a Old Fashioned served in?", "a": "Rocks glass", "context": "Whiskey"}, {"section": "Stirred", "q": "What is the garnish for a Old Fashioned?", "a": "Orange peel + cherry", "context": "Whiskey · Stirred"}, {"section": "Stirred", "q": "What method is used for a Old Fashioned?", "a": "Muddle sugar and bitters", "context": "Whiskey"}, {"section": "Stirred", "q": "What is the ratio for a Old Fashioned?", "a": "Spirit forward", "context": "Whiskey · Stirred"}, {"section": "Shaken", "q": "What are the ingredients in a Margarita?", "a": "50ml tequila blanco / 25ml Cointreau / 25ml fresh lime juice", "context": "Tequila · Shaken"}, {"section": "Shaken", "q": "What glass is a Margarita served in?", "a": "Coupe or rocks glass", "context": "Tequila"}, {"section": "Shaken", "q": "What is the garnish for a Margarita?", "a": "Salt rim, lime wedge", "context": "Tequila · Shaken"}, {"section": "Shaken", "q": "What method is used for a Margarita?", "a": "Shake hard with ice", "context": "Tequila"}, {"section": "Shaken", "q": "What is the ratio for a Margarita?", "a": "2:1:1", "context": "Tequila · Shaken"}, {"section": "Built", "q": "What are the ingredients in a Mojito?", "a": "50ml white rum / 25ml fresh lime juice / 15ml sugar syrup / 6–8 fresh mint leaves / soda water", "context": "Rum · Built"}, {"section": "Built", "q": "What glass is a Mojito served in?", "a": "Highball glass", "context": "Rum"}, {"section": "Built", "q": "What is the garnish for a Mojito?", "a": "Mint sprig, lime wheel", "context": "Rum · Built"}, {"section": "Built", "q": "What method is used for a Mojito?", "a": "Muddle mint gently with lime and sugar", "context": "Rum"}, {"section": "Built", "q": "What is the ratio for a Mojito?", "a": "2:1:0.5", "context": "Rum · Built"}, {"section": "Shaken", "q": "What are the ingredients in a Daiquiri?", "a": "60ml white rum / 25ml fresh lime juice / 15ml sugar syrup", "context": "Rum · Shaken"}, {"section": "Shaken", "q": "What glass is a Daiquiri served in?", "a": "Coupe glass", "context": "Rum"}, {"section": "Shaken", "q": "What is the garnish for a Daiquiri?", "a": "Lime wheel", "context": "Rum · Shaken"}, {"section": "Shaken", "q": "What method is used for a Daiquiri?", "a": "Shake hard with ice", "context": "Rum"}, {"section": "Shaken", "q": "What is the ratio for a Daiquiri?", "a": "4:2:1", "context": "Rum · Shaken"}, {"section": "Shaken", "q": "What are the ingredients in a Cosmopolitan?", "a": "40ml citrus vodka / 15ml Cointreau / 30ml cranberry juice / 15ml fresh lime juice", "context": "Vodka · Shaken"}, {"section": "Shaken", "q": "What glass is a Cosmopolitan served in?", "a": "Martini glass", "context": "Vodka"}, {"section": "Shaken", "q": "What is the garnish for a Cosmopolitan?", "a": "Flamed orange peel", "context": "Vodka · Shaken"}, {"section": "Shaken", "q": "What method is used for a Cosmopolitan?", "a": "Shake with ice", "context": "Vodka"}, {"section": "Shaken", "q": "What is the ratio for a Cosmopolitan?", "a": "4:1.5:3:1.5", "context": "Vodka · Shaken"}, {"section": "Stirred", "q": "What are the ingredients in a Manhattan?", "a": "60ml rye or bourbon / 30ml sweet vermouth / 2 dashes Angostura bitters", "context": "Whiskey · Stirred"}, {"section": "Stirred", "q": "What glass is a Manhattan served in?", "a": "Coupe or martini glass", "context": "Whiskey"}, {"section": "Stirred", "q": "What is the garnish for a Manhattan?", "a": "Maraschino cherry", "context": "Whiskey · Stirred"}, {"section": "Stirred", "q": "What method is used for a Manhattan?", "a": "Stir with ice 30 seconds", "context": "Whiskey"}, {"section": "Stirred", "q": "What is the ratio for a Manhattan?", "a": "2:1", "context": "Whiskey · Stirred"}, {"section": "Shaken", "q": "What are the ingredients in a Whiskey Sour?", "a": "50ml bourbon / 25ml fresh lemon juice / 15ml sugar syrup / 1 egg white (optional)", "context": "Whiskey · Shaken"}, {"section": "Shaken", "q": "What glass is a Whiskey Sour served in?", "a": "Rocks or coupe glass", "context": "Whiskey"}, {"section": "Shaken", "q": "What is the garnish for a Whiskey Sour?", "a": "Orange slice, cherry", "context": "Whiskey · Shaken"}, {"section": "Shaken", "q": "What method is used for a Whiskey Sour?", "a": "Dry shake first (no ice) if using egg white", "context": "Whiskey"}, {"section": "Shaken", "q": "What is the ratio for a Whiskey Sour?", "a": "2:1:0.5", "context": "Whiskey · Shaken"}, {"section": "Stirred", "q": "What are the ingredients in a Dry Martini?", "a": "75ml gin / 15ml dry vermouth", "context": "Gin · Stirred"}, {"section": "Stirred", "q": "What glass is a Dry Martini served in?", "a": "Martini glass", "context": "Gin"}, {"section": "Stirred", "q": "What is the garnish for a Dry Martini?", "a": "Lemon twist or olive", "context": "Gin · Stirred"}, {"section": "Stirred", "q": "What method is used for a Dry Martini?", "a": "Stir with ice 30–40 seconds", "context": "Gin"}, {"section": "Stirred", "q": "What is the ratio for a Dry Martini?", "a": "5:1", "context": "Gin · Stirred"}, {"section": "Shaken", "q": "What are the ingredients in a French 75?", "a": "30ml gin / 15ml fresh lemon juice / 10ml sugar syrup / 60ml Champagne", "context": "Gin · Shaken"}, {"section": "Shaken", "q": "What glass is a French 75 served in?", "a": "Champagne flute", "context": "Gin"}, {"section": "Shaken", "q": "What is the garnish for a French 75?", "a": "Lemon twist", "context": "Gin · Shaken"}, {"section": "Shaken", "q": "What method is used for a French 75?", "a": "Shake gin, lemon and sugar with ice", "context": "Gin"}, {"section": "Shaken", "q": "What is the ratio for a French 75?", "a": "2:1:0.5 + Champagne", "context": "Gin · Shaken"}, {"section": "Highball", "q": "What are the ingredients in a Dark & Stormy?", "a": "60ml dark rum (Gosling's Black Seal) / 120ml ginger beer / 15ml fresh lime juice", "context": "Rum · Highball"}, {"section": "Highball", "q": "What glass is a Dark & Stormy served in?", "a": "Highball glass", "context": "Rum"}, {"section": "Highball", "q": "What is the garnish for a Dark & Stormy?", "a": "Lime wedge, candied ginger", "context": "Rum · Highball"}, {"section": "Highball", "q": "What method is used for a Dark & Stormy?", "a": "Build over ice", "context": "Rum"}, {"section": "Highball", "q": "What is the ratio for a Dark & Stormy?", "a": "1:2", "context": "Rum · Highball"}, {"section": "Shaken", "q": "What are the ingredients in a Penicillin?", "a": "50ml blended Scotch / 10ml Islay Scotch (float) / 25ml fresh lemon juice / 20ml honey-ginger syrup", "context": "Whisky · Shaken"}, {"section": "Shaken", "q": "What glass is a Penicillin served in?", "a": "Rocks glass", "context": "Whisky"}, {"section": "Shaken", "q": "What is the garnish for a Penicillin?", "a": "Candied ginger", "context": "Whisky · Shaken"}, {"section": "Shaken", "q": "What method is used for a Penicillin?", "a": "Shake blended Scotch, lemon and syrup with ice", "context": "Whisky"}, {"section": "Shaken", "q": "What is the ratio for a Penicillin?", "a": "2:1:0.75", "context": "Whisky · Shaken"}, {"section": "Highball", "q": "What are the ingredients in a Paloma?", "a": "50ml tequila blanco / 100ml grapefruit soda (Jarritos or Fever-Tree) / 15ml fresh lime juice / pinch of salt", "context": "Tequila · Highball"}, {"section": "Highball", "q": "What glass is a Paloma served in?", "a": "Highball glass", "context": "Tequila"}, {"section": "Highball", "q": "What is the garnish for a Paloma?", "a": "Salt rim, grapefruit wedge", "context": "Tequila · Highball"}, {"section": "Highball", "q": "What method is used for a Paloma?", "a": "Build over ice", "context": "Tequila"}, {"section": "Highball", "q": "What is the ratio for a Paloma?", "a": "1:2", "context": "Tequila · Highball"}, {"section": "Shaken", "q": "What are the ingredients in a Sidecar?", "a": "50ml Cognac / 25ml Cointreau / 25ml fresh lemon juice", "context": "Cognac · Shaken"}, {"section": "Shaken", "q": "What glass is a Sidecar served in?", "a": "Coupe glass", "context": "Cognac"}, {"section": "Shaken", "q": "What is the garnish for a Sidecar?", "a": "Sugar rim, orange peel", "context": "Cognac · Shaken"}, {"section": "Shaken", "q": "What method is used for a Sidecar?", "a": "Shake with ice", "context": "Cognac"}, {"section": "Shaken", "q": "What is the ratio for a Sidecar?", "a": "2:1:1", "context": "Cognac · Shaken"}, {"section": "Built", "q": "What are the ingredients in a Bramble?", "a": "50ml gin / 25ml fresh lemon juice / 15ml sugar syrup / 15ml crème de mûre (blackberry liqueur)", "context": "Gin · Built"}, {"section": "Built", "q": "What glass is a Bramble served in?", "a": "Rocks glass", "context": "Gin"}, {"section": "Built", "q": "What is the garnish for a Bramble?", "a": "Blackberries, lemon slice", "context": "Gin · Built"}, {"section": "Built", "q": "What method is used for a Bramble?", "a": "Shake gin, lemon and sugar", "context": "Gin"}, {"section": "Built", "q": "What is the ratio for a Bramble?", "a": "2:1:0.5", "context": "Gin · Built"}, {"section": "Built", "q": "What are the ingredients in a Tom Collins?", "a": "50ml gin / 25ml fresh lemon juice / 15ml sugar syrup / soda water", "context": "Gin · Built"}, {"section": "Built", "q": "What glass is a Tom Collins served in?", "a": "Collins glass", "context": "Gin"}, {"section": "Built", "q": "What is the garnish for a Tom Collins?", "a": "Lemon slice, cherry", "context": "Gin · Built"}, {"section": "Built", "q": "What method is used for a Tom Collins?", "a": "Shake gin, lemon and sugar", "context": "Gin"}, {"section": "Built", "q": "What is the ratio for a Tom Collins?", "a": "2:1:0.5 + soda", "context": "Gin · Built"}, {"section": "Shaken", "q": "What are the ingredients in a Clover Club?", "a": "50ml gin / 20ml fresh lemon juice / 15ml sugar syrup / 6 fresh raspberries / 1 egg white", "context": "Gin · Shaken"}, {"section": "Shaken", "q": "What glass is a Clover Club served in?", "a": "Coupe glass", "context": "Gin"}, {"section": "Shaken", "q": "What is the garnish for a Clover Club?", "a": "Fresh raspberries", "context": "Gin · Shaken"}, {"section": "Shaken", "q": "What method is used for a Clover Club?", "a": "Dry shake first", "context": "Gin"}, {"section": "Shaken", "q": "What is the ratio for a Clover Club?", "a": "2:0.75:0.5", "context": "Gin · Shaken"}, {"section": "Shaken", "q": "What are the ingredients in a Porn Star Martini?", "a": "50ml vanilla vodka / 25ml Passoa / 25ml fresh passion fruit / 15ml vanilla syrup / side shot of Prosecco", "context": "Vodka · Shaken"}, {"section": "Shaken", "q": "What glass is a Porn Star Martini served in?", "a": "Martini glass + shot glass", "context": "Vodka"}, {"section": "Shaken", "q": "What is the garnish for a Porn Star Martini?", "a": "Passion fruit half, vanilla pod", "context": "Vodka · Shaken"}, {"section": "Shaken", "q": "What method is used for a Porn Star Martini?", "a": "Shake all with ice", "context": "Vodka"}, {"section": "Shaken", "q": "What is the ratio for a Porn Star Martini?", "a": "2:1:1", "context": "Vodka · Shaken"}, {"section": "Sparkling", "q": "What are the ingredients in a Kir Royale?", "a": "120ml Champagne or Crémant / 15ml crème de cassis (blackcurrant liqueur)", "context": "Champagne · Sparkling"}, {"section": "Sparkling", "q": "What glass is a Kir Royale served in?", "a": "Champagne flute", "context": "Champagne"}, {"section": "Sparkling", "q": "What is the garnish for a Kir Royale?", "a": "Blackcurrant or raspberry", "context": "Champagne · Sparkling"}, {"section": "Sparkling", "q": "What method is used for a Kir Royale?", "a": "Add crème de cassis to flute first", "context": "Champagne"}, {"section": "Sparkling", "q": "What is the ratio for a Kir Royale?", "a": "8:1", "context": "Champagne · Sparkling"}, {"section": "Sparkling", "q": "What are the ingredients in a Bellini?", "a": "100ml Prosecco / 50ml white peach purée", "context": "Prosecco · Sparkling"}, {"section": "Sparkling", "q": "What glass is a Bellini served in?", "a": "Champagne flute", "context": "Prosecco"}, {"section": "Sparkling", "q": "What is the garnish for a Bellini?", "a": "None", "context": "Prosecco · Sparkling"}, {"section": "Sparkling", "q": "What method is used for a Bellini?", "a": "Add peach purée first", "context": "Prosecco"}, {"section": "Sparkling", "q": "What is the ratio for a Bellini?", "a": "2:1", "context": "Prosecco · Sparkling"}];
+const COCKTAILS = [
+  {
+    "name": "Negroni",
+    "category": "Stirred",
+    "spirit": "Gin",
+    "glass": "Rocks glass",
+    "garnish": "Orange peel",
+    "ingredients": [
+      "1oz gin",
+      "1oz Campari",
+      "1oz sweet vermouth"
+    ],
+    "method": "Stir with ice 30 seconds. Strain over large ice cube.",
+    "ratios": "1:1:1",
+    "guest_line": "Bitter, complex and perfectly balanced — the ultimate aperitivo.",
+    "note": "Created in Florence 1919. Campari gives the red colour and bitter backbone."
+  },
+  {
+    "name": "Espresso Martini",
+    "category": "Shaken",
+    "spirit": "Vodka",
+    "glass": "Martini glass",
+    "garnish": "3 coffee beans",
+    "ingredients": [
+      "1¾oz vodka",
+      "1oz fresh espresso",
+      "¾oz coffee liqueur (Kahlúa)",
+      "¼oz sugar syrup"
+    ],
+    "method": "Shake hard with ice. Double strain into chilled glass.",
+    "ratios": "5:3:2",
+    "guest_line": "The ultimate pick-me-up — bold coffee with a silky, frothy finish.",
+    "note": "Shake very hard for the foam. Use fresh hot espresso for best crema."
+  },
+  {
+    "name": "Aperol Spritz",
+    "category": "Sparkling",
+    "spirit": "Aperol",
+    "glass": "Large wine glass",
+    "garnish": "Orange slice",
+    "ingredients": [
+      "3oz Prosecco",
+      "2oz Aperol",
+      "splash of soda water"
+    ],
+    "method": "Build over ice. Add Prosecco first, then Aperol, then soda.",
+    "ratios": "3:2:1",
+    "guest_line": "Light, bittersweet and refreshing — Italy's favourite afternoon drink.",
+    "note": "Always build in the glass — never shake or stir vigorously."
+  },
+  {
+    "name": "Gin & Tonic",
+    "category": "Highball",
+    "spirit": "Gin",
+    "glass": "Highball or copa glass",
+    "garnish": "Lime wedge or cucumber",
+    "ingredients": [
+      "1¾oz gin",
+      "5oz tonic water"
+    ],
+    "method": "Build over ice. Add gin, then tonic slowly. Gentle stir.",
+    "ratios": "1:3",
+    "guest_line": "Crisp, botanical and endlessly refreshing — the gin showcases best over lots of ice.",
+    "note": "Copa (balloon) glass keeps botanicals fragrant. Premium tonic makes a big difference."
+  },
+  {
+    "name": "Old Fashioned",
+    "category": "Stirred",
+    "spirit": "Whiskey",
+    "glass": "Rocks glass",
+    "garnish": "Orange peel + cherry",
+    "ingredients": [
+      "2oz bourbon or rye",
+      "1 sugar cube (or ¼oz sugar syrup)",
+      "2–3 dashes Angostura bitters",
+      "dash of water"
+    ],
+    "method": "Muddle sugar and bitters. Add whiskey and ice. Stir 30 seconds.",
+    "ratios": "Spirit forward",
+    "guest_line": "The original cocktail — whiskey-forward, slightly sweet with aromatic bitters.",
+    "note": "One of the oldest cocktails on record. Never add soda — that's a Wisconsin Old Fashioned."
+  },
+  {
+    "name": "Margarita",
+    "category": "Shaken",
+    "spirit": "Tequila",
+    "glass": "Coupe or rocks glass",
+    "garnish": "Salt rim, lime wedge",
+    "ingredients": [
+      "1¾oz tequila blanco",
+      "¾oz Cointreau",
+      "¾oz fresh lime juice"
+    ],
+    "method": "Shake hard with ice. Strain into salted glass.",
+    "ratios": "2:1:1",
+    "guest_line": "Tangy, citrusy and crisp — the perfect balance of sweet, sour and salt.",
+    "note": "Always use fresh lime. Blanco tequila is classic; reposado adds richness."
+  },
+  {
+    "name": "Mojito",
+    "category": "Built",
+    "spirit": "Rum",
+    "glass": "Highball glass",
+    "garnish": "Mint sprig, lime wheel",
+    "ingredients": [
+      "1¾oz white rum",
+      "¾oz fresh lime juice",
+      "½oz sugar syrup",
+      "6–8 fresh mint leaves",
+      "soda water"
+    ],
+    "method": "Muddle mint gently with lime and sugar. Add rum and ice. Top with soda.",
+    "ratios": "2:1:0.5",
+    "guest_line": "Fresh, minty and lively — Cuba's most famous cocktail.",
+    "note": "Don't over-muddle the mint — bruise gently to release oils without bitterness."
+  },
+  {
+    "name": "Daiquiri",
+    "category": "Shaken",
+    "spirit": "Rum",
+    "glass": "Coupe glass",
+    "garnish": "Lime wheel",
+    "ingredients": [
+      "2oz white rum",
+      "¾oz fresh lime juice",
+      "½oz sugar syrup"
+    ],
+    "method": "Shake hard with ice. Double strain into chilled coupe.",
+    "ratios": "4:2:1",
+    "guest_line": "Simple, elegant and perfectly sour — one of the great classic cocktails.",
+    "note": "The best test of a bartender's technique. Balance is everything — too sweet or too sour ruins it."
+  },
+  {
+    "name": "Cosmopolitan",
+    "category": "Shaken",
+    "spirit": "Vodka",
+    "glass": "Martini glass",
+    "garnish": "Flamed orange peel",
+    "ingredients": [
+      "1¼oz citrus vodka",
+      "½oz Cointreau",
+      "1oz cranberry juice",
+      "½oz fresh lime juice"
+    ],
+    "method": "Shake with ice. Double strain into chilled glass.",
+    "ratios": "4:1.5:3:1.5",
+    "guest_line": "Elegant and slightly tart — fruity without being sweet, with a beautiful pink hue.",
+    "note": "Popularised by Sex and the City. The cranberry is for colour and tartness, not sweetness."
+  },
+  {
+    "name": "Manhattan",
+    "category": "Stirred",
+    "spirit": "Whiskey",
+    "glass": "Coupe or martini glass",
+    "garnish": "Maraschino cherry",
+    "ingredients": [
+      "2oz rye or bourbon",
+      "1oz sweet vermouth",
+      "2 dashes Angostura bitters"
+    ],
+    "method": "Stir with ice 30 seconds. Strain into chilled glass.",
+    "ratios": "2:1",
+    "guest_line": "Rich, smooth and sophisticated — the ultimate whiskey cocktail for vermouth lovers.",
+    "note": "Rye gives spice; bourbon gives sweetness. Always stir — never shake."
+  },
+  {
+    "name": "Whiskey Sour",
+    "category": "Shaken",
+    "spirit": "Whiskey",
+    "glass": "Rocks or coupe glass",
+    "garnish": "Orange slice, cherry",
+    "ingredients": [
+      "1¾oz bourbon",
+      "¾oz fresh lemon juice",
+      "½oz sugar syrup",
+      "1 egg white (optional)"
+    ],
+    "method": "Dry shake first (no ice) if using egg white. Add ice and shake again. Strain.",
+    "ratios": "2:1:0.5",
+    "guest_line": "Smooth, tangy and slightly creamy — the egg white adds a silky texture without flavour.",
+    "note": "The dry shake emulsifies the egg white for a perfect foam. Can omit egg white for a sharper sour."
+  },
+  {
+    "name": "Dry Martini",
+    "category": "Stirred",
+    "spirit": "Gin",
+    "glass": "Martini glass",
+    "garnish": "Lemon twist or olive",
+    "ingredients": [
+      "2½oz gin",
+      "½oz dry vermouth"
+    ],
+    "method": "Stir with ice 30–40 seconds. Strain into chilled glass.",
+    "ratios": "5:1",
+    "guest_line": "The most iconic cocktail ever made — cold, crisp and completely uncompromising.",
+    "note": "The drier the Martini, the less vermouth. 'Dirty' = olive brine added. 'Gibson' = cocktail onion garnish."
+  },
+  {
+    "name": "French 75",
+    "category": "Shaken",
+    "spirit": "Gin",
+    "glass": "Champagne flute",
+    "garnish": "Lemon twist",
+    "ingredients": [
+      "1oz gin",
+      "½oz fresh lemon juice",
+      "¼oz sugar syrup",
+      "2oz Champagne"
+    ],
+    "method": "Shake gin, lemon and sugar with ice. Strain into flute. Top with Champagne.",
+    "ratios": "2:1:0.5 + Champagne",
+    "guest_line": "Celebratory and elegant — gin sour lifted with Champagne bubbles.",
+    "note": "Named after a French 75mm artillery gun for its kick. Can use Cognac instead of gin for the French version."
+  },
+  {
+    "name": "Dark & Stormy",
+    "category": "Highball",
+    "spirit": "Rum",
+    "glass": "Highball glass",
+    "garnish": "Lime wedge, candied ginger",
+    "ingredients": [
+      "2oz dark rum (Gosling's Black Seal)",
+      "4oz ginger beer",
+      "½oz fresh lime juice"
+    ],
+    "method": "Build over ice. Add lime, then rum, then ginger beer.",
+    "ratios": "1:2",
+    "guest_line": "Bold, spicy and warming — dark rum and ginger beer is one of the great combinations.",
+    "note": "Technically a trademark of Gosling's — only their rum makes it a 'Dark & Stormy'. Moscow Mule is the vodka equivalent."
+  },
+  {
+    "name": "Penicillin",
+    "category": "Shaken",
+    "spirit": "Whisky",
+    "glass": "Rocks glass",
+    "garnish": "Candied ginger",
+    "ingredients": [
+      "1¾oz blended Scotch",
+      "¼oz Islay Scotch (float)",
+      "¾oz fresh lemon juice",
+      "¾oz honey-ginger syrup"
+    ],
+    "method": "Shake blended Scotch, lemon and syrup with ice. Strain over ice. Float Islay Scotch.",
+    "ratios": "2:1:0.75",
+    "guest_line": "Smoky, sweet and medicinal — a modern classic invented in New York in 2005.",
+    "note": "The Islay float (Laphroaig or Ardbeg) gives the smoke on the nose. Don't stir — let it float."
+  },
+  {
+    "name": "Paloma",
+    "category": "Highball",
+    "spirit": "Tequila",
+    "glass": "Highball glass",
+    "garnish": "Salt rim, grapefruit wedge",
+    "ingredients": [
+      "1¾oz tequila blanco",
+      "3½oz grapefruit soda (Jarritos or Fever-Tree)",
+      "½oz fresh lime juice",
+      "pinch of salt"
+    ],
+    "method": "Build over ice. Salt rim optional. Add lime and salt, then tequila, then soda.",
+    "ratios": "1:2",
+    "guest_line": "Mexico's most popular cocktail — more popular than the Margarita locally. Tart, bitter and refreshing.",
+    "note": "Paloma means 'dove' in Spanish. Grapefruit soda is key — fresh grapefruit juice works but changes the character."
+  },
+  {
+    "name": "Sidecar",
+    "category": "Shaken",
+    "spirit": "Cognac",
+    "glass": "Coupe glass",
+    "garnish": "Sugar rim, orange peel",
+    "ingredients": [
+      "1¾oz Cognac",
+      "¾oz Cointreau",
+      "¾oz fresh lemon juice"
+    ],
+    "method": "Shake with ice. Strain into sugar-rimmed coupe.",
+    "ratios": "2:1:1",
+    "guest_line": "Elegant, citrusy and complex — Cognac brings warmth and depth to a classic sour template.",
+    "note": "A 1920s Parisian classic. The sugar rim balances the sour. Similar structure to the Margarita but with Cognac."
+  },
+  {
+    "name": "Bramble",
+    "category": "Built",
+    "spirit": "Gin",
+    "glass": "Rocks glass",
+    "garnish": "Blackberries, lemon slice",
+    "ingredients": [
+      "1¾oz gin",
+      "¾oz fresh lemon juice",
+      "½oz sugar syrup",
+      "½oz crème de mûre (blackberry liqueur)"
+    ],
+    "method": "Shake gin, lemon and sugar. Pour over crushed ice. Drizzle crème de mûre over top.",
+    "ratios": "2:1:0.5",
+    "guest_line": "A modern British classic — fruity, tangy and visually stunning with the purple drizzle.",
+    "note": "Invented by Dick Bradsell in London 1984. The crème de mûre is drizzled on top, not mixed in."
+  },
+  {
+    "name": "Tom Collins",
+    "category": "Built",
+    "spirit": "Gin",
+    "glass": "Collins glass",
+    "garnish": "Lemon slice, cherry",
+    "ingredients": [
+      "1¾oz gin",
+      "¾oz fresh lemon juice",
+      "½oz sugar syrup",
+      "soda water"
+    ],
+    "method": "Shake gin, lemon and sugar. Strain over ice. Top with soda.",
+    "ratios": "2:1:0.5 + soda",
+    "guest_line": "Light, refreshing and easy-drinking — a long gin sour topped with bubbles.",
+    "note": "The original 'Collins' dates to 1876. John Collins uses genever; Tom Collins uses London Dry gin."
+  },
+  {
+    "name": "Clover Club",
+    "category": "Shaken",
+    "spirit": "Gin",
+    "glass": "Coupe glass",
+    "garnish": "Fresh raspberries",
+    "ingredients": [
+      "1¾oz gin",
+      "¾oz fresh lemon juice",
+      "½oz sugar syrup",
+      "6 fresh raspberries",
+      "1 egg white"
+    ],
+    "method": "Dry shake first. Add ice and shake again. Double strain.",
+    "ratios": "2:0.75:0.5",
+    "guest_line": "Fruity, silky and beautifully pink — a pre-Prohibition classic that's back in fashion.",
+    "note": "One of the oldest cocktails in the book — dates to 1880s Philadelphia. The egg white gives a luscious texture."
+  },
+  {
+    "name": "Porn Star Martini",
+    "category": "Shaken",
+    "spirit": "Vodka",
+    "glass": "Martini glass + shot glass",
+    "garnish": "Passion fruit half, vanilla pod",
+    "ingredients": [
+      "1¾oz vanilla vodka",
+      "¾oz Passoa",
+      "¾oz fresh passion fruit",
+      "½oz vanilla syrup",
+      "side shot of Prosecco"
+    ],
+    "method": "Shake all with ice. Double strain. Serve with Prosecco shot on the side.",
+    "ratios": "2:1:1",
+    "guest_line": "Fun, fruity and indulgent — one of the UK's best-selling cocktails. The Prosecco chaser is part of the experience.",
+    "note": "Invented by Douglas Ankrah in London 2002. Not a real Martini — it's a vodka sour with passion fruit."
+  },
+  {
+    "name": "Kir Royale",
+    "category": "Sparkling",
+    "spirit": "Champagne",
+    "glass": "Champagne flute",
+    "garnish": "Blackcurrant or raspberry",
+    "ingredients": [
+      "4oz Champagne or Crémant",
+      "½oz crème de cassis (blackcurrant liqueur)"
+    ],
+    "method": "Add crème de cassis to flute first. Top slowly with Champagne.",
+    "ratios": "8:1",
+    "guest_line": "Elegant and celebratory — a French aperitif with a gorgeous deep red colour.",
+    "note": "Kir uses still white wine; Kir Royale uses sparkling. Named after Mayor Félix Kir of Dijon."
+  },
+  {
+    "name": "Bellini",
+    "category": "Sparkling",
+    "spirit": "Prosecco",
+    "glass": "Champagne flute",
+    "garnish": "None",
+    "ingredients": [
+      "3½oz Prosecco",
+      "1¾oz white peach purée"
+    ],
+    "method": "Add peach purée first. Top slowly with Prosecco. Gentle stir.",
+    "ratios": "2:1",
+    "guest_line": "Delicate, peachy and luxurious — invented at Harry's Bar Venice in 1948.",
+    "note": "Only white peaches are authentic. Yellow peach or mango is a variation. Never shake — just layer."
+  }
+];
+const COCKTAIL_QUIZ = [
+  {
+    "section": "Stirred",
+    "q": "What are the ingredients in a Negroni?",
+    "a": "1oz gin / 1oz Campari / 1oz sweet vermouth",
+    "context": "Gin · Stirred"
+  },
+  {
+    "section": "Stirred",
+    "q": "What glass is a Negroni served in?",
+    "a": "Rocks glass",
+    "context": "Gin"
+  },
+  {
+    "section": "Stirred",
+    "q": "What is the garnish for a Negroni?",
+    "a": "Orange peel",
+    "context": "Gin · Stirred"
+  },
+  {
+    "section": "Stirred",
+    "q": "What method is used for a Negroni?",
+    "a": "Stir with ice 30 seconds",
+    "context": "Gin"
+  },
+  {
+    "section": "Stirred",
+    "q": "What is the ratio for a Negroni?",
+    "a": "1:1:1",
+    "context": "Gin · Stirred"
+  },
+  {
+    "section": "Shaken",
+    "q": "What are the ingredients in a Espresso Martini?",
+    "a": "1¾oz vodka / 1oz fresh espresso / ¾oz coffee liqueur (Kahlúa) / ¼oz sugar syrup",
+    "context": "Vodka · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What glass is a Espresso Martini served in?",
+    "a": "Martini glass",
+    "context": "Vodka"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the garnish for a Espresso Martini?",
+    "a": "3 coffee beans",
+    "context": "Vodka · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What method is used for a Espresso Martini?",
+    "a": "Shake hard with ice",
+    "context": "Vodka"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the ratio for a Espresso Martini?",
+    "a": "5:3:2",
+    "context": "Vodka · Shaken"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What are the ingredients in a Aperol Spritz?",
+    "a": "3oz Prosecco / 2oz Aperol / splash of soda water",
+    "context": "Aperol · Sparkling"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What glass is a Aperol Spritz served in?",
+    "a": "Large wine glass",
+    "context": "Aperol"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What is the garnish for a Aperol Spritz?",
+    "a": "Orange slice",
+    "context": "Aperol · Sparkling"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What method is used for a Aperol Spritz?",
+    "a": "Build over ice",
+    "context": "Aperol"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What is the ratio for a Aperol Spritz?",
+    "a": "3:2:1",
+    "context": "Aperol · Sparkling"
+  },
+  {
+    "section": "Highball",
+    "q": "What are the ingredients in a Gin & Tonic?",
+    "a": "1¾oz gin / 5oz tonic water",
+    "context": "Gin · Highball"
+  },
+  {
+    "section": "Highball",
+    "q": "What glass is a Gin & Tonic served in?",
+    "a": "Highball or copa glass",
+    "context": "Gin"
+  },
+  {
+    "section": "Highball",
+    "q": "What is the garnish for a Gin & Tonic?",
+    "a": "Lime wedge or cucumber",
+    "context": "Gin · Highball"
+  },
+  {
+    "section": "Highball",
+    "q": "What method is used for a Gin & Tonic?",
+    "a": "Build over ice",
+    "context": "Gin"
+  },
+  {
+    "section": "Highball",
+    "q": "What is the ratio for a Gin & Tonic?",
+    "a": "1:3",
+    "context": "Gin · Highball"
+  },
+  {
+    "section": "Stirred",
+    "q": "What are the ingredients in a Old Fashioned?",
+    "a": "2oz bourbon or rye / 1 sugar cube (or ¼oz sugar syrup) / 2–3 dashes Angostura bitters / dash of water",
+    "context": "Whiskey · Stirred"
+  },
+  {
+    "section": "Stirred",
+    "q": "What glass is a Old Fashioned served in?",
+    "a": "Rocks glass",
+    "context": "Whiskey"
+  },
+  {
+    "section": "Stirred",
+    "q": "What is the garnish for a Old Fashioned?",
+    "a": "Orange peel + cherry",
+    "context": "Whiskey · Stirred"
+  },
+  {
+    "section": "Stirred",
+    "q": "What method is used for a Old Fashioned?",
+    "a": "Muddle sugar and bitters",
+    "context": "Whiskey"
+  },
+  {
+    "section": "Stirred",
+    "q": "What is the ratio for a Old Fashioned?",
+    "a": "Spirit forward",
+    "context": "Whiskey · Stirred"
+  },
+  {
+    "section": "Shaken",
+    "q": "What are the ingredients in a Margarita?",
+    "a": "1¾oz tequila blanco / ¾oz Cointreau / ¾oz fresh lime juice",
+    "context": "Tequila · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What glass is a Margarita served in?",
+    "a": "Coupe or rocks glass",
+    "context": "Tequila"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the garnish for a Margarita?",
+    "a": "Salt rim, lime wedge",
+    "context": "Tequila · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What method is used for a Margarita?",
+    "a": "Shake hard with ice",
+    "context": "Tequila"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the ratio for a Margarita?",
+    "a": "2:1:1",
+    "context": "Tequila · Shaken"
+  },
+  {
+    "section": "Built",
+    "q": "What are the ingredients in a Mojito?",
+    "a": "1¾oz white rum / ¾oz fresh lime juice / ½oz sugar syrup / 6–8 fresh mint leaves / soda water",
+    "context": "Rum · Built"
+  },
+  {
+    "section": "Built",
+    "q": "What glass is a Mojito served in?",
+    "a": "Highball glass",
+    "context": "Rum"
+  },
+  {
+    "section": "Built",
+    "q": "What is the garnish for a Mojito?",
+    "a": "Mint sprig, lime wheel",
+    "context": "Rum · Built"
+  },
+  {
+    "section": "Built",
+    "q": "What method is used for a Mojito?",
+    "a": "Muddle mint gently with lime and sugar",
+    "context": "Rum"
+  },
+  {
+    "section": "Built",
+    "q": "What is the ratio for a Mojito?",
+    "a": "2:1:0.5",
+    "context": "Rum · Built"
+  },
+  {
+    "section": "Shaken",
+    "q": "What are the ingredients in a Daiquiri?",
+    "a": "2oz white rum / ¾oz fresh lime juice / ½oz sugar syrup",
+    "context": "Rum · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What glass is a Daiquiri served in?",
+    "a": "Coupe glass",
+    "context": "Rum"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the garnish for a Daiquiri?",
+    "a": "Lime wheel",
+    "context": "Rum · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What method is used for a Daiquiri?",
+    "a": "Shake hard with ice",
+    "context": "Rum"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the ratio for a Daiquiri?",
+    "a": "4:2:1",
+    "context": "Rum · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What are the ingredients in a Cosmopolitan?",
+    "a": "1¼oz citrus vodka / ½oz Cointreau / 1oz cranberry juice / ½oz fresh lime juice",
+    "context": "Vodka · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What glass is a Cosmopolitan served in?",
+    "a": "Martini glass",
+    "context": "Vodka"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the garnish for a Cosmopolitan?",
+    "a": "Flamed orange peel",
+    "context": "Vodka · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What method is used for a Cosmopolitan?",
+    "a": "Shake with ice",
+    "context": "Vodka"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the ratio for a Cosmopolitan?",
+    "a": "4:1.5:3:1.5",
+    "context": "Vodka · Shaken"
+  },
+  {
+    "section": "Stirred",
+    "q": "What are the ingredients in a Manhattan?",
+    "a": "2oz rye or bourbon / 1oz sweet vermouth / 2 dashes Angostura bitters",
+    "context": "Whiskey · Stirred"
+  },
+  {
+    "section": "Stirred",
+    "q": "What glass is a Manhattan served in?",
+    "a": "Coupe or martini glass",
+    "context": "Whiskey"
+  },
+  {
+    "section": "Stirred",
+    "q": "What is the garnish for a Manhattan?",
+    "a": "Maraschino cherry",
+    "context": "Whiskey · Stirred"
+  },
+  {
+    "section": "Stirred",
+    "q": "What method is used for a Manhattan?",
+    "a": "Stir with ice 30 seconds",
+    "context": "Whiskey"
+  },
+  {
+    "section": "Stirred",
+    "q": "What is the ratio for a Manhattan?",
+    "a": "2:1",
+    "context": "Whiskey · Stirred"
+  },
+  {
+    "section": "Shaken",
+    "q": "What are the ingredients in a Whiskey Sour?",
+    "a": "1¾oz bourbon / ¾oz fresh lemon juice / ½oz sugar syrup / 1 egg white (optional)",
+    "context": "Whiskey · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What glass is a Whiskey Sour served in?",
+    "a": "Rocks or coupe glass",
+    "context": "Whiskey"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the garnish for a Whiskey Sour?",
+    "a": "Orange slice, cherry",
+    "context": "Whiskey · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What method is used for a Whiskey Sour?",
+    "a": "Dry shake first (no ice) if using egg white",
+    "context": "Whiskey"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the ratio for a Whiskey Sour?",
+    "a": "2:1:0.5",
+    "context": "Whiskey · Shaken"
+  },
+  {
+    "section": "Stirred",
+    "q": "What are the ingredients in a Dry Martini?",
+    "a": "2½oz gin / ½oz dry vermouth",
+    "context": "Gin · Stirred"
+  },
+  {
+    "section": "Stirred",
+    "q": "What glass is a Dry Martini served in?",
+    "a": "Martini glass",
+    "context": "Gin"
+  },
+  {
+    "section": "Stirred",
+    "q": "What is the garnish for a Dry Martini?",
+    "a": "Lemon twist or olive",
+    "context": "Gin · Stirred"
+  },
+  {
+    "section": "Stirred",
+    "q": "What method is used for a Dry Martini?",
+    "a": "Stir with ice 30–40 seconds",
+    "context": "Gin"
+  },
+  {
+    "section": "Stirred",
+    "q": "What is the ratio for a Dry Martini?",
+    "a": "5:1",
+    "context": "Gin · Stirred"
+  },
+  {
+    "section": "Shaken",
+    "q": "What are the ingredients in a French 75?",
+    "a": "1oz gin / ½oz fresh lemon juice / ¼oz sugar syrup / 2oz Champagne",
+    "context": "Gin · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What glass is a French 75 served in?",
+    "a": "Champagne flute",
+    "context": "Gin"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the garnish for a French 75?",
+    "a": "Lemon twist",
+    "context": "Gin · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What method is used for a French 75?",
+    "a": "Shake gin, lemon and sugar with ice",
+    "context": "Gin"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the ratio for a French 75?",
+    "a": "2:1:0.5 + Champagne",
+    "context": "Gin · Shaken"
+  },
+  {
+    "section": "Highball",
+    "q": "What are the ingredients in a Dark & Stormy?",
+    "a": "2oz dark rum (Gosling's Black Seal) / 4oz ginger beer / ½oz fresh lime juice",
+    "context": "Rum · Highball"
+  },
+  {
+    "section": "Highball",
+    "q": "What glass is a Dark & Stormy served in?",
+    "a": "Highball glass",
+    "context": "Rum"
+  },
+  {
+    "section": "Highball",
+    "q": "What is the garnish for a Dark & Stormy?",
+    "a": "Lime wedge, candied ginger",
+    "context": "Rum · Highball"
+  },
+  {
+    "section": "Highball",
+    "q": "What method is used for a Dark & Stormy?",
+    "a": "Build over ice",
+    "context": "Rum"
+  },
+  {
+    "section": "Highball",
+    "q": "What is the ratio for a Dark & Stormy?",
+    "a": "1:2",
+    "context": "Rum · Highball"
+  },
+  {
+    "section": "Shaken",
+    "q": "What are the ingredients in a Penicillin?",
+    "a": "1¾oz blended Scotch / ¼oz Islay Scotch (float) / ¾oz fresh lemon juice / ¾oz honey-ginger syrup",
+    "context": "Whisky · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What glass is a Penicillin served in?",
+    "a": "Rocks glass",
+    "context": "Whisky"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the garnish for a Penicillin?",
+    "a": "Candied ginger",
+    "context": "Whisky · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What method is used for a Penicillin?",
+    "a": "Shake blended Scotch, lemon and syrup with ice",
+    "context": "Whisky"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the ratio for a Penicillin?",
+    "a": "2:1:0.75",
+    "context": "Whisky · Shaken"
+  },
+  {
+    "section": "Highball",
+    "q": "What are the ingredients in a Paloma?",
+    "a": "1¾oz tequila blanco / 3½oz grapefruit soda (Jarritos or Fever-Tree) / ½oz fresh lime juice / pinch of salt",
+    "context": "Tequila · Highball"
+  },
+  {
+    "section": "Highball",
+    "q": "What glass is a Paloma served in?",
+    "a": "Highball glass",
+    "context": "Tequila"
+  },
+  {
+    "section": "Highball",
+    "q": "What is the garnish for a Paloma?",
+    "a": "Salt rim, grapefruit wedge",
+    "context": "Tequila · Highball"
+  },
+  {
+    "section": "Highball",
+    "q": "What method is used for a Paloma?",
+    "a": "Build over ice",
+    "context": "Tequila"
+  },
+  {
+    "section": "Highball",
+    "q": "What is the ratio for a Paloma?",
+    "a": "1:2",
+    "context": "Tequila · Highball"
+  },
+  {
+    "section": "Shaken",
+    "q": "What are the ingredients in a Sidecar?",
+    "a": "1¾oz Cognac / ¾oz Cointreau / ¾oz fresh lemon juice",
+    "context": "Cognac · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What glass is a Sidecar served in?",
+    "a": "Coupe glass",
+    "context": "Cognac"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the garnish for a Sidecar?",
+    "a": "Sugar rim, orange peel",
+    "context": "Cognac · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What method is used for a Sidecar?",
+    "a": "Shake with ice",
+    "context": "Cognac"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the ratio for a Sidecar?",
+    "a": "2:1:1",
+    "context": "Cognac · Shaken"
+  },
+  {
+    "section": "Built",
+    "q": "What are the ingredients in a Bramble?",
+    "a": "1¾oz gin / ¾oz fresh lemon juice / ½oz sugar syrup / ½oz crème de mûre (blackberry liqueur)",
+    "context": "Gin · Built"
+  },
+  {
+    "section": "Built",
+    "q": "What glass is a Bramble served in?",
+    "a": "Rocks glass",
+    "context": "Gin"
+  },
+  {
+    "section": "Built",
+    "q": "What is the garnish for a Bramble?",
+    "a": "Blackberries, lemon slice",
+    "context": "Gin · Built"
+  },
+  {
+    "section": "Built",
+    "q": "What method is used for a Bramble?",
+    "a": "Shake gin, lemon and sugar",
+    "context": "Gin"
+  },
+  {
+    "section": "Built",
+    "q": "What is the ratio for a Bramble?",
+    "a": "2:1:0.5",
+    "context": "Gin · Built"
+  },
+  {
+    "section": "Built",
+    "q": "What are the ingredients in a Tom Collins?",
+    "a": "1¾oz gin / ¾oz fresh lemon juice / ½oz sugar syrup / soda water",
+    "context": "Gin · Built"
+  },
+  {
+    "section": "Built",
+    "q": "What glass is a Tom Collins served in?",
+    "a": "Collins glass",
+    "context": "Gin"
+  },
+  {
+    "section": "Built",
+    "q": "What is the garnish for a Tom Collins?",
+    "a": "Lemon slice, cherry",
+    "context": "Gin · Built"
+  },
+  {
+    "section": "Built",
+    "q": "What method is used for a Tom Collins?",
+    "a": "Shake gin, lemon and sugar",
+    "context": "Gin"
+  },
+  {
+    "section": "Built",
+    "q": "What is the ratio for a Tom Collins?",
+    "a": "2:1:0.5 + soda",
+    "context": "Gin · Built"
+  },
+  {
+    "section": "Shaken",
+    "q": "What are the ingredients in a Clover Club?",
+    "a": "1¾oz gin / ¾oz fresh lemon juice / ½oz sugar syrup / 6 fresh raspberries / 1 egg white",
+    "context": "Gin · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What glass is a Clover Club served in?",
+    "a": "Coupe glass",
+    "context": "Gin"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the garnish for a Clover Club?",
+    "a": "Fresh raspberries",
+    "context": "Gin · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What method is used for a Clover Club?",
+    "a": "Dry shake first",
+    "context": "Gin"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the ratio for a Clover Club?",
+    "a": "2:0.75:0.5",
+    "context": "Gin · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What are the ingredients in a Porn Star Martini?",
+    "a": "1¾oz vanilla vodka / ¾oz Passoa / ¾oz fresh passion fruit / ½oz vanilla syrup / side shot of Prosecco",
+    "context": "Vodka · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What glass is a Porn Star Martini served in?",
+    "a": "Martini glass + shot glass",
+    "context": "Vodka"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the garnish for a Porn Star Martini?",
+    "a": "Passion fruit half, vanilla pod",
+    "context": "Vodka · Shaken"
+  },
+  {
+    "section": "Shaken",
+    "q": "What method is used for a Porn Star Martini?",
+    "a": "Shake all with ice",
+    "context": "Vodka"
+  },
+  {
+    "section": "Shaken",
+    "q": "What is the ratio for a Porn Star Martini?",
+    "a": "2:1:1",
+    "context": "Vodka · Shaken"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What are the ingredients in a Kir Royale?",
+    "a": "4oz Champagne or Crémant / ½oz crème de cassis (blackcurrant liqueur)",
+    "context": "Champagne · Sparkling"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What glass is a Kir Royale served in?",
+    "a": "Champagne flute",
+    "context": "Champagne"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What is the garnish for a Kir Royale?",
+    "a": "Blackcurrant or raspberry",
+    "context": "Champagne · Sparkling"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What method is used for a Kir Royale?",
+    "a": "Add crème de cassis to flute first",
+    "context": "Champagne"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What is the ratio for a Kir Royale?",
+    "a": "8:1",
+    "context": "Champagne · Sparkling"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What are the ingredients in a Bellini?",
+    "a": "3½oz Prosecco / 1¾oz white peach purée",
+    "context": "Prosecco · Sparkling"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What glass is a Bellini served in?",
+    "a": "Champagne flute",
+    "context": "Prosecco"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What is the garnish for a Bellini?",
+    "a": "None",
+    "context": "Prosecco · Sparkling"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What method is used for a Bellini?",
+    "a": "Add peach purée first",
+    "context": "Prosecco"
+  },
+  {
+    "section": "Sparkling",
+    "q": "What is the ratio for a Bellini?",
+    "a": "2:1",
+    "context": "Prosecco · Sparkling"
+  }
+];
 const WINE_CARDS = [{"section": "Vintage", "q": "What year is the Antinori Bramito Chardonnay?", "a": "2024", "context": "Umbria, Italy"}, {"section": "Vintage", "q": "What year is the Pietrabianca 'Bocca di Lupo' Chardonnay?", "a": "2024", "context": "Puglia, Italy"}, {"section": "Vintage", "q": "What year is the Chablis — Madame Veuve Point?", "a": "2024", "context": "Chablis, France"}, {"section": "Vintage", "q": "What year is the Puligny-Montrachet — François Carillon?", "a": "2022", "context": "Côte de Beaune, Burgundy"}, {"section": "Vintage", "q": "What year is the Whispering Angel Rosé?", "a": "2024", "context": "Provence, France"}, {"section": "Vintage", "q": "What year is the Malvazija — Coronica?", "a": "2023", "context": "Istria, Croatia"}, {"section": "Vintage", "q": "What year is the Ribolla Gialla — Le Vigne di Zamo?", "a": "2024", "context": "Friuli, Italy"}, {"section": "Vintage", "q": "What year is the Greco di Tufo — Mastroberardino?", "a": "2024", "context": "Campania, Italy"}, {"section": "Vintage", "q": "What year is the Etna Bianco — Planeta?", "a": "2023", "context": "Mount Etna, Sicily"}, {"section": "Vintage", "q": "What year is the Rioja Reserva — Palacios de Camino Real?", "a": "2019", "context": "Rioja, Spain"}, {"section": "Vintage", "q": "What year is the Nero d'Avola — Vigneti Zabu 'Chiantari'?", "a": "2023", "context": "Sicily, Italy"}, {"section": "Vintage", "q": "What year is the Etna Rosso — Planeta?", "a": "2023", "context": "Mount Etna, Sicily"}, {"section": "Vintage", "q": "What year is the Gamay Blend — Domaine des Huards?", "a": "2022", "context": "Loire Valley, France"}, {"section": "Vintage", "q": "What year is the Bolgheri — Tenuta Argentiera?", "a": "2023", "context": "Bolgheri, Tuscany"}, {"section": "Vintage", "q": "What year is the Montepulciano Riserva — Marina Cvetić?", "a": "2020", "context": "Abruzzo, Italy"}, {"section": "Vintage", "q": "What year is the Chianti Gran Selezione — Il Palazzino?", "a": "2021", "context": "Chianti Classico, Tuscany"}, {"section": "Vintage", "q": "What year is the Barolo — Giacomo Fenocchio?", "a": "2021", "context": "Piedmont, Italy"}, {"section": "Vintage", "q": "What year is the Super Tuscan — Gaja Ca' Marcanda 'Promis'?", "a": "2022", "context": "Bolgheri, Tuscany"}, {"section": "Vintage", "q": "What year is the Brunello — Argiano?", "a": "2020", "context": "Montalcino, Tuscany"}, {"section": "Vintage", "q": "What year is the Brunello half bottle — Altesino?", "a": "2020", "context": "Montalcino, Tuscany"}, {"section": "Vintage", "q": "What year is the Pinot Noir — Domaine de Cassiopée?", "a": "2022", "context": "Burgundy, France"}, {"section": "Vintage", "q": "What year is the Amarone — Villabella 'Fracastoro'?", "a": "2013", "context": "Valpolicella, Veneto"}, {"section": "Vintage", "q": "What year is the Brunello — Gaja 'Pieve di Santa Restituta'?", "a": "2019", "context": "Montalcino, Tuscany"}, {"section": "Vintage", "q": "What year is the Bordeaux — Corbin St-Émilion Grand Cru Classé?", "a": "2015", "context": "Saint-Émilion, Bordeaux"}, {"section": "Vintage", "q": "What year is the Pinot Noir — Kosta Browne?", "a": "2021", "context": "Santa Rita Hills, California"}, {"section": "Vintage", "q": "What year is the Pinot Noir — Domaine Georges Noëllat?", "a": "2022", "context": "Vosne-Romanée, Burgundy"}, {"section": "Vintage", "q": "What year is the Super Tuscan — Antinori 'Tignanello'?", "a": "2022", "context": "Chianti Classico, Tuscany"}, {"section": "Vintage", "q": "What year is the Dom Pérignon?", "a": "2015", "context": "Champagne, France"}, {"section": "Grape", "q": "What grape is Chianti made from?", "a": "Sangiovese", "context": "Tuscany, Italy"}, {"section": "Grape", "q": "What grape is Brunello di Montalcino made from?", "a": "Sangiovese", "context": "Must be 100% — aged 5+ years"}, {"section": "Grape", "q": "What grape is Barolo made from?", "a": "Nebbiolo", "context": "Piedmont, Italy — 'king of wines'"}, {"section": "Grape", "q": "What grape is Chablis made from?", "a": "Chardonnay", "context": "Unoaked — nothing like California Chardonnay"}, {"section": "Grape", "q": "What grape is a red Burgundy?", "a": "Pinot Noir", "context": "Always — no exceptions"}, {"section": "Grape", "q": "What grape is a white Burgundy?", "a": "Chardonnay", "context": "Always — no exceptions"}, {"section": "Grape", "q": "What grape is Rioja made from?", "a": "Tempranillo", "context": "Spain's signature red grape"}, {"section": "Grape", "q": "What grape is Amarone made from?", "a": "Corvina", "context": "Dried grapes — Valpolicella, Veneto"}, {"section": "Grape", "q": "What grape is Etna Rosso made from?", "a": "Nerello Mascalese", "context": "Grown on Mt Etna's volcanic slopes"}, {"section": "Grape", "q": "What grape is Etna Bianco made from?", "a": "Carricante", "context": "White grape from Mt Etna, Sicily"}, {"section": "Grape", "q": "What grape is Muscadet made from?", "a": "Melon de Bourgogne", "context": "Loire Valley, France"}, {"section": "Grape", "q": "What grape is Bolgheri / Super Tuscan?", "a": "Cabernet + Merlot + Sangiovese blend", "context": "Broke Italian wine rules to use Bordeaux grapes"}, {"section": "Grape", "q": "What does NV mean on a wine label?", "a": "Non-Vintage", "context": "Blended across multiple years for consistency"}, {"section": "Grape", "q": "What does Reserva mean on Rioja?", "a": "Minimum 3 years aging", "context": "Gran Reserva = 5+ years"}, {"section": "Grape", "q": "What does Riserva mean on an Italian wine?", "a": "Aged longer than standard", "context": "Exact requirements vary by region"}, {"section": "Region", "q": "What region is Greco di Tufo from?", "a": "Campania, southern Italy", "context": "'Tufo' = the volcanic soil it grows in"}, {"section": "Region", "q": "What region is Ribolla Gialla from?", "a": "Friuli, northeast Italy", "context": "Le Vigne di Zamo — Colli Orientali"}, {"section": "Region", "q": "What region is Malvazija from?", "a": "Istria, Croatia", "context": "Croatia's signature white grape"}, {"section": "Region", "q": "What region is Muscadet from?", "a": "Loire Valley, France", "context": "Lightest white on the list"}, {"section": "Region", "q": "What region is Amarone from?", "a": "Valpolicella, Veneto, Italy", "context": "Made from dried Corvina grapes"}, {"section": "Region", "q": "What region is Montepulciano from?", "a": "Abruzzo, central Italy", "context": "Marina Cvetić — one of Abruzzo's top producers"}, {"section": "Region", "q": "What region is Barolo from?", "a": "Piedmont, Italy", "context": "Giacomo Fenocchio — traditional style producer"}, {"section": "Region", "q": "What region is Pinot Noir — Kosta Browne from?", "a": "Santa Rita Hills, California", "context": "Only non-European red on the list"}, {"section": "Region", "q": "What region is Noëllat Pinot Noir from?", "a": "Vosne-Romanée, Burgundy", "context": "One of Burgundy's most prestigious villages"}, {"section": "Region", "q": "What region is Gamay — Domaine des Huards from?", "a": "Loire Valley, France", "context": "Same grape as Beaujolais, different region"}, {"section": "Region", "q": "What region is Bolgheri in?", "a": "Tuscany, Italy", "context": "Where Super Tuscans were born — Argentiera & Gaja"}, {"section": "Region", "q": "What region is Etna Bianco and Etna Rosso from?", "a": "Mount Etna, Sicily", "context": "Both made by Planeta on volcanic slopes"}, {"section": "Region", "q": "What country is Puligny-Montrachet from?", "a": "France", "context": "Côte de Beaune, Burgundy — white wine village"}, {"section": "Region", "q": "What country is Tignanello from?", "a": "Italy", "context": "Chianti Classico, Tuscany — the iconic Super Tuscan"}, {"section": "Pairing", "q": "What wine pairs with Lobster Tagliatelle?", "a": "Oaked Chardonnay", "context": "Pietrabianca $125 or Antinori Bramito $115"}, {"section": "Pairing", "q": "What wine pairs with Prime Striploin?", "a": "Barolo or Montepulciano", "context": "Fenocchio $190 or Marina Cvetić $140"}, {"section": "Pairing", "q": "What wine pairs with Whole Grilled Branzino?", "a": "Etna Bianco or Chablis", "context": "Planeta $110 or Madame Veuve Point $130"}, {"section": "Pairing", "q": "What wine pairs with Lamb Chops?", "a": "Syrah or Rioja", "context": "Syrah by glass $19 or Palacios Reserva $80"}, {"section": "Pairing", "q": "What wine pairs with Organic King Salmon?", "a": "Pinot Noir", "context": "Surprising but classic — Cassiopée $215"}, {"section": "Pairing", "q": "What wine pairs with Spaghetti?", "a": "Chianti Gran Selezione", "context": "Il Palazzino $160 — Sangiovese loves tomato"}, {"section": "Pairing", "q": "What wine pairs with Seafood Risotto?", "a": "Etna Bianco or Greco di Tufo", "context": "Planeta $110 or Mastroberardino $105"}, {"section": "Pairing", "q": "What wine pairs with Baked Feta?", "a": "Greco di Tufo", "context": "Mastroberardino $105 — body matches the honey"}, {"section": "Pairing", "q": "What wine pairs with Octopus a la Plancha?", "a": "Etna Bianco", "context": "Planeta $110 — mineral and saline"}, {"section": "Pairing", "q": "What wine pairs with Grilled Seafood Platter?", "a": "Etna Bianco or Chablis", "context": "Planeta $110 or Madame Veuve Point $130"}, {"section": "Pairing", "q": "What wine pairs with the Spaghetti if they want something lighter?", "a": "Nero d'Avola by glass", "context": "$18 — Sicilian, soft tannins"}, {"section": "Pairing", "q": "What sparkling wine is best for a celebration?", "a": "Dom Pérignon 2015", "context": "$645 — vintage Champagne, the prestige pour"}, {"section": "Style", "q": "Describe Muscadet in one sentence.", "a": "Bone dry, very light, briny sea-spray finish.", "context": "The classic oyster wine of the Loire"}, {"section": "Style", "q": "Describe Amarone in one sentence.", "a": "Intense and rich, like liquid velvet — dried grape concentration.", "context": "2013 vintage — over 10 years of aging"}, {"section": "Style", "q": "Describe Barolo in one sentence.", "a": "The king of Italian wine — tar, roses, and a very long finish.", "context": "High tannin, high acid, needs food"}, {"section": "Style", "q": "Describe Etna Bianco in one sentence.", "a": "Dry and mineral with citrus and a distinctive ashy, volcanic finish.", "context": "Unlike anything else on the list"}, {"section": "Style", "q": "Describe Sangiovese in one sentence.", "a": "Bright tart cherry, high acid, built for food — especially tomato.", "context": "Backbone of Chianti and Brunello"}, {"section": "Style", "q": "Describe oaked Chardonnay vs Chablis.", "a": "Oaked = buttery and rich. Chablis = crisp and mineral.", "context": "Always ask guests which style they prefer"}, {"section": "Style", "q": "Describe Pinot Noir in one sentence.", "a": "Light and silky with red cherry and earthy notes — never heavy.", "context": "The only red that pairs with salmon"}, {"section": "Style", "q": "Describe Nero d'Avola in one sentence.", "a": "Sicilian dark fruit with chocolate and herbs, soft and smooth.", "context": "Italy's answer to Malbec"}, {"section": "Style", "q": "Describe Ribolla Gialla in one sentence.", "a": "Crisp and dry with citrus and a clean, nutty finish.", "context": "Ancient grape from Friuli, northeast Italy"}, {"section": "Style", "q": "Describe Gamay in one sentence.", "a": "Light, juicy, bright red fruit — easy-drinking like a lighter Pinot Noir.", "context": "Domaine des Huards, Loire Valley"}, {"section": "Style", "q": "What makes Tignanello special?", "a": "The most famous Super Tuscan in the world.", "context": "Antinori 2022 — $410 — Chianti Classico"}, {"section": "Style", "q": "What's the difference between Chianti and Brunello?", "a": "Same grape, Brunello is aged 5+ years and much more complex.", "context": "Both 100% Sangiovese — Tuscany"}, {"section": "Vintage", "q": "What is the Chardonnay by the glass?", "a": "Italian Chardonnay — $19", "context": "5oz pour"}, {"section": "Style", "q": "Describe the Chardonnay by glass in one sentence.", "a": "Italian-style — lighter and crisper than New World, subtle oak.", "context": "$19 by glass"}, {"section": "Vintage", "q": "What year is the Rosé by glass?", "a": "2023", "context": "France — $17"}, {"section": "Style", "q": "Describe the Rosé by glass.", "a": "Dry Provence-style rosé — fresh strawberry and peach, crisp finish.", "context": "France 2023 — $17"}, {"section": "Vintage", "q": "What country is Cava from?", "a": "Spain", "context": "$19 by glass — traditional method sparkling"}, {"section": "Style", "q": "Describe Cava in one sentence.", "a": "Spain's answer to Champagne — dry, citrusy and refreshing at great value.", "context": "Same method as Champagne, local grapes"}, {"section": "Vintage", "q": "What is the Prosecco on the list?", "a": "Castello di Roncade — Veneto, Italy — NV — $85", "context": "Rosé & Sparkling by the bottle"}, {"section": "Style", "q": "Describe Prosecco in one sentence.", "a": "Light, fruity and fresh — green apple, pear and white peach with a gentle fizz.", "context": "Tank method — lighter than Champagne"}, {"section": "Region", "q": "What region is Prosecco from?", "a": "Veneto, Italy", "context": "Made from Glera grape — tank method"}, {"section": "Vintage", "q": "What is the Brut Champagne on the list?", "a": "Veuve Clicquot Yellow Label — NV — $195 (also half bottle $100)", "context": "Champagne, France"}, {"section": "Style", "q": "Describe Veuve Clicquot Yellow Label.", "a": "Rich and toasty — brioche, citrus, creamy bubbles. Pinot Noir dominant.", "context": "The iconic yellow label — NV house style"}, {"section": "Grape", "q": "What grape dominates Veuve Clicquot Yellow Label?", "a": "Pinot Noir", "context": "Gives body and richness to the blend"}, {"section": "Vintage", "q": "What is the Rosé Champagne on the list?", "a": "Moët & Chandon Rosé — NV — $215", "context": "Champagne, France"}, {"section": "Style", "q": "Describe Moët & Chandon Rosé.", "a": "Wild strawberry and raspberry with brioche — elegant, celebratory, fine bubbles.", "context": "Made by blending still Pinot Noir into the cuvée"}, {"section": "Vintage", "q": "What is the Blanc de Noirs on the list?", "a": "Stéphane Coquillet 'Les Clés' — NV — $240", "context": "Champagne, France"}, {"section": "Style", "q": "What does Blanc de Noirs mean?", "a": "White wine made from red grapes — pressed quickly to avoid skin contact.", "context": "Pinot Noir gives body and red fruit without colour"}, {"section": "Grape", "q": "What grape is used in Blanc de Noirs?", "a": "Pinot Noir", "context": "Pressed without skin contact — stays white"}, {"section": "Vintage", "q": "What year is the Langhe Rossese — Giovanni Manzone?", "a": "2023", "context": "Piedmont, Italy — $100"}, {"section": "Grape", "q": "What grape is Langhe Rossese made from?", "a": "Rossese Bianco", "context": "Rare indigenous grape from Liguria/Piedmont"}, {"section": "Style", "q": "Describe Langhe Rossese in one sentence.", "a": "Light and floral with white peach, apricot and a crisp mineral finish.", "context": "Giovanni Manzone — $100 — off the beaten path"}, {"section": "Vintage", "q": "What year is the Cabernet Blend — Velenosi 'Ninfa'?", "a": "2022", "context": "Le Marche, Italy — $110"}, {"section": "Region", "q": "What region is Velenosi 'Ninfa' from?", "a": "Le Marche, Italy", "context": "Adriatic coast — Cabernet Sauvignon dominant with Merlot"}, {"section": "Style", "q": "Describe Velenosi 'Ninfa' in one sentence.", "a": "Bold and structured — blackcurrant, cedar, dark chocolate with firm tannins.", "context": "Bordeaux-style blend from central Italy"}];
 
 const DIAL_LABELS = {
@@ -2530,6 +3601,18 @@ srUpdateProgress('cocktail'); srUpdateProgress('cocktailq');
       e.preventDefault();
       const flipBtn = document.getElementById(activeDeck + '-flip');
       if (flipBtn) flipBtn.click();
+      return;
+    }
+
+    if (e.code === 'ArrowLeft') {
+      e.preventDefault();
+      prev(activeDeck);
+      return;
+    }
+
+    if (e.code === 'ArrowRight') {
+      e.preventDefault();
+      next(activeDeck);
       return;
     }
 
