@@ -380,9 +380,9 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
       <div class="h-card wine-q" onclick="showScreen('wineq-screen')">
         <div class="h-icon">⭐</div>
         <div class="h-body">
-          <div class="h-top"><div class="h-name">Wine Quiz</div><div class="h-count">81 cards</div></div>
-          <div class="h-desc">Vintages, grape varieties, exact regions, pairings, how to describe each wine.</div>
-          <div class="h-tags"><span class="h-tag">Vintage</span><span class="h-tag">Grape</span><span class="h-tag">Region</span><span class="h-tag">Pairing</span></div>
+          <div class="h-top"><div class="h-name">Wine Quiz</div><div class="h-count">90 cards</div></div>
+          <div class="h-desc">Grape varieties, exact regions, pairings, how to describe each wine.</div>
+          <div class="h-tags"><span class="h-tag">Grape</span><span class="h-tag">Region</span><span class="h-tag">Pairing</span></div>
         </div>
         <div class="h-arrow">›</div>
       </div>
@@ -3106,13 +3106,8 @@ const COCKTAIL_QUIZ = [
     "context": "Prosecco · Sparkling"
   }
 ];
-const WINE_CARDS = [
-  {
-    "section": "Vintage",
-    "q": "What year is the Pecorino — Velenosi 'Villa Angela Falerio'?",
-    "a": "2024",
-    "context": "Le Marche, Italy — $75"
-  },
+const WINE_CARDS = 
+[
   {
     "section": "Grape",
     "q": "What grape is Pecorino?",
@@ -3132,12 +3127,6 @@ const WINE_CARDS = [
     "context": "$75 by bottle, $18 by glass — great value"
   },
   {
-    "section": "Vintage",
-    "q": "What year is the Bellone — Casale del Giglio?",
-    "a": "2024",
-    "context": "Lazio, Italy — $85"
-  },
-  {
     "section": "Grape",
     "q": "What grape is Bellone?",
     "a": "Bellone — an ancient Roman white grape from Lazio",
@@ -3150,22 +3139,10 @@ const WINE_CARDS = [
     "context": "$85 — rare indigenous Lazio grape"
   },
   {
-    "section": "Vintage",
-    "q": "What year is the Vermentino — La Spinetta?",
-    "a": "2025",
-    "context": "Tuscany, Italy — $95"
-  },
-  {
     "section": "Style",
     "q": "Describe Vermentino in one sentence.",
     "a": "Coastal Italian white — white peach, citrus and a saline, herbal finish.",
     "context": "La Spinetta — renowned Piedmontese producer in Tuscany"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Sancerre — Domaine Bailly-Reverdy?",
-    "a": "2024",
-    "context": "Loire Valley, France — $130"
   },
   {
     "section": "Grape",
@@ -3180,22 +3157,10 @@ const WINE_CARDS = [
     "context": "The benchmark for Sauvignon Blanc — $130"
   },
   {
-    "section": "Vintage",
-    "q": "What year is the Chablis — Famille Grossot?",
-    "a": "2023",
-    "context": "Chablis, Burgundy, France — $145"
-  },
-  {
     "section": "Style",
     "q": "Describe Chablis — Famille Grossot in one sentence.",
     "a": "Pure, steely and mineral — green apple, oyster shell and laser-like acidity.",
     "context": "$145 — serious terroir-driven Chablis"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Pinot Noir — Laroque?",
-    "a": "2023",
-    "context": "Languedoc, France — $90"
   },
   {
     "section": "Region",
@@ -3210,12 +3175,6 @@ const WINE_CARDS = [
     "context": "Most accessible Pinot Noir on the list — $90"
   },
   {
-    "section": "Vintage",
-    "q": "What year is the Côtes de Beaune — Domaine de Cassiopée?",
-    "a": "2022",
-    "context": "Côte de Beaune, Burgundy, France — $225"
-  },
-  {
     "section": "Region",
     "q": "What region is Côtes de Beaune — Domaine de Cassiopée from?",
     "a": "Côte de Beaune, Burgundy, France",
@@ -3226,12 +3185,6 @@ const WINE_CARDS = [
     "q": "Describe Côtes de Beaune — Cassiopée in one sentence.",
     "a": "Elegant Burgundy Pinot Noir — red cherry, earthy complexity and silky tannins.",
     "context": "$225 — Côte de Beaune 2022 vintage"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Rosé — Tormaresca 'Calafuria'?",
-    "a": "2025",
-    "context": "Apulia, Italy — $90"
   },
   {
     "section": "Grape",
@@ -3272,150 +3225,6 @@ const WINE_CARDS = [
     "a": "Barolo or Amarone",
     "context": "Fenocchio $190 or Villabella $230 — biggest reds for biggest steak",
     "why": "The biggest steak on the menu needs the boldest wines. Barolo's fierce tannins and high acidity cut through 25oz of dry-aged fat like a knife — the dried cherry and tar complement the char. Amarone brings dried fruit concentration and body that matches the intensity of a dry-aged prime cut. Both wines need food this rich to show their best."
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Antinori Bramito Chardonnay?",
-    "a": "2024",
-    "context": "Umbria, Italy"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Pietrabianca 'Bocca di Lupo' Chardonnay?",
-    "a": "2024",
-    "context": "Puglia, Italy"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Puligny-Montrachet — François Carillon?",
-    "a": "2022",
-    "context": "Côte de Beaune, Burgundy"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Whispering Angel Rosé?",
-    "a": "2024",
-    "context": "Provence, France"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Greco di Tufo — Mastroberardino?",
-    "a": "2024",
-    "context": "Campania, Italy"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Etna Bianco — Planeta?",
-    "a": "2023",
-    "context": "Mount Etna, Sicily"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Rioja Reserva — Palacios de Camino Real?",
-    "a": "2019",
-    "context": "Rioja, Spain"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Nero d'Avola — Vigneti Zabu 'Chiantari'?",
-    "a": "2023",
-    "context": "Sicily, Italy"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Etna Rosso — Planeta?",
-    "a": "2023",
-    "context": "Mount Etna, Sicily"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Gamay Blend — Domaine des Huards?",
-    "a": "2022",
-    "context": "Loire Valley, France"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Bolgheri — Tenuta Argentiera?",
-    "a": "2023",
-    "context": "Bolgheri, Tuscany"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Montepulciano Riserva — Marina Cvetić?",
-    "a": "2020",
-    "context": "Abruzzo, Italy"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Chianti Gran Selezione — Il Palazzino?",
-    "a": "2021",
-    "context": "Chianti Classico, Tuscany"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Barolo — Giacomo Fenocchio?",
-    "a": "2021",
-    "context": "Piedmont, Italy"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Super Tuscan — Gaja Ca' Marcanda 'Promis'?",
-    "a": "2022",
-    "context": "Bolgheri, Tuscany"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Brunello — Argiano?",
-    "a": "2020",
-    "context": "Montalcino, Tuscany"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Pinot Noir — Domaine de Cassiopée?",
-    "a": "2022",
-    "context": "Burgundy, France"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Amarone — Villabella 'Fracastoro'?",
-    "a": "2013",
-    "context": "Valpolicella, Veneto"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Brunello — Gaja 'Pieve di Santa Restituta'?",
-    "a": "2019",
-    "context": "Montalcino, Tuscany"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Bordeaux — Corbin St-Émilion Grand Cru Classé?",
-    "a": "2015",
-    "context": "Saint-Émilion, Bordeaux"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Pinot Noir — Kosta Browne?",
-    "a": "2021",
-    "context": "Santa Rita Hills, California"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Pinot Noir — Domaine Georges Noëllat?",
-    "a": "2022",
-    "context": "Vosne-Romanée, Burgundy"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Super Tuscan — Antinori 'Tignanello'?",
-    "a": "2022",
-    "context": "Chianti Classico, Tuscany"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Dom Pérignon?",
-    "a": "2015",
-    "context": "Champagne, France"
   },
   {
     "section": "Grape",
@@ -3698,22 +3507,10 @@ const WINE_CARDS = [
     "context": "Both 100% Sangiovese — Tuscany"
   },
   {
-    "section": "Vintage",
-    "q": "What is the Chardonnay by the glass?",
-    "a": "Italian Chardonnay — $19",
-    "context": "5oz pour"
-  },
-  {
     "section": "Style",
     "q": "Describe the Chardonnay by glass in one sentence.",
     "a": "Italian-style — lighter and crisper than New World, subtle oak.",
     "context": "$19 by glass"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Rosé by glass?",
-    "a": "2023",
-    "context": "France — $17"
   },
   {
     "section": "Style",
@@ -3722,22 +3519,10 @@ const WINE_CARDS = [
     "context": "France 2023 — $17"
   },
   {
-    "section": "Vintage",
-    "q": "What country is Cava from?",
-    "a": "Spain",
-    "context": "$19 by glass — traditional method sparkling"
-  },
-  {
     "section": "Style",
     "q": "Describe Cava in one sentence.",
     "a": "Spain's answer to Champagne — dry, citrusy and refreshing at great value.",
     "context": "Same method as Champagne, local grapes"
-  },
-  {
-    "section": "Vintage",
-    "q": "What is the Prosecco on the list?",
-    "a": "Castello di Roncade — Veneto, Italy — NV — $85",
-    "context": "Rosé & Sparkling by the bottle"
   },
   {
     "section": "Style",
@@ -3752,12 +3537,6 @@ const WINE_CARDS = [
     "context": "Made from Glera grape — tank method"
   },
   {
-    "section": "Vintage",
-    "q": "What is the Brut Champagne on the list?",
-    "a": "Veuve Clicquot Yellow Label — NV — $195 (also half bottle $100)",
-    "context": "Champagne, France"
-  },
-  {
     "section": "Style",
     "q": "Describe Veuve Clicquot Yellow Label.",
     "a": "Rich and toasty — brioche, citrus, creamy bubbles. Pinot Noir dominant.",
@@ -3770,22 +3549,10 @@ const WINE_CARDS = [
     "context": "Gives body and richness to the blend"
   },
   {
-    "section": "Vintage",
-    "q": "What is the Rosé Champagne on the list?",
-    "a": "Moët & Chandon Rosé — NV — $215",
-    "context": "Champagne, France"
-  },
-  {
     "section": "Style",
     "q": "Describe Moët & Chandon Rosé.",
     "a": "Wild strawberry and raspberry with brioche — elegant, celebratory, fine bubbles.",
     "context": "Made by blending still Pinot Noir into the cuvée"
-  },
-  {
-    "section": "Vintage",
-    "q": "What is the Blanc de Noirs on the list?",
-    "a": "Stéphane Coquillet 'Les Clés' — NV — $240",
-    "context": "Champagne, France"
   },
   {
     "section": "Style",
@@ -3800,12 +3567,6 @@ const WINE_CARDS = [
     "context": "Pressed without skin contact — stays white"
   },
   {
-    "section": "Vintage",
-    "q": "What year is the Langhe Rossese — Giovanni Manzone?",
-    "a": "2023",
-    "context": "Piedmont, Italy — $100"
-  },
-  {
     "section": "Grape",
     "q": "What grape is Langhe Rossese made from?",
     "a": "Rossese Bianco",
@@ -3816,12 +3577,6 @@ const WINE_CARDS = [
     "q": "Describe Langhe Rossese in one sentence.",
     "a": "Light and floral with white peach, apricot and a crisp mineral finish.",
     "context": "Giovanni Manzone — $100 — off the beaten path"
-  },
-  {
-    "section": "Vintage",
-    "q": "What year is the Cabernet Blend — Velenosi 'Ninfa'?",
-    "a": "2022",
-    "context": "Le Marche, Italy — $110"
   },
   {
     "section": "Region",
@@ -3910,7 +3665,6 @@ const WINE_CARDS = [
     "context": "Ancient grape from Friuli, northeast Italy"
   }
 ];
-
 const DIAL_LABELS = {
   Body: ["Very Light","Light","Medium","Full","Very Full"],
   Acidity: ["Very Low","Low","Medium","High","Very High"],
