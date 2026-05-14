@@ -646,7 +646,630 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
 </nav>
 
 <script>
-const DISHES = [{"name": "Tuna Tartare", "price": 34, "category": "Raw & Salad", "pitch": ["tuna", "avocado", "citrus"], "full": "avocado, chives, shallots, citrus, chips", "mise": "Fork + Spoon", "wine": "Crisp white or dry rosé", "bottles": ["Muscadet by glass — $18", "Whispering Angel Rosé — $90", "Cava by glass — $19"], "note": "Citrus is the acid element — bright and clean against the rich avocado and tuna"}, {"name": "Carpaccio", "price": 32, "category": "Raw & Salad", "pitch": ["beef tenderloin", "arugula", "manchego"], "full": "beef tenderloin, arugula, aioli, shallot, manchego", "mise": "Fork + Spoon", "wine": "Light red or full-bodied white", "bottles": ["Gamay Blend — Domaine des Huards $120", "Pinot Noir — Domaine de Cassiopée $215", "Chardonnay — Antinori Bramito $115"], "note": "Manchego = Spanish sheep's milk cheese, nutty, like a milder parmesan"}, {"name": "Greek Village Salad", "price": 26, "category": "Raw & Salad", "pitch": ["heirloom tomato", "feta", "olives"], "full": "heirloom tomatoes, cucumber, peppers, olives, feta, mint, oregano", "mise": "Fork + Spoon", "wine": "Mineral Italian white", "bottles": ["Greco di Tufo — Mastroberardino $105", "Etna Bianco — Planeta $110", "Muscadet by glass — $18"], "note": "Classic horiatiki — no lettuce. Heirloom tomatoes and fresh herbs are the backbone"}, {"name": "Spring Salad", "price": 28, "category": "Raw & Salad", "pitch": ["endives", "pear", "comté"], "full": "endives, hazelnuts, pear, comté, burnt honey vinaigrette", "mise": "Fork + Spoon", "wine": "Rich white Burgundy style", "bottles": ["Chardonnay — Antinori Bramito $115", "Chardonnay — Pietrabianca $125", "Puligny-Montrachet — François Carillon $395"], "note": "Comté = French aged cow's milk cheese, nutty with caramel notes. Endives = pale, crunchy, slightly bitter leaf"}, {"name": "Fennel & Arugula", "price": 27, "category": "Raw & Salad", "pitch": ["fennel", "blood orange", "aged parmesan"], "full": "blood orange, toasted pine nuts, aged parmesan, sumac", "mise": "Fork + Spoon", "wine": "Crisp Italian white", "bottles": ["Ribolla Gialla — Le Vigne di Zamo $95", "Etna Bianco — Planeta $110", "Muscadet by glass — $18"], "note": "Fennel = mild licorice flavor. Sumac = tangy, lemony Middle Eastern spice that ties the whole dish"}, {"name": "Beets & Goat Cheese", "price": 29, "category": "Raw & Salad", "pitch": ["beets", "goat cheese", "sicilian pistachio"], "full": "sicilian pistachio, dill, mint, shallots, champagne vinaigrette", "mise": "Fork + Spoon", "wine": "Dry mineral white", "bottles": ["Ribolla Gialla — Le Vigne di Zamo $95", "Malvazija — Coronica $78", "Muscadet by glass — $18"], "note": "Dill and mint are the herbs — specific, not generic. Sicilian pistachios are more intense than standard"}, {"name": "Zucchini Chips", "price": 27, "category": "Hot Plates", "pitch": ["fried zucchini", "tzatziki", "lemon"], "full": "fried zucchini, tzatziki, lemon", "mise": "Fork + Spoon", "wine": "Light crisp white or sparkling", "bottles": ["Muscadet by glass — $18", "Cava by glass — $19", "Malvazija — Coronica $78"], "note": "Tzatziki = Greek yogurt-cucumber-garlic-dill sauce"}, {"name": "Baked Feta", "price": 28, "category": "Hot Plates", "pitch": ["feta", "phyllo", "truffle honey"], "full": "truffle honey, phyllo, pistachio", "mise": "Butter Knife + Fork", "wine": "Rich white — the honey needs some body", "bottles": ["Greco di Tufo — Mastroberardino $105", "Chardonnay — Antinori Bramito $115", "Etna Bianco — Planeta $110"], "note": "Phyllo = paper-thin Greek pastry that crisps like baklava. Truffle honey = elevated touch"}, {"name": "Octopus a la Plancha", "price": 34, "category": "Hot Plates", "pitch": ["octopus", "hummus", "salsa verde"], "full": "hummus, potatoes, shishitos, salsa verde", "mise": "Fork + Spoon", "wine": "Mineral Sicilian or Italian white", "bottles": ["Etna Bianco — Planeta $110", "Greco di Tufo — Mastroberardino $105", "Ribolla Gialla — Le Vigne di Zamo $95"], "note": "A la plancha = grilled on a scorching flat griddle. Shishitos: 1 in 10 is spicy"}, {"name": "Calamari Fritti", "price": 32, "category": "Hot Plates", "pitch": ["calamari", "shishito peppers", "aioli"], "full": "shishito peppers, aioli, lemon", "mise": "Fork + Spoon", "wine": "Light crisp white", "bottles": ["Muscadet by glass — $18", "Malvazija — Coronica $78", "Cava by glass — $19"], "note": "Fritti = Italian for fried. Aioli = garlic mayo"}, {"name": "Baguette", "price": 8, "category": "Hot Plates", "pitch": ["warmed bread", "rosemary", "olive oil"], "full": "warmed, sea salt, rosemary, olive oil", "mise": "Butter Knife", "wine": "Anything by the glass — easy upsell starter", "bottles": ["Cava by glass — $19", "Muscadet by glass — $18", "Prosecco — Castello di Roncade $85"], "note": "Good upsell at the start of the meal. Simple and crowd-pleasing"}, {"name": "Lobster Tagliatelle", "price": 75, "category": "Signature", "pitch": ["lobster", "hand cut pasta", "bisque"], "full": "fresh east coast lobster, hand cut pasta, bisque, chilli, cream, chives", "mise": "Fork + Spoon", "wine": "Rich oaked Chardonnay — cream sauce needs body", "bottles": ["Chardonnay — Pietrabianca 'Bocca di Lupo' $125", "Chardonnay — Antinori Bramito $115", "Puligny-Montrachet — François Carillon $395"], "note": "Bisque = rich sauce from the lobster shells. Has chilli — subtle heat. Hand cut pasta, not dry"}, {"name": "Lamb Chops", "price": 78, "category": "Signature", "pitch": ["lamb", "salsa verde", "tzatziki"], "full": "grilled vegetables, potatoes, tzatziki, salsa verde", "mise": "Fork + Steak Knife", "wine": "Savory medium-full red", "bottles": ["Syrah by glass — $19", "Rioja Reserva — Palacios de Camino Real $80", "Etna Rosso — Planeta $115"], "note": "Italian salsa verde = parsley, capers, anchovy, olive oil. Not the Mexican version"}, {"name": "Organic King Salmon", "price": 48, "category": "Signature", "pitch": ["salmon", "spinach", "lemongrass beurre blanc"], "full": "spinach, potatoes, red onion, lemongrass beurre blanc", "mise": "Fork + Butter Knife (medium only)", "wine": "Pinot Noir or oaked Chardonnay", "bottles": ["Pinot Noir — Domaine de Cassiopée $215", "Gamay Blend — Domaine des Huards $120", "Chardonnay — Antinori Bramito $115"], "note": "From Ireland. Cooked medium only — don't take temp requests. Beurre blanc = French butter sauce"}, {"name": "Spaghetti", "price": 39, "category": "Signature", "pitch": ["confit tomato", "Italian burrata", "pistachio"], "full": "confit tomato, pistachio, Italian burrata, basil", "mise": "Fork + Spoon", "wine": "Tuscan red — high acid built for tomato", "bottles": ["Chianti Gran Selezione — Il Palazzino $160", "Nero d'Avola by glass — $18", "Bolgheri — Tenuta Argentiera $135"], "note": "Burrata = mozzarella with creamy center that oozes. Confit tomato = slow-cooked in oil until jammy"}, {"name": "Lemon Roasted Chicken", "price": 47, "category": "Signature", "pitch": ["chicken", "preserved lemon", "smashed potatoes"], "full": "preserved lemon, herbs, smashed potatoes, swiss chard, olives, sumac", "mise": "Steak Knife + Fork", "wine": "Dry white with good acidity", "bottles": ["Chardonnay — Antinori Bramito $115", "Chablis — Madame Veuve Point $130", "Langhe Rossese — Giovanni Manzone $100"], "note": "Preserved lemons = salt-cured weeks, deeply savory not sour. Sumac adds tangy finish"}, {"name": "Seafood Risotto", "price": 68, "category": "Signature", "pitch": ["market seafood", "arborio rice", "seafood broth"], "full": "market seafood, arborio rice, light seafood & tomato broth", "mise": "Fork + Spoon", "wine": "White with body for a rich risotto", "bottles": ["Etna Bianco — Planeta $110", "Greco di Tufo — Mastroberardino $105", "Chardonnay — Antinori Bramito $115"], "note": "Market seafood = calamari, shrimp, scallops (confirmed by kitchen). Arborio = short-grain rice that makes it creamy"}, {"name": "Whole Grilled Branzino", "price": 58, "category": "Signature", "pitch": ["branzino", "vine tomatoes", "herb roasted potatoes"], "full": "vine tomatoes, olives, capers, white wine, herb roasted potatoes", "mise": "Fork + Steak Knife + 3rd plate (for bones)", "wine": "Mineral Sicilian or French white", "bottles": ["Etna Bianco — Planeta $110", "Chablis — Madame Veuve Point $130", "Greco di Tufo — Mastroberardino $105"], "note": "Served whole — 3rd plate comes for the bones. Branzino = Mediterranean sea bass"}, {"name": "Prime Striploin", "price": 78, "category": "Signature", "pitch": ["12oz dry-aged striploin", "peppercorn sauce", "grilled vegetables"], "full": "12oz, dry-aged, grilled Mediterranean vegetables, potatoes, peppercorn sauce", "mise": "Fork + Steak Knife", "wine": "Bold structured red", "bottles": ["Barolo — Giacomo Fenocchio $190", "Montepulciano Riserva — Marina Cvetić $140", "Syrah by glass — $19"], "note": "12oz dry-aged prime cut. Mediterranean veg = peppers, onions, zucchini"}, {"name": "Grilled Seafood Platter", "price": 90, "category": "Signature", "pitch": ["grilled Spanish octopus", "prawns", "scallops"], "full": "grilled Spanish octopus, calamari, prawns, scallops, beans, lemon", "mise": "Butter Knife + Fork", "wine": "Versatile mineral white", "bottles": ["Etna Bianco — Planeta $110", "Chablis — Madame Veuve Point $130", "Greco di Tufo — Mastroberardino $105"], "note": "Full spec: Spanish octopus, calamari, prawns, scallops. Mediterranean bean salad on the side"}, {"name": "Coconut Cream Pie", "price": 0, "category": "Desserts", "pitch": ["coconut cream", "toasted coconut", "berries"], "full": "coconut cream, toasted coconut, chantilly cream, fresh berries", "mise": "Dessert Fork", "wine": "Late harvest Riesling, Moscato d'Asti, or dessert wine", "bottles": ["Ask sommelier for current dessert wine pairing"], "note": "Confirm exact ingredients with kitchen — ingredients approximate from photo"}, {"name": "Gluten-Free Chocolate Cake", "price": 0, "category": "Desserts", "pitch": ["chocolate", "fresh berries", "gluten-free"], "full": "chocolate cake, fresh berries, white chocolate drizzle", "mise": "Dessert Fork", "wine": "Amarone, aged port, or espresso martini pairing", "bottles": ["Amarone — Villabella 'Fracastoro' 2013 — $230", "Ask sommelier for port or digestif"], "note": "Gluten-free — important to flag for guests with dietary restrictions. Confirm with kitchen."}, {"name": "Pistachio Cheesecake", "price": 0, "category": "Desserts", "pitch": ["pistachio", "cheesecake", "berries"], "full": "pistachio cheesecake, nut crust, crushed pistachios, fresh berries", "mise": "Dessert Fork", "wine": "Moscato d'Asti, late harvest white, or Vin Santo", "bottles": ["Ask sommelier for current dessert wine or digestif pairing"], "note": "Confirm exact ingredients with kitchen — ingredients approximate from photo"}, {"name": "Chicken Salad", "price": 39, "category": "Lunch", "pitch": ["organic quinoa", "avocado", "tzatziki"], "full": "organic quinoa, avocado, feta, walnuts, tomatoes, mint, red onion, tzatziki", "mise": "Fork + Spoon", "wine": "Crisp white or dry rosé", "bottles": ["Muscadet by glass — $18", "Whispering Angel Rosé — $90", "Cava by glass — $19"], "note": "Lunch only — confirm availability before recommending"}, {"name": "Fennel Crusted Tuna", "price": 45, "category": "Lunch", "pitch": ["fennel crusted tuna", "quinoa", "avocado"], "full": "organic quinoa, avocado, feta, walnuts, tomatoes, mint, red onion", "mise": "Fork + Spoon", "wine": "Mineral white or dry rosé", "bottles": ["Etna Bianco — Planeta $110", "Muscadet by glass — $18", "Whispering Angel Rosé — $90"], "note": "Lunch only — fennel crust gives it a distinctive anise edge"}, {"name": "Ribeye Spiedini", "price": 48, "category": "Lunch", "pitch": ["ribeye", "quinoa salad", "handcut fries"], "full": "organic quinoa, avocado, feta, walnuts, tomatoes, mint, red onion OR handcut fries & aioli", "mise": "Fork + Steak Knife", "wine": "Medium red or crisp white", "bottles": ["Nero d'Avola by glass — $18", "Syrah by glass — $19", "Etna Rosso — Planeta $115"], "note": "Lunch only — guest choice: quinoa salad OR handcut fries & aioli"}, {"name": "Rigatoni Puttanesca", "price": 42, "category": "Lunch", "pitch": ["rigatoni", "fresh seafood", "Calabrian chili"], "full": "fresh seafood, tomatoes, olives, capers, white wine, Calabrian chili", "mise": "Fork + Spoon", "wine": "Italian red or crisp white", "bottles": ["Chianti Gran Selezione — $160", "Nero d'Avola by glass — $18", "Etna Bianco — $110"], "note": "Lunch only — Calabrian chili adds a gentle heat. Puttanesca = olives, capers, anchovies style"}, {"name": "Linguini with Clams", "price": 42, "category": "Lunch", "pitch": ["baby clams", "white wine", "garlic"], "full": "fresh baby clams, chilli, garlic, white wine, parsley", "mise": "Fork + Spoon", "wine": "Crisp Italian white — classic pairing", "bottles": ["Etna Bianco — Planeta $110", "Greco di Tufo — Mastroberardino $105", "Muscadet by glass — $18"], "note": "Lunch only — clams in white wine is a classic Italian combination"}, {"name": "Lobster Roll", "price": 48, "category": "Lunch", "pitch": ["east coast lobster", "avocado", "tarragon aioli"], "full": "fresh east coast lobster, avocado, chives, tarragon aioli, frites", "mise": "Fork + Spoon", "wine": "Oaked Chardonnay or dry rosé", "bottles": ["Chardonnay — Antinori Bramito $115", "Whispering Angel Rosé — $90", "Cava by glass — $19"], "note": "Lunch only — tarragon aioli is a French herb mayo. Frites = thin crispy fries"}, {"name": "Cowboy Ribeye Special", "price": 0, "category": "Specials", "pitch": ["dry-aged ribeye", "shishito peppers", "daily special"], "full": "Ingredients vary — ask kitchen for today's preparation", "mise": "Fork + Steak Knife", "wine": "Bold structured red", "bottles": ["Barolo — Giacomo Fenocchio $190", "Montepulciano Riserva $140", "Syrah by glass — $19"], "note": "Daily special — price and preparation change. Always confirm with manager before service"}, {"name": "Halibut Special", "price": 68, "category": "Specials", "pitch": ["halibut", "tuscan kale", "chickpeas"], "full": "halibut, tuscan kale, chickpeas", "mise": "Fork + Butter Knife", "wine": "Mineral white — crisp and clean to match the delicate fish", "bottles": ["Etna Bianco — Planeta $110", "Chablis — Madame Veuve Point $130", "Greco di Tufo — Mastroberardino $105"], "note": "Tuscan kale (cavolo nero) is darker and earthier than regular kale. Chickpeas add body. $68."}, {"name": "Mussels", "price": 0, "category": "Specials", "pitch": ["mussels", "nduja", "tomato sauce"], "full": "mussels, nduja, tomato sauce, crostini", "mise": "Fork + Spoon", "wine": "Crisp white or sparkling — mineral whites work well with shellfish", "bottles": ["Pecorino by glass $18", "Etna Bianco — Planeta $110", "Cava by glass $19"], "note": "Nduja is a spicy, spreadable Calabrian salami — melts into the tomato sauce. Crostini for dipping. Confirm price with manager."}, {"name": "Duck", "price": 0, "category": "Specials", "pitch": ["seared duck", "honey chilli", "red wine demi-glace"], "full": "seared duck breast, honey chilli glaze, red wine demi-glace, mushrooms, fried brussels sprouts", "mise": "Fork + Steak Knife", "wine": "Medium-full red — Pinot Noir or earthy Burgundy style", "bottles": ["Pinot Noir — Domaine de Cassiope $215", "Etna Rosso — Planeta $115", "Gamay Blend — Domaine des Huards $120"], "note": "Demi-glace is a rich, reduced red wine and veal stock sauce — intense and glossy. Honey chilli adds sweet heat. Confirm price with manager."}, {"name": "32oz Porterhouse", "price": 195, "category": "Specials", "pitch": ["Canadian prime porterhouse", "dry-aged", "shishito peppers"], "full": "32oz Canadian prime dry-aged porterhouse — 7oz bone, 25oz meat (tenderloin + New York strip loin), shishito peppers, fries", "mise": "Fork + Steak Knife", "wine": "Bold structured red — needs something with backbone", "bottles": ["Barolo — Giacomo Fenocchio $190", "Montepulciano Riserva — Marina Cveti $140", "Amarone — Villabella Fracastoro $230"], "note": "32oz total — 7oz is bone, 25oz of meat. Two cuts: tenderloin (buttery, lean) + New York strip (marbling, intense). Canadian prime top grade. Dry-aged for depth. Shishitos: 1 in 10 is spicy. $195."}];
+const DISHES = [
+  {
+    "name": "Tuna Tartare",
+    "price": 34,
+    "category": "Raw & Salad",
+    "pitch": [
+      "tuna",
+      "avocado",
+      "citrus"
+    ],
+    "full": "avocado, chives, shallots, citrus, chips",
+    "mise": "Fork + Spoon",
+    "wine": "Crisp white or dry rosé",
+    "bottles": [
+      "Muscadet by glass — $18",
+      "Whispering Angel Rosé — $90",
+      "Cava by glass — $19"
+    ],
+    "note": "Citrus is the acid element — bright and clean against the rich avocado and tuna"
+  },
+  {
+    "name": "Carpaccio",
+    "price": 32,
+    "category": "Raw & Salad",
+    "pitch": [
+      "beef tenderloin",
+      "arugula",
+      "manchego"
+    ],
+    "full": "beef tenderloin, arugula, aioli, shallot, manchego",
+    "mise": "Fork + Spoon",
+    "wine": "Light red or full-bodied white",
+    "bottles": [
+      "Gamay Blend — Domaine des Huards $120",
+      "Pinot Noir — Domaine de Cassiopée $215",
+      "Chardonnay — Antinori Bramito $115"
+    ],
+    "note": "Manchego = Spanish sheep's milk cheese, nutty, like a milder parmesan"
+  },
+  {
+    "name": "Greek Village Salad",
+    "price": 26,
+    "category": "Raw & Salad",
+    "pitch": [
+      "heirloom tomato",
+      "feta",
+      "olives"
+    ],
+    "full": "heirloom tomatoes, cucumber, peppers, olives, feta, mint, oregano",
+    "mise": "Fork + Spoon",
+    "wine": "Mineral Italian white",
+    "bottles": [
+      "Greco di Tufo — Mastroberardino $105",
+      "Etna Bianco — Planeta $110",
+      "Muscadet by glass — $18"
+    ],
+    "note": "Classic horiatiki — no lettuce. Heirloom tomatoes and fresh herbs are the backbone"
+  },
+  {
+    "name": "Spring Salad",
+    "price": 28,
+    "category": "Raw & Salad",
+    "pitch": [
+      "endives",
+      "pear",
+      "comté"
+    ],
+    "full": "endives, hazelnuts, pear, comté, burnt honey vinaigrette",
+    "mise": "Fork + Spoon",
+    "wine": "Rich white Burgundy style",
+    "bottles": [
+      "Chardonnay — Antinori Bramito $115",
+      "Chardonnay — Pietrabianca $125",
+      "Puligny-Montrachet — François Carillon $395"
+    ],
+    "note": "Comté = French aged cow's milk cheese, nutty with caramel notes. Endives = pale, crunchy, slightly bitter leaf"
+  },
+  {
+    "name": "Fennel & Arugula",
+    "price": 27,
+    "category": "Raw & Salad",
+    "pitch": [
+      "fennel",
+      "blood orange",
+      "aged parmesan"
+    ],
+    "full": "blood orange, toasted pine nuts, aged parmesan, sumac",
+    "mise": "Fork + Spoon",
+    "wine": "Crisp Italian white",
+    "bottles": [
+      "Ribolla Gialla — Le Vigne di Zamo $95",
+      "Etna Bianco — Planeta $110",
+      "Muscadet by glass — $18"
+    ],
+    "note": "Fennel = mild licorice flavor. Sumac = tangy, lemony Middle Eastern spice that ties the whole dish"
+  },
+  {
+    "name": "Beets & Goat Cheese",
+    "price": 29,
+    "category": "Raw & Salad",
+    "pitch": [
+      "beets",
+      "goat cheese",
+      "sicilian pistachio"
+    ],
+    "full": "sicilian pistachio, dill, mint, shallots, champagne vinaigrette",
+    "mise": "Fork + Spoon",
+    "wine": "Dry mineral white",
+    "bottles": [
+      "Ribolla Gialla — Le Vigne di Zamo $95",
+      "Malvazija — Coronica $78",
+      "Muscadet by glass — $18"
+    ],
+    "note": "Dill and mint are the herbs — specific, not generic. Sicilian pistachios are more intense than standard"
+  },
+  {
+    "name": "Zucchini Chips",
+    "price": 27,
+    "category": "Hot Plates",
+    "pitch": [
+      "fried zucchini",
+      "tzatziki",
+      "lemon"
+    ],
+    "full": "fried zucchini, tzatziki, lemon",
+    "mise": "Fork + Spoon",
+    "wine": "Light crisp white or sparkling",
+    "bottles": [
+      "Muscadet by glass — $18",
+      "Cava by glass — $19",
+      "Malvazija — Coronica $78"
+    ],
+    "note": "Tzatziki = Greek yogurt-cucumber-garlic-dill sauce"
+  },
+  {
+    "name": "Baked Feta",
+    "price": 28,
+    "category": "Hot Plates",
+    "pitch": [
+      "feta",
+      "phyllo",
+      "truffle honey"
+    ],
+    "full": "truffle honey, phyllo, pistachio",
+    "mise": "Butter Knife + Fork",
+    "wine": "Rich white — the honey needs some body",
+    "bottles": [
+      "Greco di Tufo — Mastroberardino $105",
+      "Chardonnay — Antinori Bramito $115",
+      "Etna Bianco — Planeta $110"
+    ],
+    "note": "Phyllo = paper-thin Greek pastry that crisps like baklava. Truffle honey = elevated touch"
+  },
+  {
+    "name": "Octopus a la Plancha",
+    "price": 34,
+    "category": "Hot Plates",
+    "pitch": [
+      "octopus",
+      "hummus",
+      "salsa verde"
+    ],
+    "full": "hummus, potatoes, shishitos, salsa verde",
+    "mise": "Fork + Spoon",
+    "wine": "Mineral Sicilian or Italian white",
+    "bottles": [
+      "Etna Bianco — Planeta $110",
+      "Greco di Tufo — Mastroberardino $105",
+      "Ribolla Gialla — Le Vigne di Zamo $95"
+    ],
+    "note": "A la plancha = grilled on a scorching flat griddle. Shishitos: 1 in 10 is spicy"
+  },
+  {
+    "name": "Calamari Fritti",
+    "price": 32,
+    "category": "Hot Plates",
+    "pitch": [
+      "calamari",
+      "shishito peppers",
+      "aioli"
+    ],
+    "full": "shishito peppers, aioli, lemon",
+    "mise": "Fork + Spoon",
+    "wine": "Light crisp white",
+    "bottles": [
+      "Muscadet by glass — $18",
+      "Malvazija — Coronica $78",
+      "Cava by glass — $19"
+    ],
+    "note": "Fritti = Italian for fried. Aioli = garlic mayo"
+  },
+  {
+    "name": "Baguette",
+    "price": 8,
+    "category": "Hot Plates",
+    "pitch": [
+      "warmed bread",
+      "rosemary",
+      "olive oil"
+    ],
+    "full": "warmed, sea salt, rosemary, olive oil",
+    "mise": "Butter Knife",
+    "wine": "Anything by the glass — easy upsell starter",
+    "bottles": [
+      "Cava by glass — $19",
+      "Muscadet by glass — $18",
+      "Prosecco — Castello di Roncade $85"
+    ],
+    "note": "Good upsell at the start of the meal. Simple and crowd-pleasing"
+  },
+  {
+    "name": "Lobster Tagliatelle",
+    "price": 75,
+    "category": "Signature",
+    "pitch": [
+      "lobster",
+      "hand cut pasta",
+      "bisque"
+    ],
+    "full": "fresh east coast lobster, hand cut pasta, bisque, chilli, cream, chives",
+    "mise": "Fork + Spoon",
+    "wine": "Rich oaked Chardonnay — cream sauce needs body",
+    "bottles": [
+      "Chardonnay — Pietrabianca 'Bocca di Lupo' $125",
+      "Chardonnay — Antinori Bramito $115",
+      "Puligny-Montrachet — François Carillon $395"
+    ],
+    "note": "Bisque = rich sauce from the lobster shells. Has chilli — subtle heat. Hand cut pasta, not dry"
+  },
+  {
+    "name": "Lamb Chops",
+    "price": 78,
+    "category": "Signature",
+    "pitch": [
+      "lamb",
+      "salsa verde",
+      "tzatziki"
+    ],
+    "full": "grilled vegetables, potatoes, tzatziki, salsa verde",
+    "mise": "Fork + Steak Knife",
+    "wine": "Savory medium-full red",
+    "bottles": [
+      "Syrah by glass — $19",
+      "Rioja Reserva — Palacios de Camino Real $80",
+      "Etna Rosso — Planeta $115"
+    ],
+    "note": "Italian salsa verde = parsley, capers, anchovy, olive oil. Not the Mexican version"
+  },
+  {
+    "name": "Organic King Salmon",
+    "price": 48,
+    "category": "Signature",
+    "pitch": [
+      "salmon",
+      "spinach",
+      "lemongrass beurre blanc"
+    ],
+    "full": "spinach, potatoes, red onion, lemongrass beurre blanc",
+    "mise": "Fork + Butter Knife (medium only)",
+    "wine": "Pinot Noir or oaked Chardonnay",
+    "bottles": [
+      "Pinot Noir — Domaine de Cassiopée $215",
+      "Gamay Blend — Domaine des Huards $120",
+      "Chardonnay — Antinori Bramito $115"
+    ],
+    "note": "From Ireland. Cooked medium only — don't take temp requests. Beurre blanc = French butter sauce"
+  },
+  {
+    "name": "Spaghetti",
+    "price": 39,
+    "category": "Signature",
+    "pitch": [
+      "confit tomato",
+      "Italian burrata",
+      "pistachio"
+    ],
+    "full": "confit tomato, pistachio, Italian burrata, basil",
+    "mise": "Fork + Spoon",
+    "wine": "Tuscan red — high acid built for tomato",
+    "bottles": [
+      "Chianti Gran Selezione — Il Palazzino $160",
+      "Nero d'Avola by glass — $18",
+      "Bolgheri — Tenuta Argentiera $135"
+    ],
+    "note": "Burrata = mozzarella with creamy center that oozes. Confit tomato = slow-cooked in oil until jammy"
+  },
+  {
+    "name": "Lemon Roasted Chicken",
+    "price": 47,
+    "category": "Signature",
+    "pitch": [
+      "chicken",
+      "preserved lemon",
+      "smashed potatoes"
+    ],
+    "full": "preserved lemon, herbs, smashed potatoes, swiss chard, olives, sumac",
+    "mise": "Steak Knife + Fork",
+    "wine": "Dry white with good acidity",
+    "bottles": [
+      "Chardonnay — Antinori Bramito $115",
+      "Chablis — Madame Veuve Point $130",
+      "Langhe Rossese — Giovanni Manzone $100"
+    ],
+    "note": "Preserved lemons = salt-cured weeks, deeply savory not sour. Sumac adds tangy finish"
+  },
+  {
+    "name": "Seafood Risotto",
+    "price": 68,
+    "category": "Signature",
+    "pitch": [
+      "market seafood",
+      "arborio rice",
+      "seafood broth"
+    ],
+    "full": "market seafood, arborio rice, light seafood & tomato broth",
+    "mise": "Fork + Spoon",
+    "wine": "White with body for a rich risotto",
+    "bottles": [
+      "Etna Bianco — Planeta $110",
+      "Greco di Tufo — Mastroberardino $105",
+      "Chardonnay — Antinori Bramito $115"
+    ],
+    "note": "Market seafood = calamari, shrimp, scallops (confirmed by kitchen). Arborio = short-grain rice that makes it creamy"
+  },
+  {
+    "name": "Whole Grilled Branzino",
+    "price": 58,
+    "category": "Signature",
+    "pitch": [
+      "branzino",
+      "vine tomatoes",
+      "herb roasted potatoes"
+    ],
+    "full": "vine tomatoes, olives, capers, white wine, herb roasted potatoes",
+    "mise": "Fork + Steak Knife + 3rd plate (for bones)",
+    "wine": "Mineral Sicilian or French white",
+    "bottles": [
+      "Etna Bianco — Planeta $110",
+      "Chablis — Madame Veuve Point $130",
+      "Greco di Tufo — Mastroberardino $105"
+    ],
+    "note": "Served whole — 3rd plate comes for the bones. Branzino = Mediterranean sea bass"
+  },
+  {
+    "name": "Prime Striploin",
+    "price": 78,
+    "category": "Signature",
+    "pitch": [
+      "12oz dry-aged striploin",
+      "peppercorn sauce",
+      "grilled vegetables"
+    ],
+    "full": "12oz, dry-aged, grilled Mediterranean vegetables, potatoes, peppercorn sauce",
+    "mise": "Fork + Steak Knife",
+    "wine": "Bold structured red",
+    "bottles": [
+      "Barolo — Giacomo Fenocchio $190",
+      "Montepulciano Riserva — Marina Cvetić $140",
+      "Syrah by glass — $19"
+    ],
+    "note": "12oz dry-aged prime cut. Mediterranean veg = peppers, onions, zucchini"
+  },
+  {
+    "name": "Grilled Seafood Platter",
+    "price": 90,
+    "category": "Signature",
+    "pitch": [
+      "grilled Spanish octopus",
+      "prawns",
+      "scallops"
+    ],
+    "full": "grilled Spanish octopus, calamari, prawns, scallops, beans, lemon",
+    "mise": "Butter Knife + Fork",
+    "wine": "Versatile mineral white",
+    "bottles": [
+      "Etna Bianco — Planeta $110",
+      "Chablis — Madame Veuve Point $130",
+      "Greco di Tufo — Mastroberardino $105"
+    ],
+    "note": "Full spec: Spanish octopus, calamari, prawns, scallops. Mediterranean bean salad on the side"
+  },
+  {
+    "name": "Coconut Cream Pie",
+    "price": 0,
+    "category": "Desserts",
+    "pitch": [
+      "coconut cream",
+      "toasted coconut",
+      "berries"
+    ],
+    "full": "coconut cream, toasted coconut, chantilly cream, fresh berries",
+    "mise": "Dessert Fork",
+    "wine": "Late harvest Riesling, Moscato d'Asti, or dessert wine",
+    "bottles": [
+      "Ask sommelier for current dessert wine pairing"
+    ],
+    "note": "Confirm exact ingredients with kitchen — ingredients approximate from photo"
+  },
+  {
+    "name": "Gluten-Free Chocolate Cake",
+    "price": 0,
+    "category": "Desserts",
+    "pitch": [
+      "chocolate",
+      "fresh berries",
+      "gluten-free"
+    ],
+    "full": "chocolate cake, fresh berries, white chocolate drizzle",
+    "mise": "Dessert Fork",
+    "wine": "Amarone, aged port, or espresso martini pairing",
+    "bottles": [
+      "Amarone — Villabella 'Fracastoro' 2013 — $230",
+      "Ask sommelier for port or digestif"
+    ],
+    "note": "Gluten-free — important to flag for guests with dietary restrictions. Confirm with kitchen."
+  },
+  {
+    "name": "Pistachio Cheesecake",
+    "price": 0,
+    "category": "Desserts",
+    "pitch": [
+      "pistachio",
+      "cheesecake",
+      "berries"
+    ],
+    "full": "pistachio cheesecake, nut crust, crushed pistachios, fresh berries",
+    "mise": "Dessert Fork",
+    "wine": "Moscato d'Asti, late harvest white, or Vin Santo",
+    "bottles": [
+      "Ask sommelier for current dessert wine or digestif pairing"
+    ],
+    "note": "Confirm exact ingredients with kitchen — ingredients approximate from photo"
+  },
+  {
+    "name": "Chicken Salad",
+    "price": 39,
+    "category": "Lunch",
+    "pitch": [
+      "organic quinoa",
+      "avocado",
+      "tzatziki"
+    ],
+    "full": "organic quinoa, avocado, feta, walnuts, tomatoes, mint, red onion, tzatziki",
+    "mise": "Fork + Spoon",
+    "wine": "Crisp white or dry rosé",
+    "bottles": [
+      "Muscadet by glass — $18",
+      "Whispering Angel Rosé — $90",
+      "Cava by glass — $19"
+    ],
+    "note": "Lunch only — confirm availability before recommending"
+  },
+  {
+    "name": "Fennel Crusted Tuna",
+    "price": 45,
+    "category": "Lunch",
+    "pitch": [
+      "fennel crusted tuna",
+      "quinoa",
+      "avocado"
+    ],
+    "full": "organic quinoa, avocado, feta, walnuts, tomatoes, mint, red onion",
+    "mise": "Fork + Spoon",
+    "wine": "Mineral white or dry rosé",
+    "bottles": [
+      "Etna Bianco — Planeta $110",
+      "Muscadet by glass — $18",
+      "Whispering Angel Rosé — $90"
+    ],
+    "note": "Lunch only — fennel crust gives it a distinctive anise edge"
+  },
+  {
+    "name": "Ribeye Spiedini",
+    "price": 48,
+    "category": "Lunch",
+    "pitch": [
+      "ribeye",
+      "quinoa salad",
+      "handcut fries"
+    ],
+    "full": "organic quinoa, avocado, feta, walnuts, tomatoes, mint, red onion OR handcut fries & aioli",
+    "mise": "Fork + Steak Knife",
+    "wine": "Medium red or crisp white",
+    "bottles": [
+      "Nero d'Avola by glass — $18",
+      "Syrah by glass — $19",
+      "Etna Rosso — Planeta $115"
+    ],
+    "note": "Lunch only — guest choice: quinoa salad OR handcut fries & aioli"
+  },
+  {
+    "name": "Rigatoni Puttanesca",
+    "price": 42,
+    "category": "Lunch",
+    "pitch": [
+      "rigatoni",
+      "fresh seafood",
+      "Calabrian chili"
+    ],
+    "full": "fresh seafood, tomatoes, olives, capers, white wine, Calabrian chili",
+    "mise": "Fork + Spoon",
+    "wine": "Italian red or crisp white",
+    "bottles": [
+      "Chianti Gran Selezione — $160",
+      "Nero d'Avola by glass — $18",
+      "Etna Bianco — $110"
+    ],
+    "note": "Lunch only — Calabrian chili adds a gentle heat. Puttanesca = olives, capers, anchovies style"
+  },
+  {
+    "name": "Linguini with Clams",
+    "price": 42,
+    "category": "Lunch",
+    "pitch": [
+      "baby clams",
+      "white wine",
+      "garlic"
+    ],
+    "full": "fresh baby clams, chilli, garlic, white wine, parsley",
+    "mise": "Fork + Spoon",
+    "wine": "Crisp Italian white — classic pairing",
+    "bottles": [
+      "Etna Bianco — Planeta $110",
+      "Greco di Tufo — Mastroberardino $105",
+      "Muscadet by glass — $18"
+    ],
+    "note": "Lunch only — clams in white wine is a classic Italian combination"
+  },
+  {
+    "name": "Lobster Roll",
+    "price": 48,
+    "category": "Lunch",
+    "pitch": [
+      "east coast lobster",
+      "avocado",
+      "tarragon aioli"
+    ],
+    "full": "fresh east coast lobster, avocado, chives, tarragon aioli, frites",
+    "mise": "Fork + Spoon",
+    "wine": "Oaked Chardonnay or dry rosé",
+    "bottles": [
+      "Chardonnay — Antinori Bramito $115",
+      "Whispering Angel Rosé — $90",
+      "Cava by glass — $19"
+    ],
+    "note": "Lunch only — tarragon aioli is a French herb mayo. Frites = thin crispy fries"
+  },
+  {
+    "name": "Halibut Special",
+    "price": 68,
+    "category": "Specials",
+    "pitch": [
+      "halibut",
+      "tuscan kale",
+      "chickpeas"
+    ],
+    "full": "halibut, tuscan kale, chickpeas, saffron hollandaise",
+    "mise": "Fork + Butter Knife",
+    "wine": "Mineral white — crisp and clean to match the delicate fish",
+    "bottles": [
+      "Etna Bianco — Planeta $110",
+      "Chablis — Madame Veuve Point $130",
+      "Greco di Tufo — Mastroberardino $105"
+    ],
+    "note": "Tuscan kale (cavolo nero) is darker and earthier than regular kale. Chickpeas add body. $68. Saffron hollandaise — classic butter sauce infused with saffron, rich and golden."
+  },
+  {
+    "name": "Mussels",
+    "price": 29,
+    "category": "Specials",
+    "pitch": [
+      "1 lb mussels",
+      "nduja",
+      "tomato sauce"
+    ],
+    "full": "1 pound of mussels, nduja, tomato sauce, crostini",
+    "mise": "Fork + Spoon",
+    "wine": "Crisp white or sparkling — mineral whites work well with shellfish",
+    "bottles": [
+      "Pecorino by glass $18",
+      "Etna Bianco — Planeta $110",
+      "Cava by glass $19"
+    ],
+    "note": "Nduja is a spicy, spreadable Calabrian salami — melts into the tomato sauce. Crostini for dipping.  Comes as a full pound of mussels. Price is $29."
+  },
+  {
+    "name": "Duck",
+    "price": 65,
+    "category": "Specials",
+    "pitch": [
+      "seared duck",
+      "honey chilli",
+      "red wine demi-glace"
+    ],
+    "full": "seared duck breast, honey chilli glaze, red wine demi-glace, mushrooms, fried brussels sprouts",
+    "mise": "Fork + Steak Knife",
+    "wine": "Medium-full red — Pinot Noir or earthy Burgundy style",
+    "bottles": [
+      "Pinot Noir — Domaine de Cassiope $215",
+      "Etna Rosso — Planeta $115",
+      "Gamay Blend — Domaine des Huards $120"
+    ],
+    "note": "Demi-glace is a rich, reduced red wine and veal stock sauce — intense and glossy. Honey chilli adds sweet heat. Confirm price with manager."
+  },
+  {
+    "name": "32oz Porterhouse",
+    "price": 195,
+    "category": "Specials",
+    "pitch": [
+      "Canadian prime porterhouse",
+      "dry-aged",
+      "shishito peppers"
+    ],
+    "full": "32oz Canadian prime dry-aged porterhouse — 7oz bone, 25oz meat (tenderloin + New York strip loin), shishito peppers, fries",
+    "mise": "Fork + Steak Knife",
+    "wine": "Bold structured red — needs something with backbone",
+    "bottles": [
+      "Barolo — Giacomo Fenocchio $190",
+      "Montepulciano Riserva — Marina Cveti $140",
+      "Amarone — Villabella Fracastoro $230"
+    ],
+    "note": "32oz total — 7oz is bone, 25oz of meat. Two cuts: tenderloin (buttery, lean) + New York strip (marbling, intense). Canadian prime top grade. Dry-aged for depth. Shishitos: 1 in 10 is spicy. $195."
+  }
+];
 const WINES = [
   {
     "type": "grape",
