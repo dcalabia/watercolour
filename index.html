@@ -398,6 +398,23 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
     </div>
   </div>
 </div>
+<!-- MENU SCREEN -->
+<div id="menu-screen" class="screen deck-screen">
+  <div class="deck-wrap">
+    <button class="back-btn" onclick="showScreen('home')">← Back</button>
+    <div class="deck-eyebrow">Reference</div>
+    <div class="deck-title">Menu Cards</div>
+    <div class="deck-divider"></div>
+    <div class="cat-row" id="menu-cats"></div>
+    <div class="progress" id="menu-prog"></div>
+    <div class="sr-stats" id="menu-sr-stats"></div>
+    <div class="sr-progress-bar-wrap"><div class="sr-progress-bar" id="menu-sr-bar" style="width:0%"></div></div>
+    <div class="card-wrap" onclick="flip('menu')">
+      <div class="card-inner" id="menu-card">
+        <div class="card-face card-front" id="menu-front"></div>
+        <div class="card-face card-back" id="menu-back"></div>
+      </div>
+    </div>
     <div class="deck-controls">
       <div class="nav-row">
         <button class="nav-btn" onclick="prev('menu')">←</button>
@@ -6749,22 +6766,25 @@ srInit('foodq', FOOD_CARDS.length);
 srInit('wineq', WINE_CARDS.length);
 
 initDeck('newq', NEW_QUIZ, ['Signature','Grape','Region','Style','Pairing','Service','New']);
-  srInit('newq', NEW_QUIZ.length);
-  initDeck('cocktail', COCKTAILS, ['Signature','Stirred','Shaken','Highball','Sparkling','Built']);
+srInit('newq', NEW_QUIZ.length);
+initDeck('cocktail', COCKTAILS, ['Signature','Stirred','Shaken','Highball','Sparkling','Built']);
 initDeck('cocktailq', COCKTAIL_QUIZ, ['Signature','Stirred','Shaken','Highball','Sparkling','Built']);
 srInit('cocktail', COCKTAILS.length);
 srInit('cocktailq', COCKTAIL_QUIZ.length);
 renderMenu(); renderWine();
 renderQuiz('foodq', FOOD_CARDS);
 renderQuiz('wineq', WINE_CARDS);
+renderQuiz('newq', NEW_QUIZ);
 renderCocktail();
 renderQuiz('cocktailq', COCKTAIL_QUIZ);
 buildCats('menu'); buildCats('wine');
 buildCats('foodq'); buildCats('wineq');
+buildCats('newq');
 buildCats('cocktail');
 buildCats('cocktailq');
 srUpdateProgress('menu'); srUpdateProgress('wine');
 srUpdateProgress('foodq'); srUpdateProgress('wineq');
+srUpdateProgress('newq');
 srUpdateProgress('cocktail'); srUpdateProgress('cocktailq');
 
 
@@ -6780,6 +6800,7 @@ srUpdateProgress('cocktail'); srUpdateProgress('cocktailq');
       'wine-screen':     'wine',
       'foodq-screen':    'foodq',
       'wineq-screen':    'wineq',
+      'newq-screen':     'newq',
       'cocktail-screen': 'cocktail',
       'cocktailq-screen':'cocktailq'
     };
