@@ -340,7 +340,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
       <div class="h-card" style="border-left-color:#5a3a1a;" onclick="showScreen('cocktail-screen')">
         <div class="h-icon">🍸</div>
         <div class="h-body">
-          <div class="h-top"><div class="h-name">Cocktail Cards</div><div class="h-count">23 cocktails</div></div>
+          <div class="h-top"><div class="h-name">Cocktail Cards</div><div class="h-count">26 cocktails</div></div>
           <div class="h-desc">Ingredients, ratios, glass, garnish and method for classic cocktails.</div>
           <div class="h-tags"><span class="h-tag">Stirred</span><span class="h-tag">Shaken</span><span class="h-tag">Highball</span><span class="h-tag">Sparkling</span></div>
         </div>
@@ -3984,6 +3984,51 @@ const FOOD_CARDS = [
 ];
 const COCKTAILS = [
   {
+    "name": "Otto's Negroni",
+    "category": "Signature",
+    "glass": "Rocks glass",
+    "method": "Stirred",
+    "garnish": "Orange twist",
+    "ingredients": [
+      "Otto's vermouth",
+      "Campari",
+      "Gin"
+    ],
+    "ratio": "Equal parts",
+    "price": 18,
+    "note": "House Negroni using Otto's vermouth. Stirred over ice, strained over a large rock. Bitter, aromatic and spirit-forward."
+  },
+  {
+    "name": "Athenian Spritz",
+    "category": "Signature",
+    "glass": "Wine glass / large stemmed glass",
+    "method": "Built",
+    "garnish": "Orange slice",
+    "ingredients": [
+      "Otto's vermouth",
+      "Prosecco",
+      "Tonic"
+    ],
+    "ratio": "Built over ice",
+    "price": 19,
+    "note": "A lighter, spritz-style drink using Otto's vermouth as the base. Refreshing and low-ABV. Build directly in glass over ice."
+  },
+  {
+    "name": "Pomegranate Margarita",
+    "category": "Signature",
+    "glass": "Rocks glass / coupe",
+    "method": "Shaken",
+    "garnish": "Lime wheel or salted rim",
+    "ingredients": [
+      "Tequila",
+      "Cointreau",
+      "Pomegranate"
+    ],
+    "ratio": "Shaken, served up or on the rocks",
+    "price": 21,
+    "note": "House Margarita with pomegranate. Tequila, Cointreau (orange liqueur) and pomegranate juice. Shaken and served up or on the rocks."
+  },
+  {
     "name": "Negroni",
     "category": "Stirred",
     "spirit": "Gin",
@@ -6309,7 +6354,7 @@ srInit('wine', WINES.length);
 srInit('foodq', FOOD_CARDS.length);
 srInit('wineq', WINE_CARDS.length);
 
-initDeck('cocktail', COCKTAILS, ['Stirred','Shaken','Highball','Sparkling','Built']);
+initDeck('cocktail', COCKTAILS, ['Signature','Stirred','Shaken','Highball','Sparkling','Built']);
 initDeck('cocktailq', COCKTAIL_QUIZ, ['Stirred','Shaken','Highball','Sparkling','Built']);
 srInit('cocktail', COCKTAILS.length);
 srInit('cocktailq', COCKTAIL_QUIZ.length);
