@@ -349,9 +349,9 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
       <div class="h-card wine-card" onclick="showScreen('wine-screen')">
         <div class="h-icon">🍷</div>
         <div class="h-body">
-          <div class="h-top"><div class="h-name">Wine Cards</div><div class="h-count">33 wines</div></div>
+          <div class="h-top"><div class="h-name">Wine Cards</div><div class="h-count">41 wines</div></div>
           <div class="h-desc">Flavor profiles, dials, every bottle with vintage year and exact region.</div>
-          <div class="h-tags"><span class="h-tag">White Grapes</span><span class="h-tag">Red Grapes</span><span class="h-tag">Regions</span></div>
+          <div class="h-tags"><span class="h-tag">White Grapes</span><span class="h-tag">Red Grapes</span><span class="h-tag">Regions</span><span class="h-tag">New</span></div>
         </div>
         <div class="h-arrow">›</div>
       </div>
@@ -362,7 +362,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
       <div class="h-card food-q" onclick="showScreen('foodq-screen')">
         <div class="h-icon">🧠</div>
         <div class="h-body">
-          <div class="h-top"><div class="h-name">Food Quiz</div><div class="h-count">207 cards</div></div>
+          <div class="h-top"><div class="h-name">Food Quiz</div><div class="h-count">201 cards</div></div>
           <div class="h-desc">Prices, mise, ingredients, details, pitch trios, cocktails, beverages, service.</div>
           <div class="h-tags"><span class="h-tag">Price</span><span class="h-tag">Mise</span><span class="h-tag">Ingredients</span><span class="h-tag">Cocktails</span></div>
         </div>
@@ -380,9 +380,9 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
       <div class="h-card wine-q" onclick="showScreen('wineq-screen')">
         <div class="h-icon">⭐</div>
         <div class="h-body">
-          <div class="h-top"><div class="h-name">Wine Quiz</div><div class="h-count">94 cards</div></div>
-          <div class="h-desc">Grape varieties, exact regions, pairings, how to describe each wine.</div>
-          <div class="h-tags"><span class="h-tag">Grape</span><span class="h-tag">Region</span><span class="h-tag">Pairing</span></div>
+          <div class="h-top"><div class="h-name">Wine Quiz</div><div class="h-count">81 cards</div></div>
+          <div class="h-desc">Vintages, grape varieties, exact regions, pairings, how to describe each wine.</div>
+          <div class="h-tags"><span class="h-tag">Vintage</span><span class="h-tag">Grape</span><span class="h-tag">Region</span><span class="h-tag">Pairing</span></div>
         </div>
         <div class="h-arrow">›</div>
       </div>
@@ -1839,6 +1839,244 @@ const WINES = [
   {
     "type": "grape",
     "color": "white",
+    "category": "New",
+    "name": "Pecorino",
+    "pronunciation": "peh-koh-REE-noh",
+    "flavors": [
+      "green apple and fennel",
+      "citrus and white peach",
+      "crisp mineral finish"
+    ],
+    "dials": {
+      "Body": 2,
+      "Acidity": 4,
+      "Sweetness": 1
+    },
+    "on_list": [
+      {
+        "bottle": "Pecorino — Velenosi 'Villa Angela Falerio'",
+        "region": "Le Marche, Italy",
+        "year": "2024",
+        "price": "$75"
+      },
+      {
+        "bottle": "Pecorino by glass",
+        "region": "Italy",
+        "year": "NV",
+        "price": "$18"
+      }
+    ],
+    "guest_line": "A crisp, herbal Italian white from Le Marche — green apple, fennel and a clean mineral finish. Light and very food-friendly.",
+    "note": "Pecorino is the grape, not the cheese! Named after the sheep (pecora) that grazed the hillsides. Same producer (Velenosi) as our Cabernet Blend Ninfa.",
+    "subcat": "Pecorino",
+    "pairing": "A crisp, herbal Italian white — pairs well with the Tuna Tartare, Calamari Fritti, Zucchini Chips and Mussels. Its herbal edge also complements the Fennel Arugula salad."
+  },
+  {
+    "type": "grape",
+    "color": "white",
+    "category": "New",
+    "name": "Bellone",
+    "pronunciation": "bel-LOH-neh",
+    "flavors": [
+      "citrus and white peach",
+      "light mineral and floral",
+      "dry and refreshing"
+    ],
+    "dials": {
+      "Body": 2,
+      "Acidity": 4,
+      "Sweetness": 1
+    },
+    "on_list": [
+      {
+        "bottle": "Bellone — Casale del Giglio",
+        "region": "Lazio, Italy",
+        "year": "2024",
+        "price": "$85"
+      }
+    ],
+    "guest_line": "A rare indigenous white from Lazio near Rome — fresh, mineral and citrusy. Great for guests who want something truly off the beaten path.",
+    "note": "Bellone is an ancient Roman grape variety. Casale del Giglio is one of Lazio's most respected modern producers.",
+    "subcat": "Bellone",
+    "pairing": "A rare indigenous white from Lazio — pairs well with delicate seafood: Branzino, Halibut Special and Seafood Risotto."
+  },
+  {
+    "type": "grape",
+    "color": "white",
+    "category": "New",
+    "name": "Vermentino",
+    "pronunciation": "ver-men-TEE-noh",
+    "flavors": [
+      "white peach and citrus",
+      "almond and light herbs",
+      "saline mineral finish"
+    ],
+    "dials": {
+      "Body": 2,
+      "Acidity": 4,
+      "Sweetness": 1
+    },
+    "on_list": [
+      {
+        "bottle": "Vermentino — La Spinetta",
+        "region": "Tuscany, Italy",
+        "year": "2025",
+        "price": "$95"
+      }
+    ],
+    "guest_line": "A coastal Italian white with bright citrus, peach and a saline, herbal finish — built for seafood and warm-weather dining.",
+    "note": "Vermentino is the signature grape of Sardinia and coastal Tuscany. La Spinetta is a renowned Piedmontese producer also making stunning wines in Tuscany.",
+    "subcat": "Vermentino",
+    "pairing": "A coastal Italian white — pairs beautifully with the Grilled Seafood Platter, Branzino, Mussels and Greek Village Salad."
+  },
+  {
+    "type": "grape",
+    "color": "white",
+    "category": "New",
+    "name": "Sancerre",
+    "pronunciation": "sahn-SAIR",
+    "flavors": [
+      "gooseberry and citrus",
+      "flinty mineral and chalk",
+      "herbaceous and crisp"
+    ],
+    "dials": {
+      "Body": 2,
+      "Acidity": 5,
+      "Sweetness": 1
+    },
+    "on_list": [
+      {
+        "bottle": "Sancerre — Domaine Bailly-Reverdy",
+        "region": "Loire Valley, France",
+        "year": "2024",
+        "price": "$130"
+      }
+    ],
+    "guest_line": "Sancerre is the benchmark for Sauvignon Blanc — intensely mineral, crisp and elegant with gooseberry and a flinty finish.",
+    "note": "Sancerre is 100% Sauvignon Blanc from the Loire Valley. Very different from New Zealand Sauvignon Blanc — more mineral and restrained.",
+    "subcat": "Sancerre",
+    "pairing": "Intensely mineral Sauvignon Blanc — pairs well with the Tuna Tartare, Beets & Goat Cheese and Branzino."
+  },
+  {
+    "type": "grape",
+    "color": "white",
+    "category": "New",
+    "name": "Chablis — Famille Grossot",
+    "pronunciation": "shah-BLEE groh-SOH",
+    "flavors": [
+      "green apple and lemon",
+      "oyster shell and flint",
+      "steely and precise"
+    ],
+    "dials": {
+      "Body": 2,
+      "Acidity": 5,
+      "Sweetness": 1
+    },
+    "on_list": [
+      {
+        "bottle": "Chablis — Famille Grossot",
+        "region": "Chablis, Burgundy, France",
+        "year": "2023",
+        "price": "$145"
+      }
+    ],
+    "guest_line": "A serious, terroir-driven Chablis — pure, steely and mineral with laser-like acidity and a long, flinty finish.",
+    "note": "Famille Grossot is a highly regarded Chablis domaine. At $145 it's a step up from the previous Chablis — reflects a more serious producer.",
+    "subcat": "Chablis",
+    "pairing": "Pure, steely Chablis — ideal for delicate seafood: Branzino, Halibut Special, Grilled Seafood Platter. Also cuts through the richness of the Lobster Tagliatelle."
+  },
+  {
+    "type": "grape",
+    "color": "red",
+    "category": "New",
+    "name": "Pinot Noir — Laroque",
+    "pronunciation": "PEE-noh NWAHR lah-ROCK",
+    "flavors": [
+      "bright red cherry",
+      "light earth and herbs",
+      "soft silky finish"
+    ],
+    "dials": {
+      "Body": 2,
+      "Acidity": 4,
+      "Tannin": 2
+    },
+    "on_list": [
+      {
+        "bottle": "Pinot Noir — Laroque",
+        "region": "Languedoc, France",
+        "year": "2023",
+        "price": "$90"
+      }
+    ],
+    "guest_line": "A lighter, more approachable Pinot Noir from southern France — fresh red cherry, earthy notes and soft tannins. Great value and very food-friendly.",
+    "note": "Laroque is from Languedoc — slightly fruitier than Burgundy. At $90 it's the most accessible Pinot Noir on the list.",
+    "subcat": "Pinot Noir",
+    "pairing": "A lighter, approachable Pinot Noir — works well alongside the Salmon, Lemon Roasted Chicken and Duck Special."
+  },
+  {
+    "type": "region",
+    "color": "red",
+    "category": "New",
+    "name": "Côtes de Beaune — Domaine de Cassiopée",
+    "pronunciation": "coat duh BONE",
+    "flavors": [
+      "red cherry and raspberry",
+      "earthy and floral",
+      "silky elegant tannins"
+    ],
+    "dials": {
+      "Body": 3,
+      "Acidity": 4,
+      "Tannin": 3
+    },
+    "on_list": [
+      {
+        "bottle": "Côtes de Beaune — Domaine de Cassiopée",
+        "region": "Côte de Beaune, Burgundy, France",
+        "year": "2022",
+        "price": "$225"
+      }
+    ],
+    "guest_line": "A Burgundy Pinot Noir from the Côte de Beaune — elegant, earthy and complex with silky tannins. Same domaine as our existing Pinot Noir bottle.",
+    "note": "Côte de Beaune is the southern part of Burgundy's Côte d'Or. The 2022 vintage is exceptional.",
+    "subcat": "Burgundy",
+    "pairing": "Elegant Burgundy Pinot Noir — pairs beautifully with the Duck Special, Salmon and Lemon Roasted Chicken."
+  },
+  {
+    "type": "region",
+    "color": "red",
+    "category": "New",
+    "name": "Rosé — Tormaresca 'Calafuria'",
+    "pronunciation": "tor-mah-RES-kah kah-lah-FOO-ree-ah",
+    "flavors": [
+      "fresh red berry and peach",
+      "floral and mineral",
+      "dry and structured"
+    ],
+    "dials": {
+      "Body": 2,
+      "Acidity": 4,
+      "Sweetness": 1
+    },
+    "on_list": [
+      {
+        "bottle": "Rosé — Tormaresca 'Calafuria'",
+        "region": "Apulia, Italy",
+        "year": "2025",
+        "price": "$90"
+      }
+    ],
+    "guest_line": "A dry, structured Italian rosé from Puglia — fresh red fruit, floral notes and a clean mineral finish. A more interesting alternative to Provence rosé.",
+    "note": "Tormaresca is an Antinori estate in Puglia — same family as Tignanello. Made from Negroamaro, giving it slightly more body than Provence rosé.",
+    "subcat": "Rosé",
+    "pairing": "A dry, structured Italian rosé — works across the menu: Tuna Tartare, Carpaccio, Greek Village Salad, Salmon and Lamb Chops."
+  },
+  {
+    "type": "grape",
+    "color": "white",
     "category": "Old Items",
     "name": "Chardonnay",
     "pronunciation": "shar-doh-NAY",
@@ -2032,44 +2270,7 @@ const WINES = [
     "pairing": "Unoaked Chardonnay at its most mineral and pure. Best with delicate dishes: Branzino, Halibut Special and Lemon Roasted Chicken. The high acidity also cuts through the richness of the Lobster Tagliatelle."
   }
 ];
-const FOOD_CARDS = [{"section": "Price", "q": "How much is the Grilled Seafood Platter?", "a": "$90", "context": "Signature — octopus, calamari, prawns, scallops"}, {"section": "Price", "q": "How much is the Lobster Tagliatelle?", "a": "$75", "context": "Signature — most expensive pasta on the menu"}, {"section": "Price", "q": "How much is the Prime Striploin?", "a": "$78", "context": "12oz dry-aged — same price as Lamb Chops"}, {"section": "Price", "q": "How much are the Lamb Chops?", "a": "$78", "context": "Signature — same price as Prime Striploin"}, {"section": "Price", "q": "How much is the Seafood Risotto?", "a": "$68", "context": "Signature — calamari, shrimp, scallops"}, {"section": "Price", "q": "How much is the Whole Grilled Branzino?", "a": "$58", "context": "Signature — served whole"}, {"section": "Price", "q": "How much is the Organic King Salmon?", "a": "$48", "context": "Signature — from Ireland, medium only"}, {"section": "Price", "q": "How much is the Lemon Roasted Chicken?", "a": "$47", "context": "Signature — smashed potatoes, swiss chard"}, {"section": "Price", "q": "How much is the Spaghetti?", "a": "$39", "context": "Signature — most affordable pasta"}, {"section": "Price", "q": "How much is the Octopus a la Plancha?", "a": "$34", "context": "Hot Plate — most expensive hot plate"}, {"section": "Price", "q": "How much is the Calamari Fritti?", "a": "$32", "context": "Hot Plate"}, {"section": "Price", "q": "How much is the Baked Feta?", "a": "$28", "context": "Hot Plate"}, {"section": "Price", "q": "How much are the Zucchini Chips?", "a": "$27", "context": "Hot Plate"}, {"section": "Price", "q": "How much is the Beets & Goat Cheese?", "a": "$29", "context": "Raw & Salad"}, {"section": "Price", "q": "How much is the Spring Salad?", "a": "$28", "context": "Raw & Salad"}, {"section": "Price", "q": "How much is the Fennel & Arugula?", "a": "$27", "context": "Raw & Salad"}, {"section": "Price", "q": "How much is the Carpaccio?", "a": "$32", "context": "Raw & Salad"}, {"section": "Price", "q": "How much is the Tuna Tartare?", "a": "$34", "context": "Raw & Salad — most expensive starter"}, {"section": "Price", "q": "How much is the Greek Village Salad?", "a": "$26", "context": "Raw & Salad — most affordable salad"}, {"section": "Price", "q": "How much is the Baguette?", "a": "$8", "context": "Hot Plate — good upsell at table arrival"}, {"section": "Mise", "q": "What cutlery for Whole Grilled Branzino?", "a": "Fork + Steak Knife + 3rd plate", "context": "3rd plate is for the bones"}, {"section": "Mise", "q": "What cutlery for Baked Feta?", "a": "Butter Knife + Fork", "context": "Only hot plate that uses a butter knife"}, {"section": "Mise", "q": "What cutlery for Lamb Chops?", "a": "Fork + Steak Knife", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Prime Striploin?", "a": "Fork + Steak Knife", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Lemon Roasted Chicken?", "a": "Steak Knife + Fork", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Organic King Salmon?", "a": "Fork + Butter Knife", "context": "Medium only — note on the mise"}, {"section": "Mise", "q": "What cutlery for Grilled Seafood Platter?", "a": "Butter Knife + Fork", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Lobster Tagliatelle?", "a": "Fork + Spoon", "context": "Signature pasta"}, {"section": "Mise", "q": "What cutlery for Spaghetti?", "a": "Fork + Spoon", "context": "Signature pasta"}, {"section": "Mise", "q": "What cutlery for Seafood Risotto?", "a": "Fork + Spoon", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Baguette?", "a": "Butter Knife only", "context": "Hot Plate"}, {"section": "Mise", "q": "What cutlery for all Raw & Salad dishes?", "a": "Fork + Spoon", "context": "All 6 salads — same setting"}, {"section": "Mise", "q": "What cutlery for Zucchini Chips?", "a": "Fork + Spoon", "context": "Hot Plate"}, {"section": "Mise", "q": "What cutlery for Octopus a la Plancha?", "a": "Fork + Spoon", "context": "Hot Plate"}, {"section": "Mise", "q": "What cutlery for Calamari Fritti?", "a": "Fork + Spoon", "context": "Hot Plate"}, {"section": "Mise", "q": "Which dish needs a 3rd plate?", "a": "Whole Grilled Branzino", "context": "For the bones — always set it"}, {"section": "Mise", "q": "Which dishes use a Steak Knife?", "a": "Lamb Chops, Prime Striploin, Lemon Roasted Chicken, Branzino", "context": "Any dish you need to cut through"}, {"section": "Mise", "q": "Which dishes use a Butter Knife?", "a": "Baked Feta, Salmon, Seafood Platter, Baguette", "context": "Softer proteins and spreads"}, {"section": "Ingredients", "q": "What cheese is in the Carpaccio?", "a": "Manchego", "context": "Spanish sheep's milk cheese — nutty, like a milder parmesan"}, {"section": "Ingredients", "q": "What herbs are in the Beets & Goat Cheese?", "a": "Dill and mint", "context": "Not just 'herbs' — be specific if asked"}, {"section": "Ingredients", "q": "What is the dressing on Beets & Goat Cheese?", "a": "Champagne vinaigrette", "context": "Raw & Salad"}, {"section": "Ingredients", "q": "What is the dressing on Spring Salad?", "a": "Burnt honey vinaigrette", "context": "Endives, hazelnuts, pear, comté"}, {"section": "Ingredients", "q": "What type of pasta is in Lobster Tagliatelle?", "a": "Hand cut pasta", "context": "Not dry pasta — made in-house"}, {"section": "Ingredients", "q": "What sauce is in Lobster Tagliatelle?", "a": "Bisque, cream, chives — and chilli", "context": "Chilli is easy to forget — it's in there"}, {"section": "Ingredients", "q": "What potatoes come with Lemon Roasted Chicken?", "a": "Smashed potatoes", "context": "Not roasted, not herb — smashed"}, {"section": "Ingredients", "q": "What greens are in Lemon Roasted Chicken?", "a": "Swiss chard", "context": "Also has olives, sumac, preserved lemon"}, {"section": "Ingredients", "q": "What seafood is in the Seafood Risotto?", "a": "Calamari, shrimp, scallops", "context": "Menu says 'market seafood' — kitchen confirmed these three"}, {"section": "Ingredients", "q": "What is the broth in Seafood Risotto?", "a": "Light seafood and tomato broth", "context": "Arborio rice absorbs it to make it creamy"}, {"section": "Ingredients", "q": "What comes on the Whole Grilled Branzino?", "a": "Vine tomatoes, olives, capers, white wine, herb roasted potatoes", "context": "Served whole on an oval plate"}, {"section": "Ingredients", "q": "What type of potatoes come with Branzino?", "a": "Herb roasted potatoes", "context": "Not smashed, not plain — herb roasted"}, {"section": "Ingredients", "q": "What sauce comes with Octopus a la Plancha?", "a": "Salsa verde and hummus", "context": "New menu — no longer capers/red onion"}, {"section": "Ingredients", "q": "What comes with Calamari Fritti?", "a": "Shishito peppers, aioli, lemon", "context": "Fritti = Italian for fried"}, {"section": "Ingredients", "q": "What nut is in the Spring Salad?", "a": "Hazelnuts", "context": "With pear, comté, burnt honey vinaigrette"}, {"section": "Ingredients", "q": "What nut is in the Fennel & Arugula?", "a": "Toasted pine nuts", "context": "With blood orange, aged parmesan, sumac"}, {"section": "Ingredients", "q": "What spice finishes the Fennel & Arugula?", "a": "Sumac", "context": "Tangy, lemony Middle Eastern spice"}, {"section": "Ingredients", "q": "What spice is in Lemon Roasted Chicken?", "a": "Sumac", "context": "Also in Fennel & Arugula — two dishes share it"}, {"section": "Ingredients", "q": "What sauce is on the Prime Striploin?", "a": "Peppercorn sauce", "context": "12oz dry-aged with grilled Mediterranean veg"}, {"section": "Ingredients", "q": "What is specifically listed in the Seafood Platter?", "a": "Grilled Spanish octopus, calamari, prawns, scallops, beans, lemon", "context": "Grilled Spanish octopus — be specific"}, {"section": "Ingredients", "q": "What is the vinaigrette on Greek Village Salad?", "a": "No vinaigrette — just olive oil and herbs", "context": "Heirloom tomatoes, cucumber, peppers, olives, feta, mint, oregano"}, {"section": "Details", "q": "Where is the King Salmon from?", "a": "Ireland", "context": "Organic — cooked medium only"}, {"section": "Details", "q": "What temperature is Salmon cooked?", "a": "Medium only", "context": "Don't take temp requests — it's set"}, {"section": "Details", "q": "How many ounces is the Prime Striploin?", "a": "12oz", "context": "Dry-aged — mention this when describing"}, {"section": "Details", "q": "What does 'a la Plancha' mean?", "a": "Grilled on a scorching flat griddle", "context": "Spanish term — char on outside, tender inside"}, {"section": "Details", "q": "What does 'Fritti' mean?", "a": "Italian for fried", "context": "Calamari Fritti"}, {"section": "Details", "q": "What does 'confit' mean?", "a": "Slow-cooked in oil at low heat", "context": "Confit tomato = jammy, concentrated flavor"}, {"section": "Details", "q": "What is burrata?", "a": "Mozzarella with a creamy center that oozes", "context": "In the Spaghetti — delicate, serve immediately"}, {"section": "Details", "q": "What are 'Mediterranean vegetables'?", "a": "Peppers, onions, zucchini", "context": "Come with Prime Striploin"}, {"section": "Details", "q": "What does preserved lemon taste like?", "a": "Deeply savory, intensely salty — not sour", "context": "Salt-cured for weeks. In Lemon Roasted Chicken"}, {"section": "Details", "q": "What is bisque?", "a": "Rich creamy sauce made from the lobster shells", "context": "In Lobster Tagliatelle — concentrated shellfish flavor"}, {"section": "Details", "q": "What is beurre blanc?", "a": "French butter-wine sauce — silky and slightly tangy", "context": "Lemongrass beurre blanc on the Salmon"}, {"section": "Details", "q": "What is salsa verde (on the menu)?", "a": "Italian style — parsley, capers, anchovy, olive oil", "context": "Not Mexican salsa verde. On Lamb Chops and Octopus"}, {"section": "Details", "q": "Which dish is served whole?", "a": "Whole Grilled Branzino", "context": "Needs 3rd plate for bones — you may carve tableside"}, {"section": "Details", "q": "What are shishito peppers?", "a": "Mild Japanese peppers — but 1 in 10 is spicy", "context": "In Octopus a la Plancha and Calamari Fritti"}, {"section": "Details", "q": "What is phyllo?", "a": "Paper-thin Greek pastry that crisps like baklava", "context": "In Baked Feta — wraps the cheese"}, {"section": "Details", "q": "What does the Baguette come with?", "a": "Warmed, sea salt, rosemary, olive oil", "context": "Good upsell at the start of the meal — $8"}, {"section": "Details", "q": "Which dish has chilli in it?", "a": "Lobster Tagliatelle", "context": "Easy to forget — bisque, chilli, cream, chives"}, {"section": "Details", "q": "What rice is used in Seafood Risotto?", "a": "Arborio rice", "context": "Short-grain Italian rice — releases starch to make it creamy"}, {"section": "Pitch", "q": "3 ingredients to pitch for Tuna Tartare", "a": "tuna · avocado · citrus", "context": "$34 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Carpaccio", "a": "beef tenderloin · arugula · manchego", "context": "$32 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Greek Village Salad", "a": "heirloom tomato · feta · olives", "context": "$26 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Spring Salad", "a": "endives · pear · comté", "context": "$28 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Fennel & Arugula", "a": "fennel · blood orange · aged parmesan", "context": "$27 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Beets & Goat Cheese", "a": "beets · goat cheese · sicilian pistachio", "context": "$29 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Zucchini Chips", "a": "fried zucchini · tzatziki · lemon", "context": "$27 — Hot Plate"}, {"section": "Pitch", "q": "3 ingredients to pitch for Baked Feta", "a": "feta · phyllo · truffle honey", "context": "$28 — Hot Plate"}, {"section": "Pitch", "q": "3 ingredients to pitch for Octopus a la Plancha", "a": "octopus · hummus · salsa verde", "context": "$34 — Hot Plate"}, {"section": "Pitch", "q": "3 ingredients to pitch for Calamari Fritti", "a": "calamari · shishito peppers · aioli", "context": "$32 — Hot Plate"}, {"section": "Pitch", "q": "3 ingredients to pitch for Lobster Tagliatelle", "a": "lobster · hand cut pasta · bisque", "context": "$75 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Spaghetti", "a": "confit tomato · Italian burrata · pistachio", "context": "$39 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Whole Grilled Branzino", "a": "branzino · vine tomatoes · herb roasted potatoes", "context": "$58 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Lamb Chops", "a": "lamb · salsa verde · tzatziki", "context": "$78 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Lemon Roasted Chicken", "a": "chicken · preserved lemon · smashed potatoes", "context": "$47 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Prime Striploin", "a": "12oz dry-aged striploin · peppercorn sauce · grilled vegetables", "context": "$78 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Organic King Salmon", "a": "salmon · spinach · lemongrass beurre blanc", "context": "$48 — Signature, from Ireland"}, {"section": "Pitch", "q": "3 ingredients to pitch for Seafood Risotto", "a": "market seafood · arborio rice · seafood broth", "context": "$68 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Grilled Seafood Platter", "a": "grilled Spanish octopus · prawns · scallops", "context": "$90 — Signature"}, {"section": "Cocktails", "q": "How many signature cocktails do we have?", "a": "3", "context": "Otto's Negroni, Athenian Spritz, Pomegranate Margarita"}, {"section": "Cocktails", "q": "What's in the Otto's Negroni?", "a": "Otto's vermouth, campari, gin", "context": "3oz — $18"}, {"section": "Cocktails", "q": "What's in the Athenian Spritz?", "a": "Otto's vermouth, prosecco, tonic", "context": "3oz — $19"}, {"section": "Cocktails", "q": "What's in the Pomegranate Margarita?", "a": "Tequila, cointreau, pomegranate", "context": "3oz — $21 — most expensive cocktail"}, {"section": "Cocktails", "q": "How much is the Otto's Negroni?", "a": "$18", "context": "Otto's vermouth, campari, gin"}, {"section": "Cocktails", "q": "How much is the Athenian Spritz?", "a": "$19", "context": "Otto's vermouth, prosecco, tonic"}, {"section": "Cocktails", "q": "How much is the Pomegranate Margarita?", "a": "$21", "context": "Most expensive cocktail on the menu"}, {"section": "Cocktails", "q": "Can we make cocktails beyond the 3 signature ones?", "a": "Yes — traditional cocktails too", "context": "Margarita, spicy margarita etc — ask the bar"}, {"section": "Cocktails", "q": "What is cointreau?", "a": "Orange-flavoured liqueur", "context": "In the Pomegranate Margarita"}, {"section": "Cocktails", "q": "What is campari?", "a": "Bitter Italian aperitif — deep red colour", "context": "In the Otto's Negroni"}, {"section": "Beverages", "q": "What is the only non-alcoholic beer?", "a": "Heineken 0.0", "context": "355ml — $9"}, {"section": "Beverages", "q": "How much is Heineken 0.0?", "a": "$9", "context": "Only non-alcoholic beer on the menu — 355ml $9"}, {"section": "Beverages", "q": "What beers do we have?", "a": "Peroni Lager and Hoegaarden Wheat Beer", "context": "Both 330ml, both $12"}, {"section": "Beverages", "q": "Where is Peroni from?", "a": "Italy", "context": "Lager — 330ml — $12"}, {"section": "Beverages", "q": "Where is Hoegaarden from?", "a": "Belgium", "context": "Wheat Beer — 330ml — $12"}, {"section": "Beverages", "q": "What style is Hoegaarden?", "a": "Wheat Beer", "context": "Belgian — $12"}, {"section": "Beverages", "q": "How much are both beers?", "a": "$12 each", "context": "Peroni Lager and Hoegaarden Wheat Beer — 330ml"}, {"section": "Beverages", "q": "How is the Coke served?", "a": "Classic glass bottle, imported", "context": "355ml — $7.50"}, {"section": "Beverages", "q": "How much is the Coke?", "a": "$7.50", "context": "Classic glass bottle, imported"}, {"section": "Beverages", "q": "What is the cheapest non-alcoholic option?", "a": "Diet Coke or Gingerale — $6", "context": "355ml"}, {"section": "Beverages", "q": "What non-alcoholic options do we offer?", "a": "Peach Iced Tea, Raspberry Lemonade, Coke, Diet Coke/Gingerale, Heineken 0.0", "context": "$6–$10 range"}, {"section": "Beverages", "q": "How much is Peach Iced Tea?", "a": "$10", "context": "355ml non-alcoholic"}, {"section": "Beverages", "q": "How much is Raspberry Lemonade?", "a": "$10", "context": "355ml non-alcoholic"}, {"section": "Beverages", "q": "What sparkling water do we serve?", "a": "Pellegrino", "context": "Sparkling — offer with lime"}, {"section": "Beverages", "q": "What wine options are available by the glass?", "a": "Muscadet, Chardonnay, Nero d'Avola, Syrah, Rosé, Cava", "context": "5oz pours — $17 to $19"}, {"section": "Beverages", "q": "How much is wine by the glass?", "a": "$17–$19", "context": "Rosé $17 · Muscadet/Nero d'Avola $18 · Chardonnay/Syrah/Cava $19"}, {"section": "Service", "q": "What garnish for flat water?", "a": "Lemon", "context": "Never offer tap unprompted — upsell still or sparkling"}, {"section": "Service", "q": "What garnish for sparkling water?", "a": "Lime", "context": "Pellegrino is the sparkling water"}, {"section": "Service", "q": "Do we offer tap water?", "a": "Only if guest requests it", "context": "Always offer flat or sparkling first — for upsell"}, {"section": "Service", "q": "How many wine glass types are there?", "a": "4", "context": "Champagne, White, Burgundy, Syrah/Reds"}, {"section": "Service", "q": "What are the 4 wine glasses?", "a": "Champagne · White · Burgundy · Syrah/Other Reds", "context": "Each grape family gets its own glass"}, {"section": "Service", "q": "What glass for Chardonnay?", "a": "Burgundy glass", "context": "Not the standard white wine glass"}, {"section": "Service", "q": "What glass for Pinot Noir?", "a": "Burgundy glass", "context": "Same glass as Chardonnay"}, {"section": "Service", "q": "What glass for all whites except Chardonnay?", "a": "White wine glass", "context": "Muscadet, Ribolla, Greco di Tufo, Etna Bianco etc."}, {"section": "Service", "q": "What glass for Syrah, Nero d'Avola, Montepulciano etc.?", "a": "Syrah / Other Reds glass", "context": "All reds except Pinot Noir and Chardonnay"}, {"section": "Service", "q": "What glass for Champagne and Prosecco?", "a": "Champagne / Prosecco glass", "context": "All sparkling wines"}, {"section": "Service", "q": "Where is Seat 1 at a table?", "a": "First banquette seat to the left", "context": "Consistent across all tables"}, {"section": "Service", "q": "What is the 86 list?", "a": "Items currently sold out or unavailable", "context": "Review it at the start of every shift — food, wine, cocktails"}, {"section": "Service", "q": "How many water jugs to fill at opening?", "a": "8 water jugs", "context": "Fill with water and ice — opening checklist"}, {"section": "Service", "q": "How far from the table edge should plates be?", "a": "Half an inch", "context": "Opening checklist — uniform settings"}, {"section": "Service", "q": "How full should candles be before service?", "a": "At least 30% filled", "context": "Opening checklist"}, {"section": "Service", "q": "How many cleaning triangles to prepare?", "a": "6 to 8", "context": "Table wipes — opening checklist"}, {"section": "Service", "q": "What are the 3 types of plates?", "a": "Crown/spiky (balcony 211–215) + 2 similar plates (thin vs thick outer layer)", "context": "Don't mix them — you'll get called out"}, {"section": "Service", "q": "Which plates go on the balcony?", "a": "Crown / spiky plates", "context": "Seats 211–215 only"}, {"section": "Service", "q": "What goes in the copper dishes during opening?", "a": "Mussel shells", "context": "Opening checklist — fill before service"}, {"section": "Service", "q": "Where are decanters kept?", "a": "In the wine cabinets", "context": "Don't leave them out"}, {"section": "Details", "q": "What is manchego?", "a": "Spanish sheep's milk cheese — nutty, like a milder parmesan", "context": "In the Carpaccio"}, {"section": "Details", "q": "What is tzatziki?", "a": "Greek yogurt, cucumber, garlic, dill sauce", "context": "In Octopus a la Plancha, Lamb Chops, Zucchini Chips"}, {"section": "Details", "q": "What is aioli?", "a": "Garlic mayonnaise", "context": "In Carpaccio and Calamari Fritti"}, {"section": "Details", "q": "What is comté?", "a": "French aged cow's milk cheese — nutty with caramel notes", "context": "In Spring Salad"}, {"section": "Details", "q": "What is sumac?", "a": "Tangy, lemony Middle Eastern spice — dark red powder", "context": "In Fennel & Arugula and Lemon Roasted Chicken"}, {"section": "Details", "q": "What are endives?", "a": "Pale, crunchy, slightly bitter leaf — elongated like a small torpedo", "context": "In Spring Salad — not a Brussels sprout"}, {"section": "Details", "q": "What is swiss chard?", "a": "Leafy green related to beets — slightly earthy, mellow when cooked", "context": "In Lemon Roasted Chicken"}, {"section": "Details", "q": "What is truffle honey?", "a": "Honey infused with black truffle — earthy, aromatic sweetness", "context": "In Baked Feta — makes it indulgent"}, {"section": "Details", "q": "What is sicilian pistachio?", "a": "Richer and more intensely flavored than standard pistachios", "context": "In Beets & Goat Cheese and Spaghetti"}, {"section": "Details", "q": "What is a champagne vinaigrette?", "a": "Light dressing made with champagne vinegar — delicate and slightly sweet", "context": "In Beets & Goat Cheese"}, {"section": "Details", "q": "What is dry-aged beef?", "a": "Beef aged in a controlled environment — concentrates flavor, more tender", "context": "Prime Striploin is 12oz dry-aged"}, {"section": "Beverages", "q": "How many wines do we sell by the half bottle?", "a": "3", "context": "Chablis, Brunello, Brut Champagne"}, {"section": "Beverages", "q": "Which Chablis do we sell by the half bottle?", "a": "Dom. Hamelin Premier Cru 'Beauroy'", "context": "France · $75"}, {"section": "Beverages", "q": "How much is the Chablis half bottle?", "a": "$75", "context": "Dom. Hamelin Premier Cru 'Beauroy' — France"}, {"section": "Beverages", "q": "Which Brunello do we sell by the half bottle?", "a": "Altesino 2020", "context": "Montalcino, Tuscany · $100"}, {"section": "Beverages", "q": "How much is the Brunello half bottle?", "a": "$100", "context": "Altesino 2020 — Montalcino, Tuscany"}, {"section": "Beverages", "q": "Which Champagne do we sell by the half bottle?", "a": "Veuve Clicquot Brut NV", "context": "Champagne, France · $100"}, {"section": "Beverages", "q": "How much is the Champagne half bottle?", "a": "$100", "context": "Veuve Clicquot Brut NV — Champagne, France"}, {"section": "Beverages", "q": "Name all three half bottle wines with prices", "a": "Chablis Dom. Hamelin $75 · Brunello Altesino $100 · Veuve Clicquot $100", "context": "All 375ml — white, red, sparkling"}, {"section": "Beverages", "q": "What size are the half bottles?", "a": "375ml", "context": "vs standard 750ml full bottles"}, {"section": "Beverages", "q": "What are the two red wines by the glass?", "a": "Nero d'Avola (Italy) · Syrah (France)", "context": "Both $18–$19 · 5oz pours"}, {"section": "Beverages", "q": "How much is Nero d'Avola by the glass?", "a": "$18", "context": "Sicily, Italy · 5oz"}, {"section": "Beverages", "q": "How much is Syrah by the glass?", "a": "$19", "context": "France · 5oz"}, {"section": "Beverages", "q": "What are the two white wines by the glass?", "a": "Muscadet (France) · Chardonnay (Italy)", "context": "$18 and $19 · 5oz pours"}, {"section": "Beverages", "q": "How much is Muscadet by the glass?", "a": "$18", "context": "Loire Valley, France · 5oz"}, {"section": "Beverages", "q": "How much is Chardonnay by the glass?", "a": "$19", "context": "Italy · 5oz"}, {"section": "Beverages", "q": "What is the rosé by the glass?", "a": "French Rosé 2023", "context": "$17 · 5oz — cheapest wine by the glass"}, {"section": "Beverages", "q": "What is the sparkling wine by the glass?", "a": "Cava (Spain)", "context": "$19 · 5oz"}, {"section": "Beverages", "q": "How many wines do we offer by the glass?", "a": "6", "context": "Muscadet $18 · Chardonnay $19 · Nero d'Avola $18 · Syrah $19 · Rosé $17 · Cava $19"}, {"section": "Beverages", "q": "What is the cheapest wine by the glass?", "a": "Rosé — $17", "context": "French Rosé 2023 · 5oz"}, {"section": "Beverages", "q": "What is the most expensive wine by the glass?", "a": "$19 — Chardonnay, Syrah, or Cava", "context": "Three options tied at $19"}, {"section": "Beverages", "q": "What are the two beers we sell?", "a": "Peroni Lager (Italy) · Leffe Brune (Belgium)", "context": "Both 330ml · Both $12"}, {"section": "Beverages", "q": "What style is Leffe Brune?", "a": "Dark Abbey Ale", "context": "Belgium · 330ml · $12"}, {"section": "Beverages", "q": "Where is Peroni from?", "a": "Italy", "context": "Lager · 330ml · $12"}, {"section": "Beverages", "q": "How much are both beers?", "a": "$12 each", "context": "Peroni Lager and Leffe Brune · 330ml"}, {"section": "Beverages", "q": "Do we have a non-alcoholic beer?", "a": "Yes — Heineken 0.0", "context": "$9 · 355ml · only non-alcoholic beer"}, {"section": "Beverages", "q": "How many non-alcoholic beverages do we offer?", "a": "5", "context": "Peach Iced Tea, Raspberry Lemonade, Coke, Diet Coke/Gingerale, Heineken 0.0"}, {"section": "Beverages", "q": "What non-alcoholic options do we have?", "a": "Peach Iced Tea · Raspberry Lemonade · Coke · Diet Coke/Gingerale · Heineken 0.0", "context": "$6–$10 range · 355ml"}, {"section": "Beverages", "q": "What is the most expensive non-alcoholic drink?", "a": "Peach Iced Tea or Raspberry Lemonade — $10", "context": "Both 355ml"}, {"section": "Beverages", "q": "What is the cheapest non-alcoholic drink?", "a": "Diet Coke or Gingerale — $6", "context": "355ml"}, {"section": "Beverages", "q": "How is the Coke served?", "a": "Classic glass bottle, imported", "context": "$7.50 · 355ml"}, {"section": "Beverages", "q": "What is the price of Heineken 0.0?", "a": "$9", "context": "355ml · only non-alcoholic beer on the menu"}, {"section": "Cocktails", "q": "How many cocktails do we have?", "a": "3 signature cocktails", "context": "Plus traditional cocktails available on request"}, {"section": "Cocktails", "q": "What is the most expensive cocktail?", "a": "Pomegranate Margarita — $21", "context": "Tequila, Cointreau, pomegranate · 3oz"}, {"section": "Cocktails", "q": "What is the cheapest cocktail?", "a": "Otto's Negroni — $18", "context": "Otto's vermouth, Campari, gin · 3oz"}, {"section": "Cocktails", "q": "Which cocktail uses prosecco?", "a": "Athenian Spritz", "context": "Otto's vermouth, prosecco, tonic · $19"}, {"section": "Cocktails", "q": "Which cocktail uses Cointreau?", "a": "Pomegranate Margarita", "context": "Tequila, Cointreau, pomegranate · $21"}, {"section": "Cocktails", "q": "What is Cointreau?", "a": "Orange-flavoured liqueur", "context": "In the Pomegranate Margarita"}, {"section": "Cocktails", "q": "Can guests order cocktails not on the menu?", "a": "Yes — traditional cocktails available", "context": "Margarita, Espresso Martini etc — check with bar"}, {"section": "Cocktails", "q": "What size are the cocktails?", "a": "3oz", "context": "All three signature cocktails"}, {"section": "Beverages", "q": "What is the most expensive bottle on the wine list?", "a": "Dom Pérignon 2015 — $645", "context": "Brut Vintage Champagne · France"}, {"section": "Beverages", "q": "What is the most expensive red on the wine list?", "a": "Super Tuscan — Antinori 'Tignanello' 2022 · $410", "context": "Chianti Classico, Tuscany"}, {"section": "Beverages", "q": "What is the most affordable bottle of red?", "a": "Rioja Reserva — Palacios de Camino Real · $80", "context": "Spain · 2019"}, {"section": "Beverages", "q": "What is the most affordable bottle of white?", "a": "Malvazija — Coronica · $78", "context": "Croatia · 2023"}, {"section": "Beverages", "q": "What sparkling wines do we offer by the bottle?", "a": "Prosecco, Rosé, Brut Champagne, Rosé Champagne, Blanc de Noirs, Brut Vintage", "context": "6 options — $85 to $645"}, {"section": "Beverages", "q": "What is the entry-level Champagne?", "a": "Veuve Clicquot Brut NV — $195", "context": "Most recognizable Champagne on the list"}, {"section": "Beverages", "q": "Which wine region has the most bottles on our list?", "a": "Tuscany, Italy", "context": "Chianti, Brunello x3, Bolgheri, Super Tuscans — 7 bottles"}, {"section": "Beverages", "q": "Do we have any Croatian wine?", "a": "Yes — Malvazija, Coronica 2023", "context": "From Istria · $78 · white wine"}, {"section": "Beverages", "q": "What is the only Californian wine on the list?", "a": "Pinot Noir — Kosta Browne, Santa Rita Hills 2021", "context": "$375 · only New World red"},
-{
-  "section": "Service",
-  "q": "When do you use a decanter?",
-  "a": "Young tannic reds and Amarone",
-  "context": "Barolo, Brunello, Amarone, bold Bordeaux — aeration opens them up"
-},
-{
-  "section": "Service",
-  "q": "Which bottles on our list should always be decanted?",
-  "a": "Amarone — decant if possible",
-  "context": "Also recommended for Barolo, Brunello, Montepulciano Riserva"
-},
-{
-  "section": "Service",
-  "q": "Why do you decant a young tannic red?",
-  "a": "Aeration softens tannins and opens up the aroma",
-  "context": "Barolo and Brunello especially benefit — decant 20-30 min"
-},
-{
-  "section": "Service",
-  "q": "Why do you decant an old wine?",
-  "a": "To separate sediment from the wine",
-  "context": "Older Bordeaux and Brunello may have sediment — pour slowly"
-},
-{
-  "section": "Service",
-  "q": "Where are decanters kept?",
-  "a": "In the wine cabinets — never leave them out",
-  "context": "Opening checklist — return after service"
-},
-{
-  "section": "Service",
-  "q": "Which whites are ever decanted?",
-  "a": "Rarely — but aged white Burgundy can benefit",
-  "context": "Generally only reds. Never decant sparkling wines."
-}
-];
+const FOOD_CARDS = [{"section": "Price", "q": "How much is the Grilled Seafood Platter?", "a": "$90", "context": "Signature — octopus, calamari, prawns, scallops"}, {"section": "Price", "q": "How much is the Lobster Tagliatelle?", "a": "$75", "context": "Signature — most expensive pasta on the menu"}, {"section": "Price", "q": "How much is the Prime Striploin?", "a": "$78", "context": "12oz dry-aged — same price as Lamb Chops"}, {"section": "Price", "q": "How much are the Lamb Chops?", "a": "$78", "context": "Signature — same price as Prime Striploin"}, {"section": "Price", "q": "How much is the Seafood Risotto?", "a": "$68", "context": "Signature — calamari, shrimp, scallops"}, {"section": "Price", "q": "How much is the Whole Grilled Branzino?", "a": "$58", "context": "Signature — served whole"}, {"section": "Price", "q": "How much is the Organic King Salmon?", "a": "$48", "context": "Signature — from Ireland, medium only"}, {"section": "Price", "q": "How much is the Lemon Roasted Chicken?", "a": "$47", "context": "Signature — smashed potatoes, swiss chard"}, {"section": "Price", "q": "How much is the Spaghetti?", "a": "$39", "context": "Signature — most affordable pasta"}, {"section": "Price", "q": "How much is the Octopus a la Plancha?", "a": "$34", "context": "Hot Plate — most expensive hot plate"}, {"section": "Price", "q": "How much is the Calamari Fritti?", "a": "$32", "context": "Hot Plate"}, {"section": "Price", "q": "How much is the Baked Feta?", "a": "$28", "context": "Hot Plate"}, {"section": "Price", "q": "How much are the Zucchini Chips?", "a": "$27", "context": "Hot Plate"}, {"section": "Price", "q": "How much is the Beets & Goat Cheese?", "a": "$29", "context": "Raw & Salad"}, {"section": "Price", "q": "How much is the Spring Salad?", "a": "$28", "context": "Raw & Salad"}, {"section": "Price", "q": "How much is the Fennel & Arugula?", "a": "$27", "context": "Raw & Salad"}, {"section": "Price", "q": "How much is the Carpaccio?", "a": "$32", "context": "Raw & Salad"}, {"section": "Price", "q": "How much is the Tuna Tartare?", "a": "$34", "context": "Raw & Salad — most expensive starter"}, {"section": "Price", "q": "How much is the Greek Village Salad?", "a": "$26", "context": "Raw & Salad — most affordable salad"}, {"section": "Price", "q": "How much is the Baguette?", "a": "$8", "context": "Hot Plate — good upsell at table arrival"}, {"section": "Mise", "q": "What cutlery for Whole Grilled Branzino?", "a": "Fork + Steak Knife + 3rd plate", "context": "3rd plate is for the bones"}, {"section": "Mise", "q": "What cutlery for Baked Feta?", "a": "Butter Knife + Fork", "context": "Only hot plate that uses a butter knife"}, {"section": "Mise", "q": "What cutlery for Lamb Chops?", "a": "Fork + Steak Knife", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Prime Striploin?", "a": "Fork + Steak Knife", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Lemon Roasted Chicken?", "a": "Steak Knife + Fork", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Organic King Salmon?", "a": "Fork + Butter Knife", "context": "Medium only — note on the mise"}, {"section": "Mise", "q": "What cutlery for Grilled Seafood Platter?", "a": "Butter Knife + Fork", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Lobster Tagliatelle?", "a": "Fork + Spoon", "context": "Signature pasta"}, {"section": "Mise", "q": "What cutlery for Spaghetti?", "a": "Fork + Spoon", "context": "Signature pasta"}, {"section": "Mise", "q": "What cutlery for Seafood Risotto?", "a": "Fork + Spoon", "context": "Signature"}, {"section": "Mise", "q": "What cutlery for Baguette?", "a": "Butter Knife only", "context": "Hot Plate"}, {"section": "Mise", "q": "What cutlery for all Raw & Salad dishes?", "a": "Fork + Spoon", "context": "All 6 salads — same setting"}, {"section": "Mise", "q": "What cutlery for Zucchini Chips?", "a": "Fork + Spoon", "context": "Hot Plate"}, {"section": "Mise", "q": "What cutlery for Octopus a la Plancha?", "a": "Fork + Spoon", "context": "Hot Plate"}, {"section": "Mise", "q": "What cutlery for Calamari Fritti?", "a": "Fork + Spoon", "context": "Hot Plate"}, {"section": "Mise", "q": "Which dish needs a 3rd plate?", "a": "Whole Grilled Branzino", "context": "For the bones — always set it"}, {"section": "Mise", "q": "Which dishes use a Steak Knife?", "a": "Lamb Chops, Prime Striploin, Lemon Roasted Chicken, Branzino", "context": "Any dish you need to cut through"}, {"section": "Mise", "q": "Which dishes use a Butter Knife?", "a": "Baked Feta, Salmon, Seafood Platter, Baguette", "context": "Softer proteins and spreads"}, {"section": "Ingredients", "q": "What cheese is in the Carpaccio?", "a": "Manchego", "context": "Spanish sheep's milk cheese — nutty, like a milder parmesan"}, {"section": "Ingredients", "q": "What herbs are in the Beets & Goat Cheese?", "a": "Dill and mint", "context": "Not just 'herbs' — be specific if asked"}, {"section": "Ingredients", "q": "What is the dressing on Beets & Goat Cheese?", "a": "Champagne vinaigrette", "context": "Raw & Salad"}, {"section": "Ingredients", "q": "What is the dressing on Spring Salad?", "a": "Burnt honey vinaigrette", "context": "Endives, hazelnuts, pear, comté"}, {"section": "Ingredients", "q": "What type of pasta is in Lobster Tagliatelle?", "a": "Hand cut pasta", "context": "Not dry pasta — made in-house"}, {"section": "Ingredients", "q": "What sauce is in Lobster Tagliatelle?", "a": "Bisque, cream, chives — and chilli", "context": "Chilli is easy to forget — it's in there"}, {"section": "Ingredients", "q": "What potatoes come with Lemon Roasted Chicken?", "a": "Smashed potatoes", "context": "Not roasted, not herb — smashed"}, {"section": "Ingredients", "q": "What greens are in Lemon Roasted Chicken?", "a": "Swiss chard", "context": "Also has olives, sumac, preserved lemon"}, {"section": "Ingredients", "q": "What seafood is in the Seafood Risotto?", "a": "Calamari, shrimp, scallops", "context": "Menu says 'market seafood' — kitchen confirmed these three"}, {"section": "Ingredients", "q": "What is the broth in Seafood Risotto?", "a": "Light seafood and tomato broth", "context": "Arborio rice absorbs it to make it creamy"}, {"section": "Ingredients", "q": "What comes on the Whole Grilled Branzino?", "a": "Vine tomatoes, olives, capers, white wine, herb roasted potatoes", "context": "Served whole on an oval plate"}, {"section": "Ingredients", "q": "What type of potatoes come with Branzino?", "a": "Herb roasted potatoes", "context": "Not smashed, not plain — herb roasted"}, {"section": "Ingredients", "q": "What sauce comes with Octopus a la Plancha?", "a": "Salsa verde and hummus", "context": "New menu — no longer capers/red onion"}, {"section": "Ingredients", "q": "What comes with Calamari Fritti?", "a": "Shishito peppers, aioli, lemon", "context": "Fritti = Italian for fried"}, {"section": "Ingredients", "q": "What nut is in the Spring Salad?", "a": "Hazelnuts", "context": "With pear, comté, burnt honey vinaigrette"}, {"section": "Ingredients", "q": "What nut is in the Fennel & Arugula?", "a": "Toasted pine nuts", "context": "With blood orange, aged parmesan, sumac"}, {"section": "Ingredients", "q": "What spice finishes the Fennel & Arugula?", "a": "Sumac", "context": "Tangy, lemony Middle Eastern spice"}, {"section": "Ingredients", "q": "What spice is in Lemon Roasted Chicken?", "a": "Sumac", "context": "Also in Fennel & Arugula — two dishes share it"}, {"section": "Ingredients", "q": "What sauce is on the Prime Striploin?", "a": "Peppercorn sauce", "context": "12oz dry-aged with grilled Mediterranean veg"}, {"section": "Ingredients", "q": "What is specifically listed in the Seafood Platter?", "a": "Grilled Spanish octopus, calamari, prawns, scallops, beans, lemon", "context": "Grilled Spanish octopus — be specific"}, {"section": "Ingredients", "q": "What is the vinaigrette on Greek Village Salad?", "a": "No vinaigrette — just olive oil and herbs", "context": "Heirloom tomatoes, cucumber, peppers, olives, feta, mint, oregano"}, {"section": "Details", "q": "Where is the King Salmon from?", "a": "Ireland", "context": "Organic — cooked medium only"}, {"section": "Details", "q": "What temperature is Salmon cooked?", "a": "Medium only", "context": "Don't take temp requests — it's set"}, {"section": "Details", "q": "How many ounces is the Prime Striploin?", "a": "12oz", "context": "Dry-aged — mention this when describing"}, {"section": "Details", "q": "What does 'a la Plancha' mean?", "a": "Grilled on a scorching flat griddle", "context": "Spanish term — char on outside, tender inside"}, {"section": "Details", "q": "What does 'Fritti' mean?", "a": "Italian for fried", "context": "Calamari Fritti"}, {"section": "Details", "q": "What does 'confit' mean?", "a": "Slow-cooked in oil at low heat", "context": "Confit tomato = jammy, concentrated flavor"}, {"section": "Details", "q": "What is burrata?", "a": "Mozzarella with a creamy center that oozes", "context": "In the Spaghetti — delicate, serve immediately"}, {"section": "Details", "q": "What are 'Mediterranean vegetables'?", "a": "Peppers, onions, zucchini", "context": "Come with Prime Striploin"}, {"section": "Details", "q": "What does preserved lemon taste like?", "a": "Deeply savory, intensely salty — not sour", "context": "Salt-cured for weeks. In Lemon Roasted Chicken"}, {"section": "Details", "q": "What is bisque?", "a": "Rich creamy sauce made from the lobster shells", "context": "In Lobster Tagliatelle — concentrated shellfish flavor"}, {"section": "Details", "q": "What is beurre blanc?", "a": "French butter-wine sauce — silky and slightly tangy", "context": "Lemongrass beurre blanc on the Salmon"}, {"section": "Details", "q": "What is salsa verde (on the menu)?", "a": "Italian style — parsley, capers, anchovy, olive oil", "context": "Not Mexican salsa verde. On Lamb Chops and Octopus"}, {"section": "Details", "q": "Which dish is served whole?", "a": "Whole Grilled Branzino", "context": "Needs 3rd plate for bones — you may carve tableside"}, {"section": "Details", "q": "What are shishito peppers?", "a": "Mild Japanese peppers — but 1 in 10 is spicy", "context": "In Octopus a la Plancha and Calamari Fritti"}, {"section": "Details", "q": "What is phyllo?", "a": "Paper-thin Greek pastry that crisps like baklava", "context": "In Baked Feta — wraps the cheese"}, {"section": "Details", "q": "What does the Baguette come with?", "a": "Warmed, sea salt, rosemary, olive oil", "context": "Good upsell at the start of the meal — $8"}, {"section": "Details", "q": "Which dish has chilli in it?", "a": "Lobster Tagliatelle", "context": "Easy to forget — bisque, chilli, cream, chives"}, {"section": "Details", "q": "What rice is used in Seafood Risotto?", "a": "Arborio rice", "context": "Short-grain Italian rice — releases starch to make it creamy"}, {"section": "Pitch", "q": "3 ingredients to pitch for Tuna Tartare", "a": "tuna · avocado · citrus", "context": "$34 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Carpaccio", "a": "beef tenderloin · arugula · manchego", "context": "$32 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Greek Village Salad", "a": "heirloom tomato · feta · olives", "context": "$26 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Spring Salad", "a": "endives · pear · comté", "context": "$28 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Fennel & Arugula", "a": "fennel · blood orange · aged parmesan", "context": "$27 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Beets & Goat Cheese", "a": "beets · goat cheese · sicilian pistachio", "context": "$29 — Raw & Salad"}, {"section": "Pitch", "q": "3 ingredients to pitch for Zucchini Chips", "a": "fried zucchini · tzatziki · lemon", "context": "$27 — Hot Plate"}, {"section": "Pitch", "q": "3 ingredients to pitch for Baked Feta", "a": "feta · phyllo · truffle honey", "context": "$28 — Hot Plate"}, {"section": "Pitch", "q": "3 ingredients to pitch for Octopus a la Plancha", "a": "octopus · hummus · salsa verde", "context": "$34 — Hot Plate"}, {"section": "Pitch", "q": "3 ingredients to pitch for Calamari Fritti", "a": "calamari · shishito peppers · aioli", "context": "$32 — Hot Plate"}, {"section": "Pitch", "q": "3 ingredients to pitch for Lobster Tagliatelle", "a": "lobster · hand cut pasta · bisque", "context": "$75 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Spaghetti", "a": "confit tomato · Italian burrata · pistachio", "context": "$39 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Whole Grilled Branzino", "a": "branzino · vine tomatoes · herb roasted potatoes", "context": "$58 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Lamb Chops", "a": "lamb · salsa verde · tzatziki", "context": "$78 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Lemon Roasted Chicken", "a": "chicken · preserved lemon · smashed potatoes", "context": "$47 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Prime Striploin", "a": "12oz dry-aged striploin · peppercorn sauce · grilled vegetables", "context": "$78 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Organic King Salmon", "a": "salmon · spinach · lemongrass beurre blanc", "context": "$48 — Signature, from Ireland"}, {"section": "Pitch", "q": "3 ingredients to pitch for Seafood Risotto", "a": "market seafood · arborio rice · seafood broth", "context": "$68 — Signature"}, {"section": "Pitch", "q": "3 ingredients to pitch for Grilled Seafood Platter", "a": "grilled Spanish octopus · prawns · scallops", "context": "$90 — Signature"}, {"section": "Cocktails", "q": "How many signature cocktails do we have?", "a": "3", "context": "Otto's Negroni, Athenian Spritz, Pomegranate Margarita"}, {"section": "Cocktails", "q": "What's in the Otto's Negroni?", "a": "Otto's vermouth, campari, gin", "context": "3oz — $18"}, {"section": "Cocktails", "q": "What's in the Athenian Spritz?", "a": "Otto's vermouth, prosecco, tonic", "context": "3oz — $19"}, {"section": "Cocktails", "q": "What's in the Pomegranate Margarita?", "a": "Tequila, cointreau, pomegranate", "context": "3oz — $21 — most expensive cocktail"}, {"section": "Cocktails", "q": "How much is the Otto's Negroni?", "a": "$18", "context": "Otto's vermouth, campari, gin"}, {"section": "Cocktails", "q": "How much is the Athenian Spritz?", "a": "$19", "context": "Otto's vermouth, prosecco, tonic"}, {"section": "Cocktails", "q": "How much is the Pomegranate Margarita?", "a": "$21", "context": "Most expensive cocktail on the menu"}, {"section": "Cocktails", "q": "Can we make cocktails beyond the 3 signature ones?", "a": "Yes — traditional cocktails too", "context": "Margarita, spicy margarita etc — ask the bar"}, {"section": "Cocktails", "q": "What is cointreau?", "a": "Orange-flavoured liqueur", "context": "In the Pomegranate Margarita"}, {"section": "Cocktails", "q": "What is campari?", "a": "Bitter Italian aperitif — deep red colour", "context": "In the Otto's Negroni"}, {"section": "Beverages", "q": "What is the only non-alcoholic beer?", "a": "Heineken 0.0", "context": "355ml — $9"}, {"section": "Beverages", "q": "How much is Heineken 0.0?", "a": "$9", "context": "Only non-alcoholic beer on the menu — 355ml $9"}, {"section": "Beverages", "q": "What beers do we have?", "a": "Peroni Lager and Hoegaarden Wheat Beer", "context": "Both 330ml, both $12"}, {"section": "Beverages", "q": "Where is Peroni from?", "a": "Italy", "context": "Lager — 330ml — $12"}, {"section": "Beverages", "q": "Where is Hoegaarden from?", "a": "Belgium", "context": "Wheat Beer — 330ml — $12"}, {"section": "Beverages", "q": "What style is Hoegaarden?", "a": "Wheat Beer", "context": "Belgian — $12"}, {"section": "Beverages", "q": "How much are both beers?", "a": "$12 each", "context": "Peroni Lager and Hoegaarden Wheat Beer — 330ml"}, {"section": "Beverages", "q": "How is the Coke served?", "a": "Classic glass bottle, imported", "context": "355ml — $7.50"}, {"section": "Beverages", "q": "How much is the Coke?", "a": "$7.50", "context": "Classic glass bottle, imported"}, {"section": "Beverages", "q": "What is the cheapest non-alcoholic option?", "a": "Diet Coke or Gingerale — $6", "context": "355ml"}, {"section": "Beverages", "q": "What non-alcoholic options do we offer?", "a": "Peach Iced Tea, Raspberry Lemonade, Coke, Diet Coke/Gingerale, Heineken 0.0", "context": "$6–$10 range"}, {"section": "Beverages", "q": "How much is Peach Iced Tea?", "a": "$10", "context": "355ml non-alcoholic"}, {"section": "Beverages", "q": "How much is Raspberry Lemonade?", "a": "$10", "context": "355ml non-alcoholic"}, {"section": "Beverages", "q": "What sparkling water do we serve?", "a": "Pellegrino", "context": "Sparkling — offer with lime"}, {"section": "Beverages", "q": "What wine options are available by the glass?", "a": "Muscadet, Chardonnay, Nero d'Avola, Syrah, Rosé, Cava", "context": "5oz pours — $17 to $19"}, {"section": "Beverages", "q": "How much is wine by the glass?", "a": "$17–$19", "context": "Rosé $17 · Muscadet/Nero d'Avola $18 · Chardonnay/Syrah/Cava $19"}, {"section": "Service", "q": "What garnish for flat water?", "a": "Lemon", "context": "Never offer tap unprompted — upsell still or sparkling"}, {"section": "Service", "q": "What garnish for sparkling water?", "a": "Lime", "context": "Pellegrino is the sparkling water"}, {"section": "Service", "q": "Do we offer tap water?", "a": "Only if guest requests it", "context": "Always offer flat or sparkling first — for upsell"}, {"section": "Service", "q": "How many wine glass types are there?", "a": "4", "context": "Champagne, White, Burgundy, Syrah/Reds"}, {"section": "Service", "q": "What are the 4 wine glasses?", "a": "Champagne · White · Burgundy · Syrah/Other Reds", "context": "Each grape family gets its own glass"}, {"section": "Service", "q": "What glass for Chardonnay?", "a": "Burgundy glass", "context": "Not the standard white wine glass"}, {"section": "Service", "q": "What glass for Pinot Noir?", "a": "Burgundy glass", "context": "Same glass as Chardonnay"}, {"section": "Service", "q": "What glass for all whites except Chardonnay?", "a": "White wine glass", "context": "Muscadet, Ribolla, Greco di Tufo, Etna Bianco etc."}, {"section": "Service", "q": "What glass for Syrah, Nero d'Avola, Montepulciano etc.?", "a": "Syrah / Other Reds glass", "context": "All reds except Pinot Noir and Chardonnay"}, {"section": "Service", "q": "What glass for Champagne and Prosecco?", "a": "Champagne / Prosecco glass", "context": "All sparkling wines"}, {"section": "Service", "q": "Where is Seat 1 at a table?", "a": "First banquette seat to the left", "context": "Consistent across all tables"}, {"section": "Service", "q": "What is the 86 list?", "a": "Items currently sold out or unavailable", "context": "Review it at the start of every shift — food, wine, cocktails"}, {"section": "Service", "q": "How many water jugs to fill at opening?", "a": "8 water jugs", "context": "Fill with water and ice — opening checklist"}, {"section": "Service", "q": "How far from the table edge should plates be?", "a": "Half an inch", "context": "Opening checklist — uniform settings"}, {"section": "Service", "q": "How full should candles be before service?", "a": "At least 30% filled", "context": "Opening checklist"}, {"section": "Service", "q": "How many cleaning triangles to prepare?", "a": "6 to 8", "context": "Table wipes — opening checklist"}, {"section": "Service", "q": "What are the 3 types of plates?", "a": "Crown/spiky (balcony 211–215) + 2 similar plates (thin vs thick outer layer)", "context": "Don't mix them — you'll get called out"}, {"section": "Service", "q": "Which plates go on the balcony?", "a": "Crown / spiky plates", "context": "Seats 211–215 only"}, {"section": "Service", "q": "What goes in the copper dishes during opening?", "a": "Mussel shells", "context": "Opening checklist — fill before service"}, {"section": "Service", "q": "Where are decanters kept?", "a": "In the wine cabinets", "context": "Don't leave them out"}, {"section": "Details", "q": "What is manchego?", "a": "Spanish sheep's milk cheese — nutty, like a milder parmesan", "context": "In the Carpaccio"}, {"section": "Details", "q": "What is tzatziki?", "a": "Greek yogurt, cucumber, garlic, dill sauce", "context": "In Octopus a la Plancha, Lamb Chops, Zucchini Chips"}, {"section": "Details", "q": "What is aioli?", "a": "Garlic mayonnaise", "context": "In Carpaccio and Calamari Fritti"}, {"section": "Details", "q": "What is comté?", "a": "French aged cow's milk cheese — nutty with caramel notes", "context": "In Spring Salad"}, {"section": "Details", "q": "What is sumac?", "a": "Tangy, lemony Middle Eastern spice — dark red powder", "context": "In Fennel & Arugula and Lemon Roasted Chicken"}, {"section": "Details", "q": "What are endives?", "a": "Pale, crunchy, slightly bitter leaf — elongated like a small torpedo", "context": "In Spring Salad — not a Brussels sprout"}, {"section": "Details", "q": "What is swiss chard?", "a": "Leafy green related to beets — slightly earthy, mellow when cooked", "context": "In Lemon Roasted Chicken"}, {"section": "Details", "q": "What is truffle honey?", "a": "Honey infused with black truffle — earthy, aromatic sweetness", "context": "In Baked Feta — makes it indulgent"}, {"section": "Details", "q": "What is sicilian pistachio?", "a": "Richer and more intensely flavored than standard pistachios", "context": "In Beets & Goat Cheese and Spaghetti"}, {"section": "Details", "q": "What is a champagne vinaigrette?", "a": "Light dressing made with champagne vinegar — delicate and slightly sweet", "context": "In Beets & Goat Cheese"}, {"section": "Details", "q": "What is dry-aged beef?", "a": "Beef aged in a controlled environment — concentrates flavor, more tender", "context": "Prime Striploin is 12oz dry-aged"}, {"section": "Beverages", "q": "How many wines do we sell by the half bottle?", "a": "3", "context": "Chablis, Brunello, Brut Champagne"}, {"section": "Beverages", "q": "Which Chablis do we sell by the half bottle?", "a": "Dom. Hamelin Premier Cru 'Beauroy'", "context": "France · $75"}, {"section": "Beverages", "q": "How much is the Chablis half bottle?", "a": "$75", "context": "Dom. Hamelin Premier Cru 'Beauroy' — France"}, {"section": "Beverages", "q": "Which Brunello do we sell by the half bottle?", "a": "Altesino 2020", "context": "Montalcino, Tuscany · $100"}, {"section": "Beverages", "q": "How much is the Brunello half bottle?", "a": "$100", "context": "Altesino 2020 — Montalcino, Tuscany"}, {"section": "Beverages", "q": "Which Champagne do we sell by the half bottle?", "a": "Veuve Clicquot Brut NV", "context": "Champagne, France · $100"}, {"section": "Beverages", "q": "How much is the Champagne half bottle?", "a": "$100", "context": "Veuve Clicquot Brut NV — Champagne, France"}, {"section": "Beverages", "q": "Name all three half bottle wines with prices", "a": "Chablis Dom. Hamelin $75 · Brunello Altesino $100 · Veuve Clicquot $100", "context": "All 375ml — white, red, sparkling"}, {"section": "Beverages", "q": "What size are the half bottles?", "a": "375ml", "context": "vs standard 750ml full bottles"}, {"section": "Beverages", "q": "What are the two red wines by the glass?", "a": "Nero d'Avola (Italy) · Syrah (France)", "context": "Both $18–$19 · 5oz pours"}, {"section": "Beverages", "q": "How much is Nero d'Avola by the glass?", "a": "$18", "context": "Sicily, Italy · 5oz"}, {"section": "Beverages", "q": "How much is Syrah by the glass?", "a": "$19", "context": "France · 5oz"}, {"section": "Beverages", "q": "What are the two white wines by the glass?", "a": "Muscadet (France) · Chardonnay (Italy)", "context": "$18 and $19 · 5oz pours"}, {"section": "Beverages", "q": "How much is Muscadet by the glass?", "a": "$18", "context": "Loire Valley, France · 5oz"}, {"section": "Beverages", "q": "How much is Chardonnay by the glass?", "a": "$19", "context": "Italy · 5oz"}, {"section": "Beverages", "q": "What is the rosé by the glass?", "a": "French Rosé 2023", "context": "$17 · 5oz — cheapest wine by the glass"}, {"section": "Beverages", "q": "What is the sparkling wine by the glass?", "a": "Cava (Spain)", "context": "$19 · 5oz"}, {"section": "Beverages", "q": "How many wines do we offer by the glass?", "a": "6", "context": "Muscadet $18 · Chardonnay $19 · Nero d'Avola $18 · Syrah $19 · Rosé $17 · Cava $19"}, {"section": "Beverages", "q": "What is the cheapest wine by the glass?", "a": "Rosé — $17", "context": "French Rosé 2023 · 5oz"}, {"section": "Beverages", "q": "What is the most expensive wine by the glass?", "a": "$19 — Chardonnay, Syrah, or Cava", "context": "Three options tied at $19"}, {"section": "Beverages", "q": "What are the two beers we sell?", "a": "Peroni Lager (Italy) · Leffe Brune (Belgium)", "context": "Both 330ml · Both $12"}, {"section": "Beverages", "q": "What style is Leffe Brune?", "a": "Dark Abbey Ale", "context": "Belgium · 330ml · $12"}, {"section": "Beverages", "q": "Where is Peroni from?", "a": "Italy", "context": "Lager · 330ml · $12"}, {"section": "Beverages", "q": "How much are both beers?", "a": "$12 each", "context": "Peroni Lager and Leffe Brune · 330ml"}, {"section": "Beverages", "q": "Do we have a non-alcoholic beer?", "a": "Yes — Heineken 0.0", "context": "$9 · 355ml · only non-alcoholic beer"}, {"section": "Beverages", "q": "How many non-alcoholic beverages do we offer?", "a": "5", "context": "Peach Iced Tea, Raspberry Lemonade, Coke, Diet Coke/Gingerale, Heineken 0.0"}, {"section": "Beverages", "q": "What non-alcoholic options do we have?", "a": "Peach Iced Tea · Raspberry Lemonade · Coke · Diet Coke/Gingerale · Heineken 0.0", "context": "$6–$10 range · 355ml"}, {"section": "Beverages", "q": "What is the most expensive non-alcoholic drink?", "a": "Peach Iced Tea or Raspberry Lemonade — $10", "context": "Both 355ml"}, {"section": "Beverages", "q": "What is the cheapest non-alcoholic drink?", "a": "Diet Coke or Gingerale — $6", "context": "355ml"}, {"section": "Beverages", "q": "How is the Coke served?", "a": "Classic glass bottle, imported", "context": "$7.50 · 355ml"}, {"section": "Beverages", "q": "What is the price of Heineken 0.0?", "a": "$9", "context": "355ml · only non-alcoholic beer on the menu"}, {"section": "Cocktails", "q": "How many cocktails do we have?", "a": "3 signature cocktails", "context": "Plus traditional cocktails available on request"}, {"section": "Cocktails", "q": "What is the most expensive cocktail?", "a": "Pomegranate Margarita — $21", "context": "Tequila, Cointreau, pomegranate · 3oz"}, {"section": "Cocktails", "q": "What is the cheapest cocktail?", "a": "Otto's Negroni — $18", "context": "Otto's vermouth, Campari, gin · 3oz"}, {"section": "Cocktails", "q": "Which cocktail uses prosecco?", "a": "Athenian Spritz", "context": "Otto's vermouth, prosecco, tonic · $19"}, {"section": "Cocktails", "q": "Which cocktail uses Cointreau?", "a": "Pomegranate Margarita", "context": "Tequila, Cointreau, pomegranate · $21"}, {"section": "Cocktails", "q": "What is Cointreau?", "a": "Orange-flavoured liqueur", "context": "In the Pomegranate Margarita"}, {"section": "Cocktails", "q": "Can guests order cocktails not on the menu?", "a": "Yes — traditional cocktails available", "context": "Margarita, Espresso Martini etc — check with bar"}, {"section": "Cocktails", "q": "What size are the cocktails?", "a": "3oz", "context": "All three signature cocktails"}, {"section": "Beverages", "q": "What is the most expensive bottle on the wine list?", "a": "Dom Pérignon 2015 — $645", "context": "Brut Vintage Champagne · France"}, {"section": "Beverages", "q": "What is the most expensive red on the wine list?", "a": "Super Tuscan — Antinori 'Tignanello' 2022 · $410", "context": "Chianti Classico, Tuscany"}, {"section": "Beverages", "q": "What is the most affordable bottle of red?", "a": "Rioja Reserva — Palacios de Camino Real · $80", "context": "Spain · 2019"}, {"section": "Beverages", "q": "What is the most affordable bottle of white?", "a": "Malvazija — Coronica · $78", "context": "Croatia · 2023"}, {"section": "Beverages", "q": "What sparkling wines do we offer by the bottle?", "a": "Prosecco, Rosé, Brut Champagne, Rosé Champagne, Blanc de Noirs, Brut Vintage", "context": "6 options — $85 to $645"}, {"section": "Beverages", "q": "What is the entry-level Champagne?", "a": "Veuve Clicquot Brut NV — $195", "context": "Most recognizable Champagne on the list"}, {"section": "Beverages", "q": "Which wine region has the most bottles on our list?", "a": "Tuscany, Italy", "context": "Chianti, Brunello x3, Bolgheri, Super Tuscans — 7 bottles"}, {"section": "Beverages", "q": "Do we have any Croatian wine?", "a": "Yes — Malvazija, Coronica 2023", "context": "From Istria · $78 · white wine"}, {"section": "Beverages", "q": "What is the only Californian wine on the list?", "a": "Pinot Noir — Kosta Browne, Santa Rita Hills 2021", "context": "$375 · only New World red"}];
 const COCKTAILS = [
   {
     "name": "Negroni",
@@ -3143,8 +3344,13 @@ const COCKTAIL_QUIZ = [
     "context": "Prosecco · Sparkling"
   }
 ];
-const WINE_CARDS = 
-[
+const WINE_CARDS = [
+  {
+    "section": "Vintage",
+    "q": "What year is the Pecorino — Velenosi 'Villa Angela Falerio'?",
+    "a": "2024",
+    "context": "Le Marche, Italy — $75"
+  },
   {
     "section": "Grape",
     "q": "What grape is Pecorino?",
@@ -3164,6 +3370,12 @@ const WINE_CARDS =
     "context": "$75 by bottle, $18 by glass — great value"
   },
   {
+    "section": "Vintage",
+    "q": "What year is the Bellone — Casale del Giglio?",
+    "a": "2024",
+    "context": "Lazio, Italy — $85"
+  },
+  {
     "section": "Grape",
     "q": "What grape is Bellone?",
     "a": "Bellone — an ancient Roman white grape from Lazio",
@@ -3176,10 +3388,22 @@ const WINE_CARDS =
     "context": "$85 — rare indigenous Lazio grape"
   },
   {
+    "section": "Vintage",
+    "q": "What year is the Vermentino — La Spinetta?",
+    "a": "2025",
+    "context": "Tuscany, Italy — $95"
+  },
+  {
     "section": "Style",
     "q": "Describe Vermentino in one sentence.",
     "a": "Coastal Italian white — white peach, citrus and a saline, herbal finish.",
     "context": "La Spinetta — renowned Piedmontese producer in Tuscany"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Sancerre — Domaine Bailly-Reverdy?",
+    "a": "2024",
+    "context": "Loire Valley, France — $130"
   },
   {
     "section": "Grape",
@@ -3194,10 +3418,22 @@ const WINE_CARDS =
     "context": "The benchmark for Sauvignon Blanc — $130"
   },
   {
+    "section": "Vintage",
+    "q": "What year is the Chablis — Famille Grossot?",
+    "a": "2023",
+    "context": "Chablis, Burgundy, France — $145"
+  },
+  {
     "section": "Style",
     "q": "Describe Chablis — Famille Grossot in one sentence.",
     "a": "Pure, steely and mineral — green apple, oyster shell and laser-like acidity.",
     "context": "$145 — serious terroir-driven Chablis"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Pinot Noir — Laroque?",
+    "a": "2023",
+    "context": "Languedoc, France — $90"
   },
   {
     "section": "Region",
@@ -3212,6 +3448,12 @@ const WINE_CARDS =
     "context": "Most accessible Pinot Noir on the list — $90"
   },
   {
+    "section": "Vintage",
+    "q": "What year is the Côtes de Beaune — Domaine de Cassiopée?",
+    "a": "2022",
+    "context": "Côte de Beaune, Burgundy, France — $225"
+  },
+  {
     "section": "Region",
     "q": "What region is Côtes de Beaune — Domaine de Cassiopée from?",
     "a": "Côte de Beaune, Burgundy, France",
@@ -3222,6 +3464,12 @@ const WINE_CARDS =
     "q": "Describe Côtes de Beaune — Cassiopée in one sentence.",
     "a": "Elegant Burgundy Pinot Noir — red cherry, earthy complexity and silky tannins.",
     "context": "$225 — Côte de Beaune 2022 vintage"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Rosé — Tormaresca 'Calafuria'?",
+    "a": "2025",
+    "context": "Apulia, Italy — $90"
   },
   {
     "section": "Grape",
@@ -3262,6 +3510,150 @@ const WINE_CARDS =
     "a": "Barolo or Amarone",
     "context": "Fenocchio $190 or Villabella $230 — biggest reds for biggest steak",
     "why": "The biggest steak on the menu needs the boldest wines. Barolo's fierce tannins and high acidity cut through 25oz of dry-aged fat like a knife — the dried cherry and tar complement the char. Amarone brings dried fruit concentration and body that matches the intensity of a dry-aged prime cut. Both wines need food this rich to show their best."
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Antinori Bramito Chardonnay?",
+    "a": "2024",
+    "context": "Umbria, Italy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Pietrabianca 'Bocca di Lupo' Chardonnay?",
+    "a": "2024",
+    "context": "Puglia, Italy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Puligny-Montrachet — François Carillon?",
+    "a": "2022",
+    "context": "Côte de Beaune, Burgundy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Whispering Angel Rosé?",
+    "a": "2024",
+    "context": "Provence, France"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Greco di Tufo — Mastroberardino?",
+    "a": "2024",
+    "context": "Campania, Italy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Etna Bianco — Planeta?",
+    "a": "2023",
+    "context": "Mount Etna, Sicily"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Rioja Reserva — Palacios de Camino Real?",
+    "a": "2019",
+    "context": "Rioja, Spain"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Nero d'Avola — Vigneti Zabu 'Chiantari'?",
+    "a": "2023",
+    "context": "Sicily, Italy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Etna Rosso — Planeta?",
+    "a": "2023",
+    "context": "Mount Etna, Sicily"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Gamay Blend — Domaine des Huards?",
+    "a": "2022",
+    "context": "Loire Valley, France"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Bolgheri — Tenuta Argentiera?",
+    "a": "2023",
+    "context": "Bolgheri, Tuscany"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Montepulciano Riserva — Marina Cvetić?",
+    "a": "2020",
+    "context": "Abruzzo, Italy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Chianti Gran Selezione — Il Palazzino?",
+    "a": "2021",
+    "context": "Chianti Classico, Tuscany"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Barolo — Giacomo Fenocchio?",
+    "a": "2021",
+    "context": "Piedmont, Italy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Super Tuscan — Gaja Ca' Marcanda 'Promis'?",
+    "a": "2022",
+    "context": "Bolgheri, Tuscany"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Brunello — Argiano?",
+    "a": "2020",
+    "context": "Montalcino, Tuscany"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Pinot Noir — Domaine de Cassiopée?",
+    "a": "2022",
+    "context": "Burgundy, France"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Amarone — Villabella 'Fracastoro'?",
+    "a": "2013",
+    "context": "Valpolicella, Veneto"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Brunello — Gaja 'Pieve di Santa Restituta'?",
+    "a": "2019",
+    "context": "Montalcino, Tuscany"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Bordeaux — Corbin St-Émilion Grand Cru Classé?",
+    "a": "2015",
+    "context": "Saint-Émilion, Bordeaux"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Pinot Noir — Kosta Browne?",
+    "a": "2021",
+    "context": "Santa Rita Hills, California"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Pinot Noir — Domaine Georges Noëllat?",
+    "a": "2022",
+    "context": "Vosne-Romanée, Burgundy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Super Tuscan — Antinori 'Tignanello'?",
+    "a": "2022",
+    "context": "Chianti Classico, Tuscany"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Dom Pérignon?",
+    "a": "2015",
+    "context": "Champagne, France"
   },
   {
     "section": "Grape",
@@ -3544,10 +3936,22 @@ const WINE_CARDS =
     "context": "Both 100% Sangiovese — Tuscany"
   },
   {
+    "section": "Vintage",
+    "q": "What is the Chardonnay by the glass?",
+    "a": "Italian Chardonnay — $19",
+    "context": "5oz pour"
+  },
+  {
     "section": "Style",
     "q": "Describe the Chardonnay by glass in one sentence.",
     "a": "Italian-style — lighter and crisper than New World, subtle oak.",
     "context": "$19 by glass"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Rosé by glass?",
+    "a": "2023",
+    "context": "France — $17"
   },
   {
     "section": "Style",
@@ -3556,10 +3960,22 @@ const WINE_CARDS =
     "context": "France 2023 — $17"
   },
   {
+    "section": "Vintage",
+    "q": "What country is Cava from?",
+    "a": "Spain",
+    "context": "$19 by glass — traditional method sparkling"
+  },
+  {
     "section": "Style",
     "q": "Describe Cava in one sentence.",
     "a": "Spain's answer to Champagne — dry, citrusy and refreshing at great value.",
     "context": "Same method as Champagne, local grapes"
+  },
+  {
+    "section": "Vintage",
+    "q": "What is the Prosecco on the list?",
+    "a": "Castello di Roncade — Veneto, Italy — NV — $85",
+    "context": "Rosé & Sparkling by the bottle"
   },
   {
     "section": "Style",
@@ -3574,6 +3990,12 @@ const WINE_CARDS =
     "context": "Made from Glera grape — tank method"
   },
   {
+    "section": "Vintage",
+    "q": "What is the Brut Champagne on the list?",
+    "a": "Veuve Clicquot Yellow Label — NV — $195 (also half bottle $100)",
+    "context": "Champagne, France"
+  },
+  {
     "section": "Style",
     "q": "Describe Veuve Clicquot Yellow Label.",
     "a": "Rich and toasty — brioche, citrus, creamy bubbles. Pinot Noir dominant.",
@@ -3586,10 +4008,22 @@ const WINE_CARDS =
     "context": "Gives body and richness to the blend"
   },
   {
+    "section": "Vintage",
+    "q": "What is the Rosé Champagne on the list?",
+    "a": "Moët & Chandon Rosé — NV — $215",
+    "context": "Champagne, France"
+  },
+  {
     "section": "Style",
     "q": "Describe Moët & Chandon Rosé.",
     "a": "Wild strawberry and raspberry with brioche — elegant, celebratory, fine bubbles.",
     "context": "Made by blending still Pinot Noir into the cuvée"
+  },
+  {
+    "section": "Vintage",
+    "q": "What is the Blanc de Noirs on the list?",
+    "a": "Stéphane Coquillet 'Les Clés' — NV — $240",
+    "context": "Champagne, France"
   },
   {
     "section": "Style",
@@ -3604,6 +4038,12 @@ const WINE_CARDS =
     "context": "Pressed without skin contact — stays white"
   },
   {
+    "section": "Vintage",
+    "q": "What year is the Langhe Rossese — Giovanni Manzone?",
+    "a": "2023",
+    "context": "Piedmont, Italy — $100"
+  },
+  {
     "section": "Grape",
     "q": "What grape is Langhe Rossese made from?",
     "a": "Rossese Bianco",
@@ -3614,6 +4054,12 @@ const WINE_CARDS =
     "q": "Describe Langhe Rossese in one sentence.",
     "a": "Light and floral with white peach, apricot and a crisp mineral finish.",
     "context": "Giovanni Manzone — $100 — off the beaten path"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Cabernet Blend — Velenosi 'Ninfa'?",
+    "a": "2022",
+    "context": "Le Marche, Italy — $110"
   },
   {
     "section": "Region",
@@ -3700,32 +4146,9 @@ const WINE_CARDS =
     "q": "Describe Ribolla Gialla in one sentence.",
     "a": "Crisp and dry with citrus and a clean, nutty finish.",
     "context": "Ancient grape from Friuli, northeast Italy"
-  },
-{
-  "section": "Style",
-  "q": "Which wine on our list is flagged to decant if possible?",
-  "a": "Amarone — Villabella 'Fracastoro'",
-  "context": "Most intense red on the list — dried grape concentration"
-},
-{
-  "section": "Style",
-  "q": "Name 3 reds on our list that benefit from decanting",
-  "a": "Amarone · Barolo · Brunello",
-  "context": "High tannin + body — aeration opens them up significantly"
-},
-{
-  "section": "Style",
-  "q": "Why does Barolo benefit from decanting?",
-  "a": "Massive tannin and acidity — needs air to open up",
-  "context": "Fenocchio Barolo — Body 5, Acidity 5, Tannin 5"
-},
-{
-  "section": "Style",
-  "q": "Should you ever decant a sparkling wine?",
-  "a": "Never — you'll lose all the bubbles",
-  "context": "Champagne, Prosecco, Cava — always serve direct from bottle"
-}
+  }
 ];
+
 const DIAL_LABELS = {
   Body: ["Very Light","Light","Medium","Full","Very Full"],
   Acidity: ["Very Low","Low","Medium","High","Very High"],
