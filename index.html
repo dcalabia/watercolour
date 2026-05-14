@@ -389,6 +389,15 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
     </div>
   </div>
 </div>
+      <div class="h-card wine-q" onclick="showScreen('newq-screen')">
+        <div class="h-icon">🆕</div>
+        <div class="h-body">
+          <div class="h-top"><div class="h-name">What's New</div><div class="h-count">40 cards</div></div>
+          <div class="h-desc">Latest additions — new wines, signature cocktails, specials and decanting.</div>
+          <div class="h-tags"><span class="h-tag">Wines</span><span class="h-tag">Cocktails</span><span class="h-tag">Specials</span><span class="h-tag">Service</span></div>
+        </div>
+        <div class="h-arrow">›</div>
+      </div>
 
 <!-- MENU SCREEN -->
 <div id="menu-screen" class="screen deck-screen">
@@ -535,6 +544,43 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
 </div>
 
 
+
+<!-- NEW QUIZ SCREEN -->
+<div id="newq-screen" class="screen deck-screen wine-theme">
+  <div class="deck-wrap">
+    <button class="back-btn" onclick="showScreen('home')">← Back</button>
+    <div class="deck-eyebrow">Quick Quiz</div>
+    <div class="deck-title">What's New</div>
+    <div class="deck-divider"></div>
+    <div class="cat-row" id="newq-cats"></div>
+    <div class="progress" id="newq-prog"></div>
+    <div class="sr-stats" id="newq-sr-stats"></div>
+    <div class="sr-progress-bar-wrap"><div class="sr-progress-bar" id="newq-sr-bar" style="width:0%"></div></div>
+    <div class="card-wrap" onclick="flip('newq')">
+      <div class="card-inner" id="newq-card">
+        <div class="card-face card-front" id="newq-front"></div>
+        <div class="card-face card-back" id="newq-back"></div>
+      </div>
+    </div>
+    <div class="deck-controls">
+      <div class="nav-row">
+        <button class="nav-btn" onclick="prev('newq')">←</button>
+        <button class="nav-btn primary" id="newq-flip" onclick="flip('newq')">Flip</button>
+        <button class="nav-btn" onclick="next('newq')">→</button>
+      </div>
+      <div class="extra-row">
+        <button class="extra-btn" onclick="shuffle('newq')">⇄ Shuffle</button>
+        <button class="extra-btn" onclick="reset('newq')">↺ Reset</button>
+      </div>
+      <div class="sr-row" id="newq-sr-row">
+        <button class="sr-btn sr-wrong"  id="newq-sr-wrong"  onclick="srMark('newq','wrong')">A = Incorrect</button>
+        <button class="sr-btn sr-unsure" id="newq-sr-unsure" onclick="srMark('newq','unsure')">S = Unsure</button>
+        <button class="sr-btn sr-right"  id="newq-sr-right"  onclick="srMark('newq','right')">D = Correct</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- COCKTAIL SCREEN -->
 
 <div id="cocktail-screen" class="screen deck-screen">
@@ -634,6 +680,10 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
   <button class="nav-item" id="nav-wineq" onclick="showScreen('wineq-screen')">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
     Wine Q
+  </button>
+  <button class="nav-item" id="nav-newq" onclick="showScreen('newq-screen')">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+    New
   </button>
   <button class="nav-item" id="nav-cocktail" onclick="showScreen('cocktail-screen')">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M8 22h8M12 16v6M2 2l10 10 10-10H2zM5 2h14"/></svg>
@@ -6022,6 +6072,253 @@ const DIAL_LABELS = {
   Tannin: ["Very Soft","Soft","Medium","Firm","Very Firm"]
 };
 
+const NEW_QUIZ =
+[
+  {
+    "section": "Signature",
+    "q": "What are the ingredients in Otto's Negroni?",
+    "a": "Otto's vermouth · Campari · Gin",
+    "context": "1oz each — equal parts"
+  },
+  {
+    "section": "Signature",
+    "q": "What is the ratio for Otto's Negroni?",
+    "a": "1oz Otto's vermouth · 1oz Campari · 1oz Gin",
+    "context": "Equal parts — stirred over ice"
+  },
+  {
+    "section": "Signature",
+    "q": "What method for Otto's Negroni?",
+    "a": "Stirred — strained over a large rock",
+    "context": "Rocks glass · orange twist garnish"
+  },
+  {
+    "section": "Signature",
+    "q": "What glass and garnish for Otto's Negroni?",
+    "a": "Rocks glass · orange twist",
+    "context": "Bitter, aromatic, spirit-forward"
+  },
+  {
+    "section": "Signature",
+    "q": "What is the price of Otto's Negroni?",
+    "a": "$18",
+    "context": "House Negroni using Otto's vermouth"
+  },
+  {
+    "section": "Signature",
+    "q": "What are the ingredients in the Athenian Spritz?",
+    "a": "Otto's vermouth · Prosecco · tonic",
+    "context": "2.5oz · 3oz · splash"
+  },
+  {
+    "section": "Signature",
+    "q": "What is the ratio for the Athenian Spritz?",
+    "a": "2.5oz Otto's vermouth · 3oz Prosecco · splash of tonic",
+    "context": "Built over ice — light and refreshing"
+  },
+  {
+    "section": "Signature",
+    "q": "What method for the Athenian Spritz?",
+    "a": "Built — directly in glass over ice",
+    "context": "Wine glass or large stemmed glass"
+  },
+  {
+    "section": "Signature",
+    "q": "What glass for the Athenian Spritz?",
+    "a": "Wine glass or large stemmed glass",
+    "context": "Orange slice garnish"
+  },
+  {
+    "section": "Signature",
+    "q": "What is the price of the Athenian Spritz?",
+    "a": "$19",
+    "context": "Low-ABV spritz style"
+  },
+  {
+    "section": "Signature",
+    "q": "What are the ingredients in the Pomegranate Margarita?",
+    "a": "Tequila · Cointreau · pomegranate · agave",
+    "context": "2oz · 0.5oz · 0.5oz · 0.5oz"
+  },
+  {
+    "section": "Signature",
+    "q": "What is the ratio for the Pomegranate Margarita?",
+    "a": "2oz tequila · 0.5oz Cointreau · 0.5oz pomegranate · 0.5oz agave",
+    "context": "Shaken — served up or on the rocks"
+  },
+  {
+    "section": "Signature",
+    "q": "What method for the Pomegranate Margarita?",
+    "a": "Shaken — served up or on the rocks",
+    "context": "Rocks glass or coupe"
+  },
+  {
+    "section": "Signature",
+    "q": "What glass and garnish for the Pomegranate Margarita?",
+    "a": "Rocks glass or coupe · lime wheel or salted rim",
+    "context": "House Margarita"
+  },
+  {
+    "section": "Signature",
+    "q": "What is the price of the Pomegranate Margarita?",
+    "a": "$21",
+    "context": "Most expensive of the three signature cocktails"
+  },
+  {
+    "section": "Service",
+    "q": "Where are decanters kept?",
+    "a": "In the wine cabinets",
+    "context": "Don't leave them out"
+  },
+  {
+    "section": "Grape",
+    "q": "What grape is Pecorino?",
+    "a": "Pecorino — an Italian white grape (not the cheese!)",
+    "context": "Named after sheep (pecora) — Le Marche, Italy"
+  },
+  {
+    "section": "Region",
+    "q": "What region is Pecorino — Velenosi from?",
+    "a": "Le Marche, Italy",
+    "context": "Adriatic coast — same producer as Ninfa Cabernet Blend"
+  },
+  {
+    "section": "Style",
+    "q": "Describe Pecorino in one sentence.",
+    "a": "Crisp and herbal with green apple, fennel and a clean mineral finish.",
+    "context": "$75 by bottle, $18 by glass — great value"
+  },
+  {
+    "section": "Grape",
+    "q": "What grape is Bellone?",
+    "a": "Bellone — an ancient Roman white grape from Lazio",
+    "context": "Casale del Giglio — one of Lazio's top producers"
+  },
+  {
+    "section": "Style",
+    "q": "Describe Bellone in one sentence.",
+    "a": "Fresh and mineral with citrus, white peach and a light floral note.",
+    "context": "$85 — rare indigenous Lazio grape"
+  },
+  {
+    "section": "Style",
+    "q": "Describe Vermentino in one sentence.",
+    "a": "Coastal Italian white — white peach, citrus and a saline, herbal finish.",
+    "context": "La Spinetta — renowned Piedmontese producer in Tuscany"
+  },
+  {
+    "section": "Grape",
+    "q": "What grape is Sancerre made from?",
+    "a": "Sauvignon Blanc",
+    "context": "Loire Valley, France — mineral and herbaceous style"
+  },
+  {
+    "section": "Style",
+    "q": "Describe Sancerre in one sentence.",
+    "a": "Intensely mineral Sauvignon Blanc — gooseberry, citrus and a flinty, chalky finish.",
+    "context": "The benchmark for Sauvignon Blanc — $130"
+  },
+  {
+    "section": "Style",
+    "q": "Describe Chablis — Famille Grossot in one sentence.",
+    "a": "Pure, steely and mineral — green apple, oyster shell and laser-like acidity.",
+    "context": "$145 — serious terroir-driven Chablis"
+  },
+  {
+    "section": "Region",
+    "q": "What region is Pinot Noir — Laroque from?",
+    "a": "Languedoc, southern France",
+    "context": "More approachable and fruit-forward than Burgundy — $90"
+  },
+  {
+    "section": "Style",
+    "q": "Describe Pinot Noir — Laroque in one sentence.",
+    "a": "Lighter and fruitier than Burgundy — bright red cherry, soft tannins, easy drinking.",
+    "context": "Most accessible Pinot Noir on the list — $90"
+  },
+  {
+    "section": "Region",
+    "q": "What region is Côtes de Beaune — Domaine de Cassiopée from?",
+    "a": "Côte de Beaune, Burgundy, France",
+    "context": "Same domaine as our Pinot Noir by the bottle — 2022 is exceptional"
+  },
+  {
+    "section": "Style",
+    "q": "Describe Côtes de Beaune — Cassiopée in one sentence.",
+    "a": "Elegant Burgundy Pinot Noir — red cherry, earthy complexity and silky tannins.",
+    "context": "$225 — Côte de Beaune 2022 vintage"
+  },
+  {
+    "section": "Grape",
+    "q": "What grape is Tormaresca 'Calafuria' Rosé made from?",
+    "a": "Negroamaro",
+    "context": "Southern Italian red grape — gives more body than Provence rosé"
+  },
+  {
+    "section": "Style",
+    "q": "Describe Tormaresca 'Calafuria' Rosé in one sentence.",
+    "a": "Dry and structured Italian rosé — fresh red berry, floral notes and a mineral finish.",
+    "context": "Antinori estate in Puglia — same family as Tignanello"
+  },
+  {
+    "section": "Pairing",
+    "q": "What wine pairs with the Halibut Special?",
+    "a": "Etna Bianco or Chablis — Famille Grossot",
+    "context": "Planeta $110 or Famille Grossot $145 — mineral whites",
+    "why": "Halibut is a delicate, lean white fish — it needs a wine with minerality and acidity to complement, not overpower it. The volcanic mineral edge of Etna Bianco and the steely precision of Chablis both mirror the clean, subtle flavour of the fish. Tuscan kale and chickpeas add earthy body — the wine's acidity cuts right through."
+  },
+  {
+    "section": "Pairing",
+    "q": "What wine pairs with the Mussels?",
+    "a": "Pecorino by glass or Etna Bianco",
+    "context": "Pecorino $18 glass — herbal notes match the nduja",
+    "why": "Mussels in tomato and nduja need a white with enough acidity to handle the spice and enough herbal character to echo the briny shellfish. Pecorino's green apple and fennel notes are a natural match — the herbaceous quality complements the nduja. Etna Bianco's volcanic mineral finish works equally well with the tomato base."
+  },
+  {
+    "section": "Pairing",
+    "q": "What wine pairs with the Duck Special?",
+    "a": "Pinot Noir — Laroque or Côtes de Beaune",
+    "context": "Laroque $90 or Cassiopée $225 — earthy reds for demi-glace",
+    "why": "Duck is rich and fatty — it needs a red with enough acidity and earthiness to cut through the fat. The honey chilli glaze calls for fruit-forward Pinot Noir, and the red wine demi-glace echoes the earthiness of Burgundy-style reds. The mushrooms reinforce that earthy quality. Tannins should be soft — heavy tannins clash with duck."
+  },
+  {
+    "section": "New",
+    "q": "What is the Tuna Special?",
+    "a": "Spanish bluefin tuna — pepper & fennel crusted, cooked rare",
+    "context": "Quinoa, avocado, feta, walnuts, tomatoes, mint, red onion"
+  },
+  {
+    "section": "New",
+    "q": "How is the Tuna Special cooked?",
+    "a": "Rare — do not take well-done requests",
+    "context": "Spanish bluefin — premium, rich and meaty"
+  },
+  {
+    "section": "New",
+    "q": "What sauce comes with the Halibut Special?",
+    "a": "Saffron aioli",
+    "context": "Garlic mayo infused with saffron — rich and golden"
+  },
+  {
+    "section": "New",
+    "q": "What comes with the Mussels?",
+    "a": "1 pound of east coast mussels · nduja · tomato sauce · crostini",
+    "context": "$29 — full pound"
+  },
+  {
+    "section": "New",
+    "q": "What is added to the Porterhouse?",
+    "a": "Grilled onions",
+    "context": "32oz — shishito peppers, grilled onions, fries"
+  },
+  {
+    "section": "New",
+    "q": "Where do the decanters live?",
+    "a": "In the wine cabinets — never leave them out",
+    "context": "Opening checklist"
+  }
+];
+
 const SCREENS = ['home','menu-screen','wine-screen','foodq-screen','wineq-screen','cocktail-screen','cocktailq-screen'];
 const NAV_MAP = {
   'home':'nav-home','menu-screen':'nav-menu',
@@ -6464,7 +6761,9 @@ srInit('wine', WINES.length);
 srInit('foodq', FOOD_CARDS.length);
 srInit('wineq', WINE_CARDS.length);
 
-initDeck('cocktail', COCKTAILS, ['Signature','Stirred','Shaken','Highball','Sparkling','Built']);
+initDeck('newq', NEW_QUIZ, ['Signature','Grape','Region','Style','Pairing','Service','New']);
+  srInit('newq', NEW_QUIZ.length);
+  initDeck('cocktail', COCKTAILS, ['Signature','Stirred','Shaken','Highball','Sparkling','Built']);
 initDeck('cocktailq', COCKTAIL_QUIZ, ['Signature','Stirred','Shaken','Highball','Sparkling','Built']);
 srInit('cocktail', COCKTAILS.length);
 srInit('cocktailq', COCKTAIL_QUIZ.length);
