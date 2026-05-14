@@ -359,12 +359,21 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
 
     <div class="section-label">Quick Quiz — One Question, One Answer</div>
     <div class="card-list">
+      <div class="h-card wine-q" onclick="showScreen('newq-screen')" style="border-left-color:#b5922a;">
+        <div class="h-icon">🆕</div>
+        <div class="h-body">
+          <div class="h-top"><div class="h-name">What's New</div><div class="h-count">40 cards</div></div>
+          <div class="h-desc">Latest additions — new wines, signature cocktails, specials and decanting.</div>
+          <div class="h-tags"><span class="h-tag">Wines</span><span class="h-tag">Cocktails</span><span class="h-tag">Specials</span><span class="h-tag">Service</span></div>
+        </div>
+        <div class="h-arrow">›</div>
+      </div>
       <div class="h-card food-q" onclick="showScreen('foodq-screen')">
         <div class="h-icon">🧠</div>
         <div class="h-body">
           <div class="h-top"><div class="h-name">Food Quiz</div><div class="h-count">181 cards</div></div>
           <div class="h-desc">Mise, ingredients, details, pitch trios, cocktails, beverages, service.</div>
-          <div class="h-tags"><span class="h-tag">Price</span><span class="h-tag">Mise</span><span class="h-tag">Ingredients</span><span class="h-tag">Cocktails</span></div>
+          <div class="h-tags"><span class="h-tag">Mise</span><span class="h-tag">Ingredients</span><span class="h-tag">Cocktails</span></div>
         </div>
         <div class="h-arrow">›</div>
       </div>
@@ -382,40 +391,13 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
         <div class="h-body">
           <div class="h-top"><div class="h-name">Wine Quiz</div><div class="h-count">131 cards</div></div>
           <div class="h-desc">Grape varieties, exact regions, pairings, how to describe each wine.</div>
-          <div class="h-tags"><span class="h-tag">Vintage</span><span class="h-tag">Grape</span><span class="h-tag">Region</span><span class="h-tag">Pairing</span></div>
+          <div class="h-tags"><span class="h-tag">Grape</span><span class="h-tag">Region</span><span class="h-tag">Pairing</span></div>
         </div>
         <div class="h-arrow">›</div>
       </div>
     </div>
   </div>
 </div>
-      <div class="h-card wine-q" onclick="showScreen('newq-screen')">
-        <div class="h-icon">🆕</div>
-        <div class="h-body">
-          <div class="h-top"><div class="h-name">What's New</div><div class="h-count">40 cards</div></div>
-          <div class="h-desc">Latest additions — new wines, signature cocktails, specials and decanting.</div>
-          <div class="h-tags"><span class="h-tag">Wines</span><span class="h-tag">Cocktails</span><span class="h-tag">Specials</span><span class="h-tag">Service</span></div>
-        </div>
-        <div class="h-arrow">›</div>
-      </div>
-
-<!-- MENU SCREEN -->
-<div id="menu-screen" class="screen deck-screen">
-  <div class="deck-wrap">
-    <button class="back-btn" onclick="showScreen('home')">← Back</button>
-    <div class="deck-eyebrow">Service Prep</div>
-    <div class="deck-title">Menu Cards</div>
-    <div class="deck-divider"></div>
-    <div class="cat-row" id="menu-cats"></div>
-    <div class="progress" id="menu-prog"></div>
-    <div class="sr-stats" id="menu-sr-stats"></div>
-    <div class="sr-progress-bar-wrap"><div class="sr-progress-bar" id="menu-sr-bar" style="width:0%"></div></div>
-    <div class="card-wrap" onclick="flip('menu')">
-      <div class="card-inner" id="menu-card">
-        <div class="card-face card-front" id="menu-front"></div>
-        <div class="card-face card-back" id="menu-back"></div>
-      </div>
-    </div>
     <div class="deck-controls">
       <div class="nav-row">
         <button class="nav-btn" onclick="prev('menu')">←</button>
@@ -6319,12 +6301,13 @@ const NEW_QUIZ =
   }
 ];
 
-const SCREENS = ['home','menu-screen','wine-screen','foodq-screen','wineq-screen','cocktail-screen','cocktailq-screen'];
+const SCREENS = ['home','menu-screen','wine-screen','foodq-screen','wineq-screen','newq-screen','cocktail-screen','cocktailq-screen'];
 const NAV_MAP = {
   'home':'nav-home','menu-screen':'nav-menu',
   'wine-screen':'nav-wine','foodq-screen':'nav-foodq','wineq-screen':'nav-wineq',
   'cocktail-screen':'nav-cocktail',
-  'cocktailq-screen':'nav-cocktailq'
+  'cocktailq-screen':'nav-cocktailq',
+  'newq-screen':'nav-newq'
 };
 
 function showScreen(id) {
