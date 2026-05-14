@@ -6311,6 +6311,10 @@ const NAV_MAP = {
 };
 
 function showScreen(id) {
+  // Hide all deck controls when on home
+  document.querySelectorAll('.deck-controls').forEach(el => {
+    el.style.display = id === 'home' ? 'none' : '';
+  });
   SCREENS.forEach(s => {
     const el = document.getElementById(s);
     if (el) el.style.display = (s === id) ? 'block' : 'none';
