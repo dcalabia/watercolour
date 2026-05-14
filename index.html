@@ -371,7 +371,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
       <div class="h-card" style="border-left-color:#5a3a1a;" onclick="showScreen('cocktailq-screen')">
         <div class="h-icon">🍋</div>
         <div class="h-body">
-          <div class="h-top"><div class="h-name">Cocktail Quiz</div><div class="h-count">115 cards</div></div>
+          <div class="h-top"><div class="h-name">Cocktail Quiz</div><div class="h-count">130 cards</div></div>
           <div class="h-desc">Ingredients, ratios, glass, garnish and method questions for classic cocktails.</div>
           <div class="h-tags"><span class="h-tag">Ingredients</span><span class="h-tag">Method</span><span class="h-tag">Glass</span><span class="h-tag">Garnish</span></div>
         </div>
@@ -1217,11 +1217,11 @@ const DISHES = [
     "price": 29,
     "category": "Specials",
     "pitch": [
-      "1 lb mussels",
+      "1 lb east coast mussels",
       "nduja",
       "tomato sauce"
     ],
-    "full": "1 pound of mussels, nduja, tomato sauce, crostini",
+    "full": "1 pound of east coast mussels, nduja, tomato sauce, crostini",
     "mise": "Fork + Spoon",
     "wine": "Crisp white or sparkling — mineral whites work well with shellfish",
     "bottles": [
@@ -4430,6 +4430,96 @@ const COCKTAILS = [
 ];
 const COCKTAIL_QUIZ = [
   {
+    "section": "Signature",
+    "q": "What are the ingredients in Otto's Negroni?",
+    "a": "Otto's vermouth · Campari · Gin",
+    "context": "1oz each — equal parts"
+  },
+  {
+    "section": "Signature",
+    "q": "What is the ratio for Otto's Negroni?",
+    "a": "1oz Otto's vermouth · 1oz Campari · 1oz Gin",
+    "context": "Equal parts — stirred over ice"
+  },
+  {
+    "section": "Signature",
+    "q": "What method for Otto's Negroni?",
+    "a": "Stirred — strained over a large rock",
+    "context": "Rocks glass · orange twist garnish"
+  },
+  {
+    "section": "Signature",
+    "q": "What glass and garnish for Otto's Negroni?",
+    "a": "Rocks glass · orange twist",
+    "context": "Bitter, aromatic, spirit-forward"
+  },
+  {
+    "section": "Signature",
+    "q": "What is the price of Otto's Negroni?",
+    "a": "$18",
+    "context": "House Negroni using Otto's vermouth"
+  },
+  {
+    "section": "Signature",
+    "q": "What are the ingredients in the Athenian Spritz?",
+    "a": "Otto's vermouth · Prosecco · tonic",
+    "context": "2.5oz · 3oz · splash"
+  },
+  {
+    "section": "Signature",
+    "q": "What is the ratio for the Athenian Spritz?",
+    "a": "2.5oz Otto's vermouth · 3oz Prosecco · splash of tonic",
+    "context": "Built over ice — light and refreshing"
+  },
+  {
+    "section": "Signature",
+    "q": "What method for the Athenian Spritz?",
+    "a": "Built — directly in glass over ice",
+    "context": "Wine glass or large stemmed glass"
+  },
+  {
+    "section": "Signature",
+    "q": "What glass for the Athenian Spritz?",
+    "a": "Wine glass or large stemmed glass",
+    "context": "Orange slice garnish"
+  },
+  {
+    "section": "Signature",
+    "q": "What is the price of the Athenian Spritz?",
+    "a": "$19",
+    "context": "Low-ABV spritz style"
+  },
+  {
+    "section": "Signature",
+    "q": "What are the ingredients in the Pomegranate Margarita?",
+    "a": "Tequila · Cointreau · pomegranate · agave",
+    "context": "2oz · 0.5oz · 0.5oz · 0.5oz"
+  },
+  {
+    "section": "Signature",
+    "q": "What is the ratio for the Pomegranate Margarita?",
+    "a": "2oz tequila · 0.5oz Cointreau · 0.5oz pomegranate · 0.5oz agave",
+    "context": "Shaken — served up or on the rocks"
+  },
+  {
+    "section": "Signature",
+    "q": "What method for the Pomegranate Margarita?",
+    "a": "Shaken — served up or on the rocks",
+    "context": "Rocks glass or coupe"
+  },
+  {
+    "section": "Signature",
+    "q": "What glass and garnish for the Pomegranate Margarita?",
+    "a": "Rocks glass or coupe · lime wheel or salted rim",
+    "context": "House Margarita"
+  },
+  {
+    "section": "Signature",
+    "q": "What is the price of the Pomegranate Margarita?",
+    "a": "$21",
+    "context": "Most expensive of the three signature cocktails"
+  },
+  {
     "section": "Stirred",
     "q": "What are the ingredients in a Negroni?",
     "a": "1oz gin / 1oz Campari / 1oz sweet vermouth",
@@ -6375,7 +6465,7 @@ srInit('foodq', FOOD_CARDS.length);
 srInit('wineq', WINE_CARDS.length);
 
 initDeck('cocktail', COCKTAILS, ['Signature','Stirred','Shaken','Highball','Sparkling','Built']);
-initDeck('cocktailq', COCKTAIL_QUIZ, ['Stirred','Shaken','Highball','Sparkling','Built']);
+initDeck('cocktailq', COCKTAIL_QUIZ, ['Signature','Stirred','Shaken','Highball','Sparkling','Built']);
 srInit('cocktail', COCKTAILS.length);
 srInit('cocktailq', COCKTAIL_QUIZ.length);
 renderMenu(); renderWine();
