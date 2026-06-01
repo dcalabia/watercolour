@@ -333,7 +333,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
       <div class="h-card" onclick="showScreen('menu-screen')">
         <div class="h-icon">🍽</div>
         <div class="h-body">
-          <div class="h-top"><div class="h-name">Menu Cards</div><div class="h-count">34 dishes</div></div>
+          <div class="h-top"><div class="h-name">Menu Cards</div><div class="h-count" id="count-menu">34 dishes</div></div>
           <div class="h-desc">Ingredients, mise en place, wine pairings with specific bottles.</div>
           <div class="h-tags"><span class="h-tag">Raw & Salad</span><span class="h-tag">Hot Plates</span><span class="h-tag">Signature</span></div>
         </div>
@@ -342,7 +342,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
       <div class="h-card" style="border-left-color:#5a3a1a;" onclick="showScreen('cocktail-screen')">
         <div class="h-icon">🍸</div>
         <div class="h-body">
-          <div class="h-top"><div class="h-name">Cocktail Cards</div><div class="h-count">26 cocktails</div></div>
+          <div class="h-top"><div class="h-name">Cocktail Cards</div><div class="h-count" id="count-cocktail">26 cocktails</div></div>
           <div class="h-desc">Ingredients, ratios, glass, garnish and method for classic cocktails.</div>
           <div class="h-tags"><span class="h-tag">Stirred</span><span class="h-tag">Shaken</span><span class="h-tag">Highball</span><span class="h-tag">Sparkling</span></div>
         </div>
@@ -351,7 +351,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
       <div class="h-card wine-card" onclick="showScreen('wine-screen')">
         <div class="h-icon">🍷</div>
         <div class="h-body">
-          <div class="h-top"><div class="h-name">Wine Cards</div><div class="h-count">53 wines</div></div>
+          <div class="h-top"><div class="h-name">Wine Cards</div><div class="h-count" id="count-wine">53 wines</div></div>
           <div class="h-desc">Flavor profiles, dials, every bottle with vintage year and exact region.</div>
           <div class="h-tags"><span class="h-tag">White Grapes</span><span class="h-tag">Red Grapes</span><span class="h-tag">Regions</span><span class="h-tag">New</span></div>
         </div>
@@ -364,7 +364,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
       <div class="h-card wine-q" onclick="showScreen('newq-screen')" style="border-left-color:#b5922a;">
         <div class="h-icon">🆕</div>
         <div class="h-body">
-          <div class="h-top"><div class="h-name">What's New</div><div class="h-count">24 cards</div></div>
+          <div class="h-top"><div class="h-name">What's New</div><div class="h-count" id="count-new">24 cards</div></div>
           <div class="h-desc">Latest additions — new wines, signature cocktails, specials and decanting.</div>
           <div class="h-tags"><span class="h-tag">Wines</span><span class="h-tag">Cocktails</span><span class="h-tag">Specials</span><span class="h-tag">Service</span></div>
         </div>
@@ -373,7 +373,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
       <div class="h-card food-q" onclick="showScreen('foodq-screen')">
         <div class="h-icon">🧠</div>
         <div class="h-body">
-          <div class="h-top"><div class="h-name">Food Quiz</div><div class="h-count">181 cards</div></div>
+          <div class="h-top"><div class="h-name">Food Quiz</div><div class="h-count" id="count-foodq">181 cards</div></div>
           <div class="h-desc">Mise, ingredients, details, pitch trios, cocktails, beverages, service.</div>
           <div class="h-tags"><span class="h-tag">Mise</span><span class="h-tag">Ingredients</span><span class="h-tag">Cocktails</span></div>
         </div>
@@ -382,7 +382,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
       <div class="h-card" style="border-left-color:#5a3a1a;" onclick="showScreen('cocktailq-screen')">
         <div class="h-icon">🍋</div>
         <div class="h-body">
-          <div class="h-top"><div class="h-name">Cocktail Quiz</div><div class="h-count">130 cards</div></div>
+          <div class="h-top"><div class="h-name">Cocktail Quiz</div><div class="h-count" id="count-cocktailq">130 cards</div></div>
           <div class="h-desc">Ingredients, ratios, glass, garnish and method questions for classic cocktails.</div>
           <div class="h-tags"><span class="h-tag">Ingredients</span><span class="h-tag">Method</span><span class="h-tag">Glass</span><span class="h-tag">Garnish</span></div>
         </div>
@@ -391,7 +391,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
       <div class="h-card wine-q" onclick="showScreen('wineq-screen')">
         <div class="h-icon">⭐</div>
         <div class="h-body">
-          <div class="h-top"><div class="h-name">Wine Quiz</div><div class="h-count">131 cards</div></div>
+          <div class="h-top"><div class="h-name">Wine Quiz</div><div class="h-count" id="count-wineq">131 cards</div></div>
           <div class="h-desc">Grape varieties, exact regions, pairings, how to describe each wine.</div>
           <div class="h-tags"><span class="h-tag">Grape</span><span class="h-tag">Region</span><span class="h-tag">Pairing</span></div>
         </div>
@@ -6817,6 +6817,15 @@ srUpdateProgress('menu'); srUpdateProgress('wine');
 srUpdateProgress('foodq'); srUpdateProgress('wineq');
 srUpdateProgress('newq');
 srUpdateProgress('cocktail'); srUpdateProgress('cocktailq');
+
+// Update home screen counts dynamically
+document.getElementById('count-menu').textContent = DISHES.length + ' dishes';
+document.getElementById('count-wine').textContent = WINES.length + ' wines';
+document.getElementById('count-cocktail').textContent = COCKTAILS.length + ' cocktails';
+document.getElementById('count-new').textContent = NEW_QUIZ.length + ' cards';
+document.getElementById('count-foodq').textContent = FOOD_CARDS.length + ' cards';
+document.getElementById('count-wineq').textContent = WINE_CARDS.length + ' cards';
+document.getElementById('count-cocktailq').textContent = COCKTAIL_QUIZ.length + ' cards';
 
 
 
