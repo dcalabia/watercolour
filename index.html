@@ -796,7 +796,7 @@ const DISHES = [
   {
     "name": "Beets & Goat Cheese",
     "price": 29,
-    "category": "Raw & Salad",
+    "category": "Old Items",
     "pitch": [
       "beets",
       "goat cheese",
@@ -6277,6 +6277,72 @@ const NEW_QUIZ =
     "q": "Where do the decanters live?",
     "a": "In the wine cabinets — never leave them out",
     "context": "Opening checklist"
+  },
+  {
+    "section": "New",
+    "q": "What replaced the Prime Striploin?",
+    "a": "14oz Bielak Family Farms Ribeye — sautéed rapini and crispy potatoes. $78.",
+    "context": "Same price, different cut and sides"
+  },
+  {
+    "section": "New",
+    "q": "What is new on the starter menu?",
+    "a": "Burrata, Summer Zucchini, Pesto ($32) and Spicy Harissa Prawns ($36) — both now on the main menu",
+    "context": "Previously specials, now permanent starters"
+  },
+  {
+    "section": "New",
+    "q": "What is the new price for Lobster Tagliatelle?",
+    "a": "$62 — was $75",
+    "context": "Big drop — worth knowing if guests ask"
+  },
+  {
+    "section": "New",
+    "q": "What is the new price for the Seafood Platter?",
+    "a": "$74 — was $90. Now comes with cannellini beans and lemon.",
+    "context": "Description simplified too — no longer lists octopus/scallops individually"
+  },
+  {
+    "section": "New",
+    "q": "What changed about the Spaghetti?",
+    "a": "Now fresh tomatoes (not confit), sicilian pistachio and burrata. No more basil. $38 (was $39).",
+    "context": "Small price drop, slightly different character — fresher, brighter"
+  },
+  {
+    "section": "New",
+    "q": "What changed about the Lemon Roasted Chicken?",
+    "a": "Now specifically castelvetrano olives, swiss chard, preserved lemon. $42 (was $47).",
+    "context": "Castelvetrano = mild, buttery green olives from Sicily"
+  },
+  {
+    "section": "New",
+    "q": "What is the spicy sauce on the Harissa Prawns?",
+    "a": "Harissa — a North African chilli paste made from roasted red peppers, chilli, garlic and spices. Smoky, spicy and bold.",
+    "context": "$36 — Argentinian prawns (langostinos) — naturally sweet and meaty"
+  },
+  {
+    "section": "New",
+    "q": "What are the new specials?",
+    "a": "Pork Ibérico Tenderloin with Mediterranean veg · Linguine a la Vongole with baby Portuguese clams",
+    "context": "Confirm prices with manager"
+  },
+  {
+    "section": "New",
+    "q": "What is Linguine a la Vongole?",
+    "a": "Linguine with baby Portuguese clams in white wine, garlic and olive oil. Vongole = clams in Italian.",
+    "context": "Classic Italian pasta — briny, light and perfect with a crisp white"
+  },
+  {
+    "section": "New",
+    "q": "What changed about the Salmon?",
+    "a": "Now citrus beurre blanc (was lemongrass beurre blanc). $45 (was $48).",
+    "context": "Still spinach and potatoes — slight sauce and price update"
+  },
+  {
+    "section": "New",
+    "q": "What dish is no longer on the menu?",
+    "a": "Beets & Goat Cheese — moved to Old Items in the reference deck",
+    "context": "If a guest asks for it, let them know it's no longer available"
   }
 ];
 
@@ -6721,7 +6787,7 @@ function srInjectBadge(id) {
 
 // Init SR weights after deck init
 
-initDeck('menu', DISHES, ['Raw & Salad','Hot Plates','Signature','Lunch','Desserts','Specials']);
+initDeck('menu', DISHES, ['Raw & Salad','Hot Plates','Signature','Lunch','Desserts','Specials','Old Items']);
 initDeck('wine', WINES, ['New','White Grapes','Red Grapes','Regions','Rosé & Sparkling','Old Items']);
 initDeck('foodq', FOOD_CARDS, ['Mise','Ingredients','Pitch','Cocktails','Beverages','Details','Service']);
 initDeck('wineq', WINE_CARDS, ['Grape','Region','Style','Pairing','Old Items']);
