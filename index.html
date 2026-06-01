@@ -215,7 +215,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--ink); min-h
 .quiz-q { font-family: var(--serif); font-size: 22px; font-weight: 400; flex: 1; display: flex; align-items: center; line-height: 1.4; margin: 8px 0 16px; }
 .quiz-context { font-size: 12px; color: var(--ink-soft); margin-top: 4px; }
 .wine-theme .card-front .quiz-context { color: #6a5060; }
-.quiz-a { font-family: var(--serif); font-size: 20px; font-weight: 400; flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.5; }
+.quiz-a { font-family: var(--serif); font-size: 34px; font-weight: 400; flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
 .quiz-context-back { font-size: 12px; color: rgba(255,255,255,0.45); text-align: center; margin-top: 8px; }
 
 /* NAV BUTTONS */
@@ -719,14 +719,14 @@ const DISHES = [
   },
   {
     "name": "Carpaccio",
-    "price": 32,
+    "price": 29,
     "category": "Raw & Salad",
     "pitch": [
       "beef tenderloin",
       "arugula",
       "manchego"
     ],
-    "full": "beef tenderloin, arugula, aioli, shallot, manchego",
+    "full": "beef tenderloin, arugula, aioli, shallot",
     "mise": "Fork + Spoon",
     "wine": "Light red or full-bodied white",
     "bottles": [
@@ -738,7 +738,7 @@ const DISHES = [
   },
   {
     "name": "Greek Village Salad",
-    "price": 26,
+    "price": 29,
     "category": "Raw & Salad",
     "pitch": [
       "heirloom tomato",
@@ -764,7 +764,7 @@ const DISHES = [
       "pear",
       "comté"
     ],
-    "full": "endives, hazelnuts, pear, comté, burnt honey vinaigrette",
+    "full": "endives, hazelnuts, gruyère, burnt honey vinaigrette",
     "mise": "Fork + Spoon",
     "wine": "Rich white Burgundy style",
     "bottles": [
@@ -813,8 +813,23 @@ const DISHES = [
     "note": "Dill and mint are the herbs — specific, not generic. Sicilian pistachios are more intense than standard"
   },
   {
-    "name": "Zucchini Chips",
-    "price": 27,
+    "name": "Burrata, Summer Zucchini, Pesto",
+    "price": 32,
+    "category": "Raw & Salad",
+    "pitch": [
+      "fresh burrata",
+      "summer zucchini",
+      "basil pesto"
+    ],
+    "full": "fresh burrata, summer zucchini, pesto. $32.",
+    "mise": "Fork",
+    "wine": "Crisp Italian white — Pecorino or Vermentino",
+    "bottles": [
+      "Pecorino — Masciarelli $75",
+      "Vermentino — Pala $80"
+    ],
+    "note": "Burrata is fresh mozzarella with a rich, creamy stracciatella filling — silky inside, soft outer shell. Summer zucchini is thinly sliced or ribboned. Pesto adds herbaceous, nutty richness. Light and fresh but indulgent."
+  },
     "category": "Hot Plates",
     "pitch": [
       "fried zucchini",
@@ -833,14 +848,14 @@ const DISHES = [
   },
   {
     "name": "Baked Feta",
-    "price": 28,
+    "price": 29,
     "category": "Hot Plates",
     "pitch": [
       "feta",
       "phyllo",
       "truffle honey"
     ],
-    "full": "truffle honey, phyllo, pistachio",
+    "full": "figs, pistachio, truffle honey",
     "mise": "Butter Knife + Fork",
     "wine": "Rich white — the honey needs some body",
     "bottles": [
@@ -852,14 +867,14 @@ const DISHES = [
   },
   {
     "name": "Octopus a la Plancha",
-    "price": 34,
+    "price": 36,
     "category": "Hot Plates",
     "pitch": [
       "octopus",
       "hummus",
       "salsa verde"
     ],
-    "full": "hummus, potatoes, shishitos, salsa verde",
+    "full": "tahini, potatoes",
     "mise": "Fork + Spoon",
     "wine": "Mineral Sicilian or Italian white",
     "bottles": [
@@ -870,7 +885,24 @@ const DISHES = [
     "note": "A la plancha = grilled on a scorching flat griddle. Shishitos: 1 in 10 is spicy"
   },
   {
-    "name": "Calamari Fritti",
+    "name": "Spicy Harissa Prawns",
+    "price": 36,
+    "category": "Raw & Salad",
+    "pitch": [
+      "Argentinian prawns",
+      "spicy harissa",
+      "rich and sweet"
+    ],
+    "full": "Spicy harissa prawns. $36.",
+    "mise": "Fork + Spoon",
+    "wine": "Crisp white or dry rosé — acidity cuts through the spice",
+    "bottles": [
+      "Whispering Angel Rosé — $90",
+      "Pecorino — Masciarelli $75",
+      "Etna Bianco — Planeta $110"
+    ],
+    "note": "Harissa is a North African chilli paste made from roasted red peppers, chilli, garlic and spices — smoky, spicy and bold. Argentinian prawns (langostinos) are naturally sweet and meaty, richer than regular prawns. The contrast of sweet prawns and spicy harissa is the key sell."
+  },
     "price": 32,
     "category": "Hot Plates",
     "pitch": [
@@ -909,7 +941,7 @@ const DISHES = [
   },
   {
     "name": "Lobster Tagliatelle",
-    "price": 75,
+    "price": 62,
     "category": "Signature",
     "pitch": [
       "lobster",
@@ -928,14 +960,14 @@ const DISHES = [
   },
   {
     "name": "Lamb Chops",
-    "price": 78,
+    "price": 75,
     "category": "Signature",
     "pitch": [
       "lamb",
       "salsa verde",
       "tzatziki"
     ],
-    "full": "grilled vegetables, potatoes, tzatziki, salsa verde",
+    "full": "grilled vegetables, potatoes, tzatziki",
     "mise": "Fork + Steak Knife",
     "wine": "Savory medium-full red",
     "bottles": [
@@ -947,14 +979,14 @@ const DISHES = [
   },
   {
     "name": "Organic King Salmon",
-    "price": 48,
+    "price": 45,
     "category": "Signature",
     "pitch": [
       "salmon",
       "spinach",
       "lemongrass beurre blanc"
     ],
-    "full": "spinach, potatoes, red onion, lemongrass beurre blanc",
+    "full": "spinach, potatoes, citrus beurre blanc",
     "mise": "Fork + Butter Knife (medium only)",
     "wine": "Pinot Noir or oaked Chardonnay",
     "bottles": [
@@ -966,14 +998,14 @@ const DISHES = [
   },
   {
     "name": "Spaghetti",
-    "price": 39,
+    "price": 38,
     "category": "Signature",
     "pitch": [
       "confit tomato",
       "Italian burrata",
       "pistachio"
     ],
-    "full": "confit tomato, pistachio, Italian burrata, basil",
+    "full": "fresh tomatoes, burrata, sicilian pistachio",
     "mise": "Fork + Spoon",
     "wine": "Tuscan red — high acid built for tomato",
     "bottles": [
@@ -985,14 +1017,14 @@ const DISHES = [
   },
   {
     "name": "Lemon Roasted Chicken",
-    "price": 47,
+    "price": 42,
     "category": "Signature",
     "pitch": [
       "chicken",
       "preserved lemon",
       "smashed potatoes"
     ],
-    "full": "preserved lemon, herbs, smashed potatoes, swiss chard, olives, sumac",
+    "full": "preserved lemon, castelvetrano olives, swiss chard",
     "mise": "Steak Knife + Fork",
     "wine": "Dry white with good acidity",
     "bottles": [
@@ -1004,7 +1036,7 @@ const DISHES = [
   },
   {
     "name": "Seafood Risotto",
-    "price": 68,
+    "price": 65,
     "category": "Signature",
     "pitch": [
       "market seafood",
@@ -1023,7 +1055,7 @@ const DISHES = [
   },
   {
     "name": "Whole Grilled Branzino",
-    "price": 58,
+    "price": 56,
     "category": "Signature",
     "pitch": [
       "branzino",
@@ -1041,7 +1073,7 @@ const DISHES = [
     "note": "Served whole — 3rd plate comes for the bones. Branzino = Mediterranean sea bass"
   },
   {
-    "name": "Prime Striploin",
+    "name": "14oz Bielak Family Farms Ribeye",
     "price": 78,
     "category": "Signature",
     "pitch": [
@@ -1049,7 +1081,7 @@ const DISHES = [
       "peppercorn sauce",
       "grilled vegetables"
     ],
-    "full": "12oz, dry-aged, grilled Mediterranean vegetables, potatoes, peppercorn sauce",
+    "full": "14oz Bielak Family Farms ribeye, sautéed rapini, crispy potatoes",
     "mise": "Fork + Steak Knife",
     "wine": "Bold structured red",
     "bottles": [
@@ -1061,14 +1093,14 @@ const DISHES = [
   },
   {
     "name": "Grilled Seafood Platter",
-    "price": 90,
+    "price": 74,
     "category": "Signature",
     "pitch": [
       "grilled Spanish octopus",
       "prawns",
       "scallops"
     ],
-    "full": "grilled Spanish octopus, calamari, prawns, scallops, beans, lemon",
+    "full": "grilled seafood, cannellini beans, lemon",
     "mise": "Butter Knife + Fork",
     "wine": "Versatile mineral white",
     "bottles": [
@@ -1083,17 +1115,17 @@ const DISHES = [
     "price": 0,
     "category": "Desserts",
     "pitch": [
-      "silky coconut cream filling",
+      "coconut cream",
       "toasted coconut",
-      "light chantilly cream"
+      "berries"
     ],
-    "full": "coconut cream filling, toasted coconut, chantilly cream, fresh berries",
+    "full": "coconut cream, toasted coconut, chantilly cream, fresh berries",
     "mise": "Dessert Fork",
     "wine": "Late harvest Riesling, Moscato d'Asti, or dessert wine",
     "bottles": [
       "Ask sommelier for current dessert wine pairing"
     ],
-    "note": "Consistency: smooth and creamy filling — silky, cool and light, not dense or heavy. The toasted coconut on top adds texture and a nutty crunch. Chantilly is softly whipped cream, not stiff. Fresh berries add brightness. Describe it as: 'a light, creamy coconut custard filling in a pastry shell, topped with toasted coconut, chantilly cream and fresh berries — cool, silky and not too sweet.'"
+    "note": "Confirm exact ingredients with kitchen — ingredients approximate from photo"
   },
   {
     "name": "Gluten-Free Chocolate Cake",
@@ -1340,79 +1372,42 @@ const DISHES = [
     "note": "Spanish bluefin tuna — premium, rich and meaty. Cooked rare — do not take well-done requests. Pepper & fennel crust gives a spiced, anise edge. Confirm price with manager."
   },
   {
-    "name": "Spicy Argentinian Prawns",
-    "price": 35,
+    "name": "Pork Ibérico Tenderloin",
+    "price": 0,
     "category": "Specials",
     "pitch": [
-      "Argentinian prawns",
-      "spicy",
-      "rich and sweet"
+      "Ibérico pork tenderloin",
+      "Mediterranean vegetables",
+      "premium Spanish pork"
     ],
-    "full": "Spicy Argentinian prawns. $35. Confirm full preparation with kitchen.",
-    "mise": "Fork + Spoon",
-    "wine": "Crisp white or dry rosé — acidity cuts through the spice and richness",
-    "bottles": [
-      "Whispering Angel Rosé — $90",
-      "Pecorino — Masciarelli $75",
-      "Etna Bianco — Planeta $110"
-    ],
-    "note": "Argentinian prawns (langostinos) are naturally sweet and meaty — richer than regular prawns. Served with a spicy sauce — confirm sauce name with your notes. The spice element means a crisp white or rosé works better than a heavy red. $35."
-  },
-  {
-    "name": "Burrata Zucchini Salad",
-    "price": 36,
-    "category": "Specials",
-    "pitch": [
-      "fresh burrata",
-      "zucchini",
-      "light and fresh"
-    ],
-    "full": "Burrata, zucchini salad. $36. Confirm full preparation with kitchen.",
-    "mise": "Fork",
-    "wine": "Crisp light white — pairs well with creamy burrata and fresh vegetables",
-    "bottles": [
-      "Pecorino — Masciarelli $75",
-      "Vermentino — Pala $80"
-    ],
-    "note": "Burrata is fresh mozzarella with a creamy stracciatella filling — soft outer shell, rich and milky inside. The zucchini keeps it light and fresh. Confirm full ingredients and preparation with kitchen."
-  },
-  {
-    "name": "Swordfish",
-    "price": 65,
-    "category": "Specials",
-    "pitch": [
-      "pan-seared swordfish",
-      "chickpeas",
-      "Mediterranean vegetables"
-    ],
-    "full": "Pan-seared swordfish, chickpeas, grilled Mediterranean vegetables. $65.",
-    "mise": "Fork + Fish Knife",
-    "wine": "Mineral white or dry rosé — mirrors the Mediterranean character of the dish",
-    "bottles": [
-      "Etna Bianco — Planeta $110",
-      "Whispering Angel Rosé — $90",
-      "Sancerre — Domaine Bailly-Reverdy $130"
-    ],
-    "note": "Cooked pan-seared like the halibut — meaty and firm texture, not flaky. Swordfish is denser and richer than most fish. Chickpeas and Mediterranean veg give it an earthy, rustic character. $65."
-  },
-  {
-    "name": "Pork Ibérico",
-    "price": 90,
-    "category": "Specials",
-    "pitch": [
-      "Ibérico pork",
-      "romesco sauce",
-      "3 jumbo prawns"
-    ],
-    "full": "6-7oz Ibérico pork, romesco sauce, 3 jumbo prawns, grilled vegetables. $90.",
+    "full": "Pork Ibérico tenderloin, Mediterranean vegetables. Confirm price with manager.",
     "mise": "Fork + Steak Knife",
-    "wine": "Medium-bodied red or dry rosé — needs enough fruit to match the richness without overwhelming the prawns",
+    "wine": "Medium-bodied red or dry rosé",
     "bottles": [
       "Rioja Reserva — Palacios de Camino Real $80",
-      "Whispering Angel Rosé — $90",
-      "Nero d'Avola — Vigneti Zabu 'Chiantari' $85"
+      "Nero d'Avola — Vigneti Zabu 'Chiantari' $85",
+      "Whispering Angel Rosé — $90"
     ],
-    "note": "Ibérico pork comes from acorn-fed black Iberian pigs — richer, more marbled and flavourful than regular pork. Cooked medium (slightly pink inside). Romesco is a Spanish sauce made from roasted red peppers, tomatoes, almonds and olive oil — smoky, nutty and slightly sweet. The prawns add a surf-and-turf element. $90."
+    "note": "Ibérico pork comes from acorn-fed black Iberian pigs — richer, more marbled and flavourful than regular pork. Tenderloin is the most tender cut, lean and delicate. Cooked medium (slightly pink). Mediterranean veg = peppers, zucchini, onions, tomatoes. Confirm price with manager."
+  },
+  {
+    "name": "Linguine a la Vongole",
+    "price": 0,
+    "category": "Specials",
+    "pitch": [
+      "baby Portuguese clams",
+      "linguine",
+      "white wine, garlic, olive oil"
+    ],
+    "full": "Linguine, baby Portuguese clams, white wine, garlic, olive oil. Confirm price with manager.",
+    "mise": "Fork + Spoon",
+    "wine": "Crisp Italian white — classic pairing with clams",
+    "bottles": [
+      "Pecorino — Masciarelli $75",
+      "Vermentino — Pala $80",
+      "Etna Bianco — Planeta $110"
+    ],
+    "note": "Vongole means clams in Italian. A classic Italian pasta dish — baby clams cooked in white wine, garlic and olive oil, tossed with linguine. The briny, sweet clam juice becomes the sauce. Baby Portuguese clams are small and tender. Always suggest a crisp white — the acidity mirrors the brininess of the clams. Confirm price with manager."
   }
 ];
 const WINES = [
@@ -1658,15 +1653,15 @@ const WINES = [
     "type": "grape",
     "color": "white",
     "category": "White Grapes",
-    "name": "Chardonnay — Antinori Bramito",
-    "pronunciation": "shar-doh-NAY — an-tee-NOH-ree brah-MEE-toh",
+    "name": "Chardonnay",
+    "pronunciation": "shar-doh-NAY",
     "flavors": [
-      "ripe apple and pear",
-      "light vanilla and oak",
-      "smooth creamy finish"
+      "apple or butter",
+      "vanilla or citrus",
+      "mineral or cream"
     ],
     "dials": {
-      "Body": 3,
+      "Body": 4,
       "Acidity": 3,
       "Sweetness": 1
     },
@@ -1676,88 +1671,19 @@ const WINES = [
         "region": "Umbria, Italy",
         "year": "2024",
         "price": "$115"
-      }
-    ],
-    "guest_line": "A lightly oaked Italian Chardonnay from Antinori — approachable and smooth with ripe apple and a hint of vanilla. Great entry point for guests who want something round and easy.",
-    "note": "Antinori is one of Tuscany's most respected producers. Bramito is their entry-level white — consistent and crowd-pleasing.",
-    "subcat": "Chardonnay",
-    "pairing": "Good all-rounder — works with the Lemon Roasted Chicken, Salmon and lighter pasta dishes."
-  },
-  {
-    "type": "grape",
-    "color": "white",
-    "category": "White Grapes",
-    "name": "Chardonnay — Pietrabianca 'Bocca di Lupo'",
-    "pronunciation": "shar-doh-NAY — pyeh-trah-BYAHN-kah BOH-kah dee LOO-poh",
-    "flavors": [
-      "tropical fruit and citrus",
-      "toasted oak and butter",
-      "long mineral finish"
-    ],
-    "dials": {
-      "Body": 4,
-      "Acidity": 3,
-      "Sweetness": 1
-    },
-    "on_list": [
+      },
       {
         "bottle": "Chardonnay — Pietrabianca 'Bocca di Lupo'",
         "region": "Puglia, Italy",
         "year": "2024",
         "price": "$125"
-      }
-    ],
-    "guest_line": "A fuller, more structured Chardonnay from southern Italy — tropical fruit with toasted oak and a long finish. Great for guests who love a classic, rich Chardonnay style.",
-    "note": "'Bocca di Lupo' means 'mouth of the wolf' — a single vineyard wine from Puglia. More body and oak than the Bramito.",
-    "subcat": "Chardonnay",
-    "pairing": "Fuller body makes it ideal with the Lobster Tagliatelle and Salmon — the oak and butter echo the cream-based sauces."
-  },
-  {
-    "type": "grape",
-    "color": "white",
-    "category": "White Grapes",
-    "name": "Puligny-Montrachet — François Carillon",
-    "pronunciation": "poo-lee-NYEE mon-rah-SHAY — fran-SWAH kah-ree-YOHN",
-    "flavors": [
-      "citrus and white peach",
-      "hazelnut and flint",
-      "precise mineral long finish"
-    ],
-    "dials": {
-      "Body": 3,
-      "Acidity": 4,
-      "Sweetness": 1
-    },
-    "on_list": [
+      },
       {
         "bottle": "Puligny-Montrachet — François Carillon",
         "region": "Côte de Beaune, Burgundy, France",
         "year": "2022",
         "price": "$395"
-      }
-    ],
-    "guest_line": "One of Burgundy's greatest white wines — unoaked Chardonnay at its finest. Precise, mineral and elegant. For the guest who knows their wine and wants something exceptional.",
-    "note": "Puligny-Montrachet is a village in Burgundy's Côte de Beaune, home to some of the world's most famous white wines. François Carillon is a top domaine.",
-    "subcat": "Chardonnay",
-    "pairing": "A prestige pour — best alongside the Halibut, Branzino or Grilled Seafood Platter where its precision and minerality shine."
-  },
-  {
-    "type": "grape",
-    "color": "white",
-    "category": "White Grapes",
-    "name": "Chardonnay by glass",
-    "pronunciation": "shar-doh-NAY",
-    "flavors": [
-      "apple and light citrus",
-      "soft and easy drinking",
-      "clean dry finish"
-    ],
-    "dials": {
-      "Body": 3,
-      "Acidity": 3,
-      "Sweetness": 1
-    },
-    "on_list": [
+      },
       {
         "bottle": "Chardonnay by glass",
         "region": "Italy",
@@ -1765,10 +1691,10 @@ const WINES = [
         "price": "$19"
       }
     ],
-    "guest_line": "Our house Chardonnay by the glass — approachable, clean and easy. Good for guests who want a safe, familiar white without committing to a bottle.",
-    "note": "House pour — Italian, unoaked style. Light and crowd-pleasing.",
+    "guest_line": "Oaked: rich, buttery, tropical. Unoaked (Chablis): crisp, mineral, clean. Always ask which style they prefer.",
+    "note": "Two completely different styles under one name. Chablis IS Chardonnay — just unoaked and minerally.",
     "subcat": "Chardonnay",
-    "pairing": "Versatile house pour — works with most white fish and lighter dishes."
+    "pairing": "Oaked Chardonnay is the go-to for our cream-based dishes — the butter and vanilla in the wine mirror the bisque in the Lobster Tagliatelle and the lemongrass beurre blanc on the Salmon. Unoaked Chablis works better with lighter dishes like the Branzino or Lemon Roasted Chicken, where you want freshness without weight."
   },
   {
     "type": "grape",
@@ -1832,7 +1758,7 @@ const WINES = [
     "type": "grape",
     "color": "red",
     "category": "Red Grapes",
-    "name": "Nero d'Avola by glass",
+    "name": "Nero d'Avola",
     "pronunciation": "NEH-roh DAH-voh-lah",
     "flavors": [
       "black cherry",
@@ -1850,30 +1776,7 @@ const WINES = [
         "region": "Sicily, Italy",
         "year": "NV",
         "price": "$18"
-      }
-    ],
-    "guest_line": "Our house Nero d'Avola by glass — Sicilian red with dark fruit, chocolate and smooth tannins. Great value and very approachable.",
-    "note": "Sicily's signature red grape. Think of it as Italy's answer to Malbec — dark, smooth, crowd-pleasing.",
-    "subcat": "Nero d'Avola",
-    "pairing": "Approachable and food-friendly — works well with the Lamb Chops, Prime Striploin and pasta dishes."
-  },
-  {
-    "type": "grape",
-    "color": "red",
-    "category": "Red Grapes",
-    "name": "Nero d'Avola — Vigneti Zabu 'Chiantari'",
-    "pronunciation": "NEH-roh DAH-voh-lah — veen-YEH-tee ZAH-boo kyan-TAH-ree",
-    "flavors": [
-      "ripe black cherry and plum",
-      "dark chocolate and spice",
-      "smooth velvety finish"
-    ],
-    "dials": {
-      "Body": 4,
-      "Acidity": 3,
-      "Tannin": 3
-    },
-    "on_list": [
+      },
       {
         "bottle": "Nero d'Avola — Vigneti Zabu 'Chiantari'",
         "region": "Sicily, Italy",
@@ -1881,10 +1784,10 @@ const WINES = [
         "price": "$85"
       }
     ],
-    "guest_line": "A serious Sicilian Nero d'Avola — riper and more concentrated than the house pour, with dark cherry, spice and a velvety finish. Great value for the quality.",
-    "note": "Vigneti Zabu is a top Sicilian producer. 'Chiantari' is their single-vineyard expression — more depth and complexity than a standard Nero d'Avola.",
+    "guest_line": "Sicilian red — rich dark fruit with chocolate and herbs, soft tannins and a smooth finish.",
+    "note": "Sicily's most important red grape. Think of it as Italy's answer to Malbec — dark, smooth, crowd-pleasing.",
     "subcat": "Nero d'Avola",
-    "pairing": "Richer and more structured — ideal with the Lamb Chops, Prime Striploin and Duck Special."
+    "pairing": "Sicily's most food-friendly red — rich dark fruit with soft tannins and a smooth finish. Pairs well with the Lamb Chops, Prime Striploin, and Duck Special. Its chocolate note also complements the Spaghetti with confit tomato."
   },
   {
     "type": "grape",
@@ -1919,12 +1822,12 @@ const WINES = [
     "type": "grape",
     "color": "red",
     "category": "Red Grapes",
-    "name": "Pinot Noir — Domaine de Cassiopée",
-    "pronunciation": "PEE-noh NWAHR — doh-MEN duh kah-see-oh-PAY",
+    "name": "Pinot Noir",
+    "pronunciation": "PEE-noh NWAHR",
     "flavors": [
-      "red cherry and raspberry",
-      "earthy and floral",
-      "silky elegant tannins"
+      "cherry",
+      "raspberry",
+      "earth"
     ],
     "dials": {
       "Body": 2,
@@ -1937,59 +1840,13 @@ const WINES = [
         "region": "Burgundy, France",
         "year": "2022",
         "price": "$215"
-      }
-    ],
-    "guest_line": "An elegant Burgundy Pinot Noir — light, earthy and silky with red cherry and floral notes. Our entry-level Burgundy and a great introduction to the style.",
-    "note": "Burgundy Pinot Noir is all about elegance and earth. Domaine de Cassiopée is consistent and well-priced for the appellation.",
-    "subcat": "Pinot Noir",
-    "pairing": "Light enough for salmon and chicken — also works beautifully with the Duck Special."
-  },
-  {
-    "type": "grape",
-    "color": "red",
-    "category": "Red Grapes",
-    "name": "Pinot Noir — Kosta Browne",
-    "pronunciation": "PEE-noh NWAHR — KOS-tah BROWN",
-    "flavors": [
-      "ripe dark cherry and plum",
-      "vanilla and toasted oak",
-      "full lush finish"
-    ],
-    "dials": {
-      "Body": 3,
-      "Acidity": 3,
-      "Tannin": 2
-    },
-    "on_list": [
+      },
       {
         "bottle": "Pinot Noir — Kosta Browne",
         "region": "Santa Rita Hills, California",
         "year": "2021",
         "price": "$375"
-      }
-    ],
-    "guest_line": "A bold, ripe Californian Pinot Noir — much fuller than a Burgundy, with dark cherry, vanilla and lush oak. For guests who want Pinot Noir but with more power.",
-    "note": "Kosta Browne is one of California's most sought-after Pinot Noir producers. Santa Rita Hills = cooler coastal California — ripe but with good acidity.",
-    "subcat": "Pinot Noir",
-    "pairing": "Fuller and richer — holds up to Duck and Lamb better than the Burgundy expressions."
-  },
-  {
-    "type": "grape",
-    "color": "red",
-    "category": "Red Grapes",
-    "name": "Pinot Noir — Domaine Georges Noëllat",
-    "pronunciation": "PEE-noh NWAHR — doh-MEN ZHORZH noh-eh-LAH",
-    "flavors": [
-      "precise red cherry and rose",
-      "forest floor and spice",
-      "fine silky tannins"
-    ],
-    "dials": {
-      "Body": 2,
-      "Acidity": 4,
-      "Tannin": 2
-    },
-    "on_list": [
+      },
       {
         "bottle": "Pinot Noir — Domaine Georges Noëllat",
         "region": "Vosne-Romanée, Burgundy, France",
@@ -1997,21 +1854,21 @@ const WINES = [
         "price": "$380"
       }
     ],
-    "guest_line": "A premier cru-level Burgundy from Vosne-Romanée — one of Burgundy's most famous villages. Precise, complex and age-worthy. For the serious wine guest.",
-    "note": "Vosne-Romanée (vone roh-mah-NAY) is home to Romanée-Conti, the world's most expensive wine. Noëllat is a highly respected small domaine.",
+    "guest_line": "Light and silky with red cherry and earthy notes. The only red that pairs with salmon — always worth mentioning.",
+    "note": "Three very different expressions: entry Burgundy $215, Californian $375, top-village Burgundy $380.",
     "subcat": "Pinot Noir",
-    "pairing": "A prestige pour — best enjoyed with lighter dishes where it can shine: Duck Special, Salmon or simply on its own."
+    "pairing": "The most versatile red on the list — light enough for fish, structured enough for poultry. The only red that pairs with Salmon (its earthy, cherry notes complement the lemongrass beurre blanc). Also excellent with the Lemon Roasted Chicken and Duck Special."
   },
   {
     "type": "grape",
     "color": "red",
     "category": "Red Grapes",
-    "name": "Chianti Gran Selezione — Il Palazzino",
-    "pronunciation": "kee-AN-tee gran sel-eh-tsee-OH-neh — eel pah-lah-TSEE-noh",
+    "name": "Sangiovese",
+    "pronunciation": "san-joh-VAY-zeh",
     "flavors": [
-      "tart cherry and dried fruit",
-      "herbs and leather",
-      "firm dry finish"
+      "tart cherry",
+      "herbs",
+      "leather"
     ],
     "dials": {
       "Body": 3,
@@ -2024,59 +1881,13 @@ const WINES = [
         "region": "Chianti Classico, Tuscany",
         "year": "2021",
         "price": "$160"
-      }
-    ],
-    "guest_line": "A serious Chianti Classico Gran Selezione — the highest tier of Chianti. Tart cherry, leather and herbs with a long dry finish. Built for food, especially tomato-based dishes.",
-    "note": "Gran Selezione = top tier of Chianti Classico, single vineyard, min. 30 months aging. Il Palazzino is a respected small producer.",
-    "subcat": "Sangiovese",
-    "pairing": "High acidity makes it perfect with the Spaghetti with confit tomato and burrata. Also works with Lamb Chops and Carpaccio."
-  },
-  {
-    "type": "grape",
-    "color": "red",
-    "category": "Red Grapes",
-    "name": "Brunello — Argiano",
-    "pronunciation": "broo-NEL-loh — ar-JAH-noh",
-    "flavors": [
-      "dried cherry and tobacco",
-      "earthy and complex",
-      "firm structured tannins"
-    ],
-    "dials": {
-      "Body": 4,
-      "Acidity": 5,
-      "Tannin": 5
-    },
-    "on_list": [
+      },
       {
         "bottle": "Brunello — Argiano",
         "region": "Montalcino, Tuscany",
         "year": "2020",
         "price": "$215"
-      }
-    ],
-    "guest_line": "A classic Brunello di Montalcino — one of Italy's great wines. Earthy, complex and age-worthy with dried cherry, tobacco and firm tannins. For guests who appreciate serious Italian reds.",
-    "note": "Brunello = 100% Sangiovese, min. 5 years aging before release. Argiano is one of Montalcino's historic estates.",
-    "subcat": "Sangiovese",
-    "pairing": "A prestige red — best with the Prime Striploin, Porterhouse or Lamb Chops where it can match the richness."
-  },
-  {
-    "type": "grape",
-    "color": "red",
-    "category": "Red Grapes",
-    "name": "Brunello — Gaja 'Pieve di Santa Restituta'",
-    "pronunciation": "broo-NEL-loh — GAH-yah PYEH-veh dee SAN-tah res-tee-TOO-tah",
-    "flavors": [
-      "ripe dark cherry and plum",
-      "cedar and roasted herbs",
-      "long powerful finish"
-    ],
-    "dials": {
-      "Body": 5,
-      "Acidity": 4,
-      "Tannin": 5
-    },
-    "on_list": [
+      },
       {
         "bottle": "Brunello — Gaja 'Pieve di Santa Restituta'",
         "region": "Montalcino, Tuscany",
@@ -2084,10 +1895,10 @@ const WINES = [
         "price": "$285"
       }
     ],
-    "guest_line": "Gaja is one of Italy's most iconic producers — this Brunello is a flagship wine. Powerful, complex and age-worthy. For the guest who wants the finest Italian red on the list.",
-    "note": "Gaja is legendary in Piedmont but also produces world-class Brunello under the Pieve di Santa Restituta label. The 2019 vintage is exceptional.",
+    "guest_line": "The Italian food grape — bright cherry, high acidity, built for tomato and pasta. Chianti and Brunello are both this grape.",
+    "note": "Same grape, very different wines: Chianti = everyday, Brunello = aged 5+ years, among Italy's finest.",
     "subcat": "Sangiovese",
-    "pairing": "A prestige pour — best alongside the Porterhouse, Prime Striploin or Lamb Chops."
+    "pairing": "High-acid, food-loving red built for tomato — the backbone of Chianti. A natural match for the Spaghetti with confit tomato and burrata. Also works with the Carpaccio and Lamb Chops."
   },
   {
     "type": "grape",
@@ -2729,35 +2540,6 @@ const WINES = [
     "note": "Velenosi is a top producer from Le Marche on Italy's Adriatic coast. Cabernet Sauvignon dominant with Merlot.",
     "subcat": "Cabernet Blend",
     "pairing": "A Bordeaux-style blend from central Italy — structured and bold. Best alongside the Prime Striploin and 32oz Porterhouse."
-  },
-  {
-    "type": "bottle",
-    "color": "red",
-    "category": "Red Grapes",
-    "name": "Rioja — Palacios de Camino Real",
-    "pronunciation": "ree-OH-hah — pah-LAH-thyos day kah-MEE-noh ray-AHL",
-    "flavors": [
-      "earthy and smooth",
-      "vanilla and leather from oak",
-      "soft dried cherry finish"
-    ],
-    "dials": {
-      "Body": 3,
-      "Acidity": 3,
-      "Tannin": 3
-    },
-    "on_list": [
-      {
-        "bottle": "Rioja Reserva — Palacios de Camino Real",
-        "region": "Rioja, Spain",
-        "year": "NV",
-        "price": "$80"
-      }
-    ],
-    "guest_line": "A Spanish Tempranillo from Rioja — earthy and smooth with vanilla, leather and a soft dried cherry finish from oak aging. Reserva means it's been aged at least three years, so it has real depth. One of the more approachable reds on the list.",
-    "note": "Tempranillo is Spain's signature grape. Rioja Reserva = min. 3 years aging, at least 1 in oak. Palacios de Camino Real is a classic producer.",
-    "subcat": "Tempranillo",
-    "pairing": "Earthy and smooth — great with the Lamb Chops and Prime Striploin. Accessible enough for guests who want something approachable but interesting."
   },
   {
     "type": "bottle",
@@ -3729,8 +3511,8 @@ const FOOD_CARDS = [
   {
     "section": "Cocktails",
     "q": "What's in the Pomegranate Margarita?",
-    "a": "Tequila + Cointreau pre-batch (2oz), pomegranate juice (0.75oz), lime (0.5oz), agave (0.25oz)",
-    "context": "$21 — tequila and Cointreau are pre-batched together"
+    "a": "Tequila, cointreau, pomegranate",
+    "context": "3oz — $21 — most expensive cocktail"
   },
   {
     "section": "Cocktails",
@@ -4374,18 +4156,18 @@ const COCKTAILS = [
   {
     "name": "Pomegranate Margarita",
     "category": "Signature",
-    "glass": "Rocks glass",
+    "glass": "Rocks glass / coupe",
     "method": "Shaken",
-    "garnish": "Lime wheel, no floating ice",
+    "garnish": "Lime wheel or salted rim",
     "ingredients": [
-      "2oz tequila + Cointreau pre-batch",
-      "0.75oz pomegranate juice",
-      "0.5oz lime juice",
-      "0.25oz agave"
+      "2oz tequila",
+      "0.5oz Cointreau",
+      "0.5oz pomegranate",
+      "0.5oz agave"
     ],
-    "ratio": "2oz tequila/Cointreau pre-batch · 0.75oz pomegranate · 0.5oz lime · 0.25oz agave",
+    "ratio": "2oz tequila · 0.5oz Cointreau · 0.5oz pomegranate · 0.5oz agave",
     "price": 21,
-    "note": "Tequila and Cointreau are pre-batched together — pour as one 2oz measure. Build order: agave first, then lime, then pomegranate, then the 2oz pre-batch. Shake, double strain into rocks glass. No floating ice."
+    "note": "House Margarita with pomegranate. Tequila, Cointreau (orange liqueur) and pomegranate juice. Shaken and served up or on the rocks."
   },
   {
     "name": "Negroni",
@@ -4831,13 +4613,13 @@ const COCKTAIL_QUIZ = [
   {
     "section": "Signature",
     "q": "What are the ingredients in the Pomegranate Margarita?",
-    "a": "Tequila + Cointreau pre-batch · pomegranate juice · lime · agave",
+    "a": "Tequila · Cointreau · pomegranate · agave",
     "context": "2oz · 0.5oz · 0.5oz · 0.5oz"
   },
   {
     "section": "Signature",
     "q": "What is the ratio for the Pomegranate Margarita?",
-    "a": "2oz tequila/Cointreau pre-batch · 0.75oz pomegranate · 0.5oz lime · 0.25oz agave",
+    "a": "2oz tequila · 0.5oz Cointreau · 0.5oz pomegranate · 0.5oz agave",
     "context": "Shaken — served up or on the rocks"
   },
   {
@@ -4857,48 +4639,6 @@ const COCKTAIL_QUIZ = [
     "q": "What is the price of the Pomegranate Margarita?",
     "a": "$21",
     "context": "Most expensive of the three signature cocktails"
-  },
-  {
-    "section": "Signature",
-    "q": "A guest asks what cocktails you'd recommend. What do you say?",
-    "a": "Ask what they're in the mood for — something refreshing and light (Athenian Spritz), bold and classic (Otto's Negroni), or fun and fruity (Pomegranate Margarita). Then make one confident suggestion based on their answer.",
-    "context": "Never just list all three. Read the guest and steer them toward one."
-  },
-  {
-    "section": "Signature",
-    "q": "How would you describe the Athenian Spritz to a guest?",
-    "a": "Light, refreshing and low-ABV — Otto's vermouth with Prosecco and a splash of tonic. Perfect if you want something bubbly and easy to sip. Very approachable.",
-    "context": "Good for guests who want something light, not too boozy, or are just starting the meal."
-  },
-  {
-    "section": "Signature",
-    "q": "How would you describe Otto's Negroni to a guest?",
-    "a": "A classic Negroni made with Otto's vermouth — bitter, aromatic and spirit-forward. Equal parts vermouth, Campari and gin, stirred and served over a large rock with an orange twist. Great for guests who like bold, complex drinks.",
-    "context": "Good for guests who say they like 'something strong' or 'not too sweet'."
-  },
-  {
-    "section": "Signature",
-    "q": "How would you describe the Pomegranate Margarita to a guest?",
-    "a": "A fresh, slightly tart twist on a classic Margarita — tequila, Cointreau, pomegranate and agave, shaken and served in a rocks glass. Fruity but not overly sweet, with a good citrus kick.",
-    "context": "Good for guests who want something fruity, fun or familiar. Great warm weather drink."
-  },
-  {
-    "section": "Signature",
-    "q": "A guest says they don't usually drink cocktails — what do you suggest?",
-    "a": "Steer toward the Athenian Spritz — it's the most approachable, low-ABV and wine-like. If they're open to something a little bolder, the Pomegranate Margarita is fruity and easy to enjoy.",
-    "context": "Avoid pitching the Negroni first to non-cocktail drinkers — it's an acquired taste."
-  },
-  {
-    "section": "Signature",
-    "q": "A guest asks which cocktail is the least alcoholic.",
-    "a": "The Athenian Spritz — it's built with vermouth and Prosecco, both lower ABV, with just a splash of tonic. Much lighter than the Negroni or Margarita.",
-    "context": "Athenian Spritz = lowest ABV. Negroni = highest (3oz of spirits). Margarita = middle."
-  },
-  {
-    "section": "Signature",
-    "q": "A guest asks what Otto's vermouth is.",
-    "a": "Otto's is an Australian-made vermouth — aromatic, herbal and slightly bitter, used as the base in both our Negroni and our Athenian Spritz. It gives both drinks a distinctive character you won't find in a standard recipe.",
-    "context": "Otto's vermouth is the house ingredient that ties both signature cocktails together — worth knowing a line about it."
   },
   {
     "section": "Stirred",
@@ -5593,6 +5333,12 @@ const COCKTAIL_QUIZ = [
 ];
 const WINE_CARDS = [
   {
+    "section": "Vintage",
+    "q": "What year is the Pecorino — Velenosi 'Villa Angela Falerio'?",
+    "a": "2024",
+    "context": "Le Marche, Italy — $75"
+  },
+  {
     "section": "Grape",
     "q": "What grape is Pecorino?",
     "a": "Pecorino — an Italian white grape (not the cheese!)",
@@ -5611,6 +5357,12 @@ const WINE_CARDS = [
     "context": "$75 by bottle, $18 by glass — great value"
   },
   {
+    "section": "Vintage",
+    "q": "What year is the Bellone — Casale del Giglio?",
+    "a": "2024",
+    "context": "Lazio, Italy — $85"
+  },
+  {
     "section": "Grape",
     "q": "What grape is Bellone?",
     "a": "Bellone — an ancient Roman white grape from Lazio",
@@ -5623,10 +5375,22 @@ const WINE_CARDS = [
     "context": "$85 — rare indigenous Lazio grape"
   },
   {
+    "section": "Vintage",
+    "q": "What year is the Vermentino — La Spinetta?",
+    "a": "2025",
+    "context": "Tuscany, Italy — $95"
+  },
+  {
     "section": "Style",
     "q": "Describe Vermentino in one sentence.",
     "a": "Coastal Italian white — white peach, citrus and a saline, herbal finish.",
     "context": "La Spinetta — renowned Piedmontese producer in Tuscany"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Sancerre — Domaine Bailly-Reverdy?",
+    "a": "2024",
+    "context": "Loire Valley, France — $130"
   },
   {
     "section": "Grape",
@@ -5641,10 +5405,22 @@ const WINE_CARDS = [
     "context": "The benchmark for Sauvignon Blanc — $130"
   },
   {
+    "section": "Vintage",
+    "q": "What year is the Chablis — Famille Grossot?",
+    "a": "2023",
+    "context": "Chablis, Burgundy, France — $145"
+  },
+  {
     "section": "Style",
     "q": "Describe Chablis — Famille Grossot in one sentence.",
     "a": "Pure, steely and mineral — green apple, oyster shell and laser-like acidity.",
     "context": "$145 — serious terroir-driven Chablis"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Pinot Noir — Laroque?",
+    "a": "2023",
+    "context": "Languedoc, France — $90"
   },
   {
     "section": "Region",
@@ -5659,6 +5435,12 @@ const WINE_CARDS = [
     "context": "Most accessible Pinot Noir on the list — $90"
   },
   {
+    "section": "Vintage",
+    "q": "What year is the Côtes de Beaune — Domaine de Cassiopée?",
+    "a": "2022",
+    "context": "Côte de Beaune, Burgundy, France — $225"
+  },
+  {
     "section": "Region",
     "q": "What region is Côtes de Beaune — Domaine de Cassiopée from?",
     "a": "Côte de Beaune, Burgundy, France",
@@ -5669,6 +5451,12 @@ const WINE_CARDS = [
     "q": "Describe Côtes de Beaune — Cassiopée in one sentence.",
     "a": "Elegant Burgundy Pinot Noir — red cherry, earthy complexity and silky tannins.",
     "context": "$225 — Côte de Beaune 2022 vintage"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Rosé — Tormaresca 'Calafuria'?",
+    "a": "2025",
+    "context": "Apulia, Italy — $90"
   },
   {
     "section": "Grape",
@@ -5709,6 +5497,150 @@ const WINE_CARDS = [
     "a": "Barolo or Amarone",
     "context": "Fenocchio $190 or Villabella $230 — biggest reds for biggest steak",
     "why": "The biggest steak on the menu needs the boldest wines. Barolo's fierce tannins and high acidity cut through 25oz of dry-aged fat like a knife — the dried cherry and tar complement the char. Amarone brings dried fruit concentration and body that matches the intensity of a dry-aged prime cut. Both wines need food this rich to show their best."
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Antinori Bramito Chardonnay?",
+    "a": "2024",
+    "context": "Umbria, Italy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Pietrabianca 'Bocca di Lupo' Chardonnay?",
+    "a": "2024",
+    "context": "Puglia, Italy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Puligny-Montrachet — François Carillon?",
+    "a": "2022",
+    "context": "Côte de Beaune, Burgundy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Whispering Angel Rosé?",
+    "a": "2024",
+    "context": "Provence, France"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Greco di Tufo — Mastroberardino?",
+    "a": "2024",
+    "context": "Campania, Italy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Etna Bianco — Planeta?",
+    "a": "2023",
+    "context": "Mount Etna, Sicily"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Rioja Reserva — Palacios de Camino Real?",
+    "a": "2019",
+    "context": "Rioja, Spain"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Nero d'Avola — Vigneti Zabu 'Chiantari'?",
+    "a": "2023",
+    "context": "Sicily, Italy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Etna Rosso — Planeta?",
+    "a": "2023",
+    "context": "Mount Etna, Sicily"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Gamay Blend — Domaine des Huards?",
+    "a": "2022",
+    "context": "Loire Valley, France"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Bolgheri — Tenuta Argentiera?",
+    "a": "2023",
+    "context": "Bolgheri, Tuscany"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Montepulciano Riserva — Marina Cvetić?",
+    "a": "2020",
+    "context": "Abruzzo, Italy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Chianti Gran Selezione — Il Palazzino?",
+    "a": "2021",
+    "context": "Chianti Classico, Tuscany"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Barolo — Giacomo Fenocchio?",
+    "a": "2021",
+    "context": "Piedmont, Italy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Super Tuscan — Gaja Ca' Marcanda 'Promis'?",
+    "a": "2022",
+    "context": "Bolgheri, Tuscany"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Brunello — Argiano?",
+    "a": "2020",
+    "context": "Montalcino, Tuscany"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Pinot Noir — Domaine de Cassiopée?",
+    "a": "2022",
+    "context": "Burgundy, France"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Amarone — Villabella 'Fracastoro'?",
+    "a": "2013",
+    "context": "Valpolicella, Veneto"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Brunello — Gaja 'Pieve di Santa Restituta'?",
+    "a": "2019",
+    "context": "Montalcino, Tuscany"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Bordeaux — Corbin St-Émilion Grand Cru Classé?",
+    "a": "2015",
+    "context": "Saint-Émilion, Bordeaux"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Pinot Noir — Kosta Browne?",
+    "a": "2021",
+    "context": "Santa Rita Hills, California"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Pinot Noir — Domaine Georges Noëllat?",
+    "a": "2022",
+    "context": "Vosne-Romanée, Burgundy"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Super Tuscan — Antinori 'Tignanello'?",
+    "a": "2022",
+    "context": "Chianti Classico, Tuscany"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Dom Pérignon?",
+    "a": "2015",
+    "context": "Champagne, France"
   },
   {
     "section": "Grape",
@@ -5991,10 +5923,22 @@ const WINE_CARDS = [
     "context": "Both 100% Sangiovese — Tuscany"
   },
   {
+    "section": "Vintage",
+    "q": "What is the Chardonnay by the glass?",
+    "a": "Italian Chardonnay — $19",
+    "context": "5oz pour"
+  },
+  {
     "section": "Style",
     "q": "Describe the Chardonnay by glass in one sentence.",
     "a": "Italian-style — lighter and crisper than New World, subtle oak.",
     "context": "$19 by glass"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Rosé by glass?",
+    "a": "2023",
+    "context": "France — $17"
   },
   {
     "section": "Style",
@@ -6003,10 +5947,22 @@ const WINE_CARDS = [
     "context": "France 2023 — $17"
   },
   {
+    "section": "Vintage",
+    "q": "What country is Cava from?",
+    "a": "Spain",
+    "context": "$19 by glass — traditional method sparkling"
+  },
+  {
     "section": "Style",
     "q": "Describe Cava in one sentence.",
     "a": "Spain's answer to Champagne — dry, citrusy and refreshing at great value.",
     "context": "Same method as Champagne, local grapes"
+  },
+  {
+    "section": "Vintage",
+    "q": "What is the Prosecco on the list?",
+    "a": "Castello di Roncade — Veneto, Italy — NV — $85",
+    "context": "Rosé & Sparkling by the bottle"
   },
   {
     "section": "Style",
@@ -6021,6 +5977,12 @@ const WINE_CARDS = [
     "context": "Made from Glera grape — tank method"
   },
   {
+    "section": "Vintage",
+    "q": "What is the Brut Champagne on the list?",
+    "a": "Veuve Clicquot Yellow Label — NV — $195 (also half bottle $100)",
+    "context": "Champagne, France"
+  },
+  {
     "section": "Style",
     "q": "Describe Veuve Clicquot Yellow Label.",
     "a": "Rich and toasty — brioche, citrus, creamy bubbles. Pinot Noir dominant.",
@@ -6033,10 +5995,22 @@ const WINE_CARDS = [
     "context": "Gives body and richness to the blend"
   },
   {
+    "section": "Vintage",
+    "q": "What is the Rosé Champagne on the list?",
+    "a": "Moët & Chandon Rosé — NV — $215",
+    "context": "Champagne, France"
+  },
+  {
     "section": "Style",
     "q": "Describe Moët & Chandon Rosé.",
     "a": "Wild strawberry and raspberry with brioche — elegant, celebratory, fine bubbles.",
     "context": "Made by blending still Pinot Noir into the cuvée"
+  },
+  {
+    "section": "Vintage",
+    "q": "What is the Blanc de Noirs on the list?",
+    "a": "Stéphane Coquillet 'Les Clés' — NV — $240",
+    "context": "Champagne, France"
   },
   {
     "section": "Style",
@@ -6051,6 +6025,12 @@ const WINE_CARDS = [
     "context": "Pressed without skin contact — stays white"
   },
   {
+    "section": "Vintage",
+    "q": "What year is the Langhe Rossese — Giovanni Manzone?",
+    "a": "2023",
+    "context": "Piedmont, Italy — $100"
+  },
+  {
     "section": "Grape",
     "q": "What grape is Langhe Rossese made from?",
     "a": "Rossese Bianco",
@@ -6061,6 +6041,12 @@ const WINE_CARDS = [
     "q": "Describe Langhe Rossese in one sentence.",
     "a": "Light and floral with white peach, apricot and a crisp mineral finish.",
     "context": "Giovanni Manzone — $100 — off the beaten path"
+  },
+  {
+    "section": "Vintage",
+    "q": "What year is the Cabernet Blend — Velenosi 'Ninfa'?",
+    "a": "2022",
+    "context": "Le Marche, Italy — $110"
   },
   {
     "section": "Region",
@@ -6147,318 +6133,6 @@ const WINE_CARDS = [
     "q": "Describe Ribolla Gialla in one sentence.",
     "a": "Crisp and dry with citrus and a clean, nutty finish.",
     "context": "Ancient grape from Friuli, northeast Italy"
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks for the least acidic red on the menu. What do you say?",
-    "a": "Recommend Merlot-dominant or softer reds — Corbin St-Émilion or Domaine les Carmels Bordeaux. Avoid Pinot Noir and Nebbiolo which are higher acid.",
-    "context": "Low-acid reds: Merlot, Grenache, Zinfandel. High-acid reds: Pinot Noir, Nebbiolo, Sangiovese."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest says they don't usually drink red wine because it dries out their mouth. What do you recommend?",
-    "a": "They're sensitive to tannins. Suggest a low-tannin red — Pinot Noir is the best option. Avoid Cabernet Sauvignon and Nebbiolo.",
-    "context": "Tannins cause that drying, grippy feeling. Pinot Noir = softest tannins on the menu."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest wants something dry and refreshing — not too heavy. Which white do you suggest?",
-    "a": "Pecorino or Bellone — both are crisp, light and mineral. Vermentino is also a great option with a saline coastal character.",
-    "context": "All three are Italian whites, light-bodied, high acidity, bone dry."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest wants a white wine but says they usually find white wine too sour. What do you suggest?",
-    "a": "Steer toward a rounder, lower-acid white — Chardonnay is the safest bet. Avoid Pecorino and Sauvignon Blanc styles which are very crisp.",
-    "context": "Chardonnay (esp. oaked) has lower acidity and a rounder, fuller feel."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest orders the fish and asks for a wine pairing. What do you suggest?",
-    "a": "Any of the white wines — Pecorino, Bellone or Vermentino. For a red, Pinot Noir works if they prefer red. Avoid big tannic reds.",
-    "context": "Fish + crisp whites = classic. Light reds like Pinot Noir can also work with richer fish dishes."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest orders a steak or lamb and asks for a wine pairing. What do you suggest?",
-    "a": "A full-bodied red — Corbin St-Émilion, Domaine les Carmels Bordeaux, or the Cabernet Blend Velenosi 'Ninfa'. Tannins cut through the fat.",
-    "context": "Tannins + fat = balance. Richer the meat, the more structured the wine should be."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest wants something celebratory or bubbly. What do you offer?",
-    "a": "Prosecco for casual and approachable, Cava for dry and elegant, Veuve Clicquot or Dom Pérignon for a proper splurge. Moët Rosé if they want something fun and pink.",
-    "context": "Always mention the price range when upselling to Champagne — let them decide."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks what the difference is between Prosecco and Champagne.",
-    "a": "Prosecco is Italian, made in a tank (lighter, fruitier, casual). Champagne is French, made in the bottle (more complex, toasty, prestige). Both are sparkling but very different in character and price.",
-    "context": "Cava is Spanish — also bottle-fermented like Champagne but more affordable."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest says they like 'smooth' wine. What are they probably looking for?",
-    "a": "Low tannins, low acidity, soft and round. Think Merlot-based reds or a fuller Chardonnay. Avoid anything described as crisp, grippy or structured.",
-    "context": "'Smooth' is the most common guest word — it almost always means low tannin and low acid."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks what Blanc de Noirs means.",
-    "a": "White wine made from red (black) grapes — in this case Pinot Noir. The skin is removed quickly so the juice stays pale. It has more body and richness than a typical white.",
-    "context": "Blanc de Noirs = 'white from blacks'. Our bottle is a Champagne-style sparkling."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest is looking at the wine list and says 'I don't know anything about wine, what do you recommend?'",
-    "a": "Ask two quick questions: red or white? And do you prefer something light and crisp or rich and full? That narrows it down fast. Then make one confident suggestion.",
-    "context": "Don't overwhelm them with options. One clear recommendation with a brief description builds trust."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest says the wine tastes 'off' or 'like vinegar'. What do you do?",
-    "a": "Take it seriously — it may be corked or oxidized. Smell the cork and the glass yourself. If it smells musty or sharp, apologize and offer to replace it. Don't argue.",
-    "context": "Corked wine smells like wet cardboard or damp basement. Oxidized smells like sherry or vinegar. Always replace without question."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks for a 'full-bodied red'. What do you recommend from the menu?",
-    "a": "Corbin St-Émilion or Domaine les Carmels Bordeaux — Merlot-dominant, rich and structured. Cabernet Blend Velenosi 'Ninfa' is also bold and full.",
-    "context": "Full-bodied = higher alcohol, more tannin, richer texture. Think Merlot, Cabernet, Syrah."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks what 'dry' means in wine.",
-    "a": "Dry means there's no residual sugar — the wine isn't sweet. Almost all table wines on our list are dry. The opposite is sweet or off-dry.",
-    "context": "Common misconception: guests sometimes think 'dry' means tannic or bitter. Clarify gently."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks for a wine that goes well with cheese.",
-    "a": "Sparkling works with almost everything — Prosecco or Cava. For reds, Pinot Noir is safe. For whites, Pecorino or Vermentino pair well with softer cheeses.",
-    "context": "Salty food + high acid wine = great match. Sparkling is the universal cheese wine."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest wants to order a bottle but isn't sure which one. How do you guide them?",
-    "a": "Ask what they're eating, whether they prefer red or white, and if they lean light or full. Then suggest one bottle with a brief one-sentence description. Be confident — guests want a recommendation, not a menu re-read.",
-    "context": "Tip: always know your two or three go-to bottle recommendations for red and white so you never hesitate."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks what the difference is between a light and full-bodied wine.",
-    "a": "Body refers to how the wine feels in your mouth — like the difference between skim milk and whole milk. Light-bodied feels delicate and crisp, full-bodied feels rich and heavy.",
-    "context": "The milk analogy is the clearest way to explain body to a non-wine person."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest says they loved the wine last time but can't remember what it was. What do you do?",
-    "a": "Ask what they remember — red or white, what food they had, whether it was light or bold, sweet or dry. Narrow it down from there. If they visited recently you may be able to check with the manager.",
-    "context": "Even partial clues help. Don't guess blindly — ask enough to make a confident match."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks if a wine is organic or natural.",
-    "a": "Be honest about what you know. If you're unsure, say so and offer to check with your sommelier or manager. Don't guess — guests who ask this care about the answer.",
-    "context": "Natural wine = minimal intervention, often unfiltered. Organic = no synthetic pesticides. These are different things."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks for a wine recommendation under a certain price. How do you handle it?",
-    "a": "Take it in stride — never make them feel awkward about budget. Point to the options in their range confidently and describe one you'd genuinely recommend.",
-    "context": "Never point at prices loudly or make it obvious. Discretion matters. Every budget deserves a great recommendation."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks what Vosne-Romanée means (if it comes up).",
-    "a": "It's one of the most famous wine villages in Burgundy, France — home to some of the world's most expensive Pinot Noir. Pronounced 'Vone Roh-mah-NAY'. The S is silent.",
-    "context": "Romanée-Conti from this village can sell for tens of thousands per bottle."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks what 'terroir' means.",
-    "a": "It's a French concept meaning the taste of the place — the combination of soil, climate, slope and geography that gives a wine its unique character. It's why the same grape tastes different in Burgundy vs California.",
-    "context": "Pronounced 'tair-WAHR'. Guests who use this word are usually wine-savvy — match their level."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "Two guests are sharing a bottle — one wants red, one wants white. What do you suggest?",
-    "a": "Offer a glass each to start while they decide on a bottle — or suggest a Rosé or light Pinot Noir which can bridge the gap. Sparkling also works for both.",
-    "context": "Don't force a compromise — two glasses by the glass is a valid and often profitable solution."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks for something 'not too oaky'.",
-    "a": "Steer toward the Italian whites — Pecorino, Bellone, Vermentino. These are unoaked and crisp. For red, Pinot Noir is typically low oak. Avoid heavily oaked Chardonnay styles.",
-    "context": "Oaky = vanilla, butter, toast, coconut notes from barrel aging. Unoaked = pure fruit and acidity."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks what wine pairs with spicy food.",
-    "a": "Off-dry or low-alcohol whites work best — they cool the heat. Avoid high-tannin reds which amplify spice. From our list, Vermentino or Prosecco are safe bets.",
-    "context": "Tannin + spice = more heat. Sugar + spice = balance. Sparkling also works well — bubbles refresh the palate."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks how a wine is supposed to smell — and is worried theirs smells strange.",
-    "a": "Reassure them that wine can smell earthy, funky or unusual at first — that's normal. Give it a swirl and a minute to open. If it smells like wet cardboard or vinegar, it may be off and worth checking.",
-    "context": "Many guests aren't used to wine aromas. A little reassurance goes a long way before escalating to a replacement."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks whether they should let the wine breathe.",
-    "a": "Fuller reds benefit from 15-30 mins of air — it softens tannins and opens up the aromas. Whites and sparkling are ready to drink immediately. You can offer to decant or simply pour and let it sit.",
-    "context": "Decanting isn't always available — even just pouring and waiting a few minutes makes a difference for bold reds."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest asks what wine is most similar to what they drink at home — they mention they like Pinot Grigio.",
-    "a": "Suggest Pecorino or Bellone — both are crisp, dry Italian whites with good acidity, similar in weight to Pinot Grigio but more interesting. A gentle upsell.",
-    "context": "Pinot Grigio drinkers want: dry, crisp, light, easy. Our Italian whites tick all those boxes and give them something new to try."
-  },
-  {
-    "section": "Guest Scenarios",
-    "q": "A guest finishes their glass and seems to have enjoyed it. What do you do?",
-    "a": "Check in naturally — 'How did you enjoy that?' If positive, ask if they'd like another glass or suggest the bottle as better value. Don't wait for them to flag you down.",
-    "context": "This is one of the easiest upsell moments. A warm check-in feels like good service, not a sales pitch."
-  },
-  {
-    "section": "Grape",
-    "q": "What grape is Antinori Bramito Chardonnay?",
-    "a": "Chardonnay — lightly oaked, from Umbria, Italy",
-    "context": "Antinori is one of Tuscany's most respected producers. 2024 · $115"
-  },
-  {
-    "section": "Style",
-    "q": "Describe Antinori Bramito Chardonnay in one sentence.",
-    "a": "Approachable and smooth — ripe apple and pear with light vanilla and a creamy finish.",
-    "context": "Entry-level oaked Chardonnay, crowd-pleasing and consistent. $115"
-  },
-  {
-    "section": "Pairing",
-    "q": "What food pairs well with Antinori Bramito Chardonnay?",
-    "a": "Lemon Roasted Chicken, Salmon, and lighter pasta dishes.",
-    "context": "Lightly oaked — versatile enough for most white meat and fish."
-  },
-  {
-    "section": "Style",
-    "q": "What is the difference between Antinori Bramito and Pietrabianca 'Bocca di Lupo' Chardonnay?",
-    "a": "Bramito is lighter and more approachable. Bocca di Lupo is fuller and more structured — more tropical fruit, more oak, longer finish. $10 more.",
-    "context": "Bramito $115 (Umbria) vs Bocca di Lupo $125 (Puglia)"
-  },
-  {
-    "section": "Style",
-    "q": "Describe Pietrabianca 'Bocca di Lupo' Chardonnay in one sentence.",
-    "a": "Fuller and more structured — tropical fruit, toasted oak and a long mineral finish from southern Italy.",
-    "context": "Single vineyard from Puglia. 'Bocca di Lupo' means mouth of the wolf. 2024 · $125"
-  },
-  {
-    "section": "Pairing",
-    "q": "What food pairs well with Pietrabianca 'Bocca di Lupo' Chardonnay?",
-    "a": "Lobster Tagliatelle and Salmon — the oak and butter echo cream-based sauces.",
-    "context": "Fuller body = richer food pairings. $125"
-  },
-  {
-    "section": "Style",
-    "q": "Describe Puligny-Montrachet — François Carillon in one sentence.",
-    "a": "Unoaked Burgundy Chardonnay at its finest — precise, mineral and elegant with citrus, hazelnut and a long finish.",
-    "context": "One of Burgundy's greatest white wines. 2022 · $395"
-  },
-  {
-    "section": "Region",
-    "q": "What region is Puligny-Montrachet from?",
-    "a": "Côte de Beaune, Burgundy, France",
-    "context": "One of Burgundy's most famous white wine villages — home to Montrachet, arguably the world's greatest white wine."
-  },
-  {
-    "section": "Pairing",
-    "q": "What food pairs with Puligny-Montrachet — François Carillon?",
-    "a": "Halibut, Branzino or Grilled Seafood Platter — its precision and minerality shine with delicate fish.",
-    "context": "Prestige pour at $395 — let it speak for itself alongside lighter dishes."
-  },
-  {
-    "section": "Style",
-    "q": "Describe Nero d'Avola — Vigneti Zabu 'Chiantari' in one sentence.",
-    "a": "Ripe and concentrated Sicilian red — dark cherry, spice and a velvety finish. More depth than the house pour.",
-    "context": "Single vineyard. Vigneti Zabu is a top Sicilian producer. 2023 · $85"
-  },
-  {
-    "section": "Style",
-    "q": "What is the difference between Nero d'Avola by glass and Vigneti Zabu 'Chiantari'?",
-    "a": "The house pour is approachable and easy. Zabu 'Chiantari' is a single vineyard — riper, more concentrated and more complex.",
-    "context": "By glass $18 (house) vs Chiantari $85 (single vineyard)"
-  },
-  {
-    "section": "Style",
-    "q": "Describe Pinot Noir — Domaine de Cassiopée in one sentence.",
-    "a": "Elegant Burgundy Pinot Noir — light and silky with red cherry, earthy notes and fine tannins.",
-    "context": "Entry-level Burgundy. 2022 · $215"
-  },
-  {
-    "section": "Style",
-    "q": "Describe Pinot Noir — Kosta Browne in one sentence.",
-    "a": "Bold Californian Pinot Noir — ripe dark cherry, vanilla and lush oak. Much fuller than the Burgundy expressions.",
-    "context": "Santa Rita Hills, California. 2021 · $375"
-  },
-  {
-    "section": "Style",
-    "q": "What is the key difference between Kosta Browne and Domaine de Cassiopée Pinot Noir?",
-    "a": "Cassiopée is a classic elegant Burgundy — light, earthy, precise. Kosta Browne is Californian — bolder, riper, more oak and fruit. Very different styles.",
-    "context": "Cassiopée $215 (Burgundy) vs Kosta Browne $375 (California)"
-  },
-  {
-    "section": "Style",
-    "q": "Describe Pinot Noir — Domaine Georges Noëllat in one sentence.",
-    "a": "A premier village-level Burgundy from Vosne-Romanée — precise, complex and silky with red cherry, rose and forest floor.",
-    "context": "Vosne-Romanée is one of Burgundy's most prestigious villages. 2022 · $380"
-  },
-  {
-    "section": "Region",
-    "q": "What makes Domaine Georges Noëllat Pinot Noir special?",
-    "a": "It comes from Vosne-Romanée — one of Burgundy's most famous villages, home to Romanée-Conti. Noëllat is a highly respected small domaine.",
-    "context": "Vosne-Romanée = vone roh-mah-NAY. $380"
-  },
-  {
-    "section": "Style",
-    "q": "Describe Chianti Gran Selezione — Il Palazzino in one sentence.",
-    "a": "Serious top-tier Chianti — tart cherry, herbs and leather with a firm dry finish. Built for food.",
-    "context": "Gran Selezione = highest tier of Chianti Classico, single vineyard, min. 30 months aging. 2021 · $160"
-  },
-  {
-    "section": "Style",
-    "q": "What does Gran Selezione mean on a Chianti label?",
-    "a": "The highest tier of Chianti Classico — single vineyard, minimum 30 months aging. A serious, food-focused wine.",
-    "context": "Il Palazzino Gran Selezione 2021 · $160"
-  },
-  {
-    "section": "Style",
-    "q": "Describe Brunello — Argiano in one sentence.",
-    "a": "A classic Brunello di Montalcino — earthy and complex with dried cherry, tobacco and firm tannins. One of Italy's great wines.",
-    "context": "100% Sangiovese, min. 5 years aging. Argiano is a historic Montalcino estate. 2020 · $215"
-  },
-  {
-    "section": "Style",
-    "q": "What is the difference between Chianti Gran Selezione and Brunello — Argiano?",
-    "a": "Both are Sangiovese — Chianti is lighter and more food-driven at $160. Brunello is more powerful and aged much longer — a prestige wine at $215.",
-    "context": "Same grape, very different wines. Chianti Classico region vs Montalcino."
-  },
-  {
-    "section": "Style",
-    "q": "Describe Brunello — Gaja 'Pieve di Santa Restituta' in one sentence.",
-    "a": "Gaja's flagship Brunello — powerful, complex and age-worthy with ripe dark cherry, cedar and a long finish. The finest Italian red on our list.",
-    "context": "Gaja is one of Italy's most iconic producers. 2019 · $285"
-  },
-  {
-    "section": "Style",
-    "q": "What is the difference between Brunello Argiano and Brunello Gaja?",
-    "a": "Both are serious Brunellos — Argiano is classic and elegant at $215. Gaja is more powerful, more complex and from a legendary producer at $285.",
-    "context": "Argiano $215 vs Gaja 'Pieve di Santa Restituta' $285. Both from Montalcino."
-  },
-  {
-    "section": "Pairing",
-    "q": "A guest wants the finest Italian red on the list. What do you recommend?",
-    "a": "Brunello — Gaja 'Pieve di Santa Restituta'. Gaja is one of Italy's most iconic producers — powerful, complex, age-worthy.",
-    "context": "$285 — 2019 vintage from Montalcino, Tuscany."
   }
 ];
 
@@ -6873,6 +6547,7 @@ function renderQuiz(id, data) {
   document.getElementById(id+'-front').innerHTML = `
     <div class="front-cat">${c.section}</div>
     <div class="quiz-q">${c.q}</div>
+    ${c.context ? `<div class="quiz-context">${c.context}</div>` : ''}
     <div class="tap-hint" style="margin-top:auto">Tap to reveal</div>`;
 
   document.getElementById(id+'-back').innerHTML = `
@@ -7063,7 +6738,7 @@ function srInjectBadge(id) {
 initDeck('menu', DISHES, ['Raw & Salad','Hot Plates','Signature','Lunch','Desserts','Specials']);
 initDeck('wine', WINES, ['New','White Grapes','Red Grapes','Regions','Rosé & Sparkling','Old Items']);
 initDeck('foodq', FOOD_CARDS, ['Mise','Ingredients','Pitch','Cocktails','Beverages','Details','Service']);
-initDeck('wineq', WINE_CARDS, ['Grape','Region','Style','Pairing','Guest Scenarios','Old Items']);
+initDeck('wineq', WINE_CARDS, ['Grape','Region','Style','Pairing','Old Items']);
 srInit('menu', DISHES.length);
 srInit('wine', WINES.length);
 srInit('foodq', FOOD_CARDS.length);
